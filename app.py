@@ -109,12 +109,13 @@ def more_output(selected_language, selected_state,selected_district,selected_cat
     if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
         
         if  old_row is None:
+            #session = psql_conn.get_database_connection()
             fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category)
 
             return [get_accordian_items(fetched_results)]
 
         #return old_row +[audio,html.Div("Report goes here")]
-        print(psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category))
+        #print(psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category))
         return old_row +[get_accordian_items(3)]
 """
 
