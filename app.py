@@ -6,6 +6,7 @@ import base64
 import dash
 import time
 import psql_conn
+from datetime import date
 
 import psycopg2
 from sshtunnel import SSHTunnelForwarder
@@ -49,6 +50,39 @@ category_dropdown =  html.Div([
     html.Div(id='categoy-dd-output-container')
 ])
 
+completed_at_datetime = html.Div([dbc.Col([
+    html.Div("Completed Between :"),
+    html.Div([
+    dcc.DatePickerRange(
+        id='completed-between-picker-range',
+        min_date_allowed=date(1995, 8, 5),
+        max_date_allowed=date.today(),
+        initial_visible_month=date.today(),
+        #end_date=date(2017, 8, 25)
+    ),
+    #html.Div(id='output-container-date-picker-range')
+])
+    ])] ,
+    style = {"marginTop":"10px"}
+
+)
+
+verified_at_datetime = html.Div([dbc.Col([
+    html.Div("Verified Between :"),
+    html.Div([
+    dcc.DatePickerRange(
+        id='verified-between-picker-range',
+        min_date_allowed=date(1995, 8, 5),
+        max_date_allowed=date.today(),
+        initial_visible_month=date.today(),
+        #end_date=date(2017, 8, 25)
+    ),
+    #html.Div(id='output-container-date-picker-range')
+])
+    ])] ,
+    style = {"marginTop":"10px"}
+
+)
 
 # corresponding audio-file.
 encoded_sound = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
@@ -105,11 +139,12 @@ def render_report(report_obj):
 def get_accordian_items(results):
 
     return  dbc.Accordion([dbc.AccordionItem(
-            [   html.Div("AUdio goes here"),
+            [   html.Div("Audio goes here"),
                 html.Div(render_report(res[1]))
             ],
             title = f"Item {res[0]}",
         )for res in results])
+
 feteched_accordian = html.Div(
      id= 'fetched-audio-row'
 )
@@ -128,6 +163,7 @@ fetch_button = html.Div(
     ]
 )
 
+load_more_button = html.Div(dbc.Button("Load Next...", id="load-more", style = {'display':'none'}),className = "d-grid gap-2 col-6 mx-auto", )
 """
 fetched_row = dbc.Row(
     [   audio,
@@ -155,17 +191,38 @@ app.layout = dbc.Container([
 
     dbc.Row(
             [
-                dbc.Col([dbc.Card(dbc.CardBody(html.H2("Filter")),outline=True,color='#0d91fd', inverse = True),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, html.Hr(),fetch_button], width = 4),
-                dbc.Col( [dbc.Card(dbc.CardBody(html.H2("Results" )),outline = True, color = '#0d91fd', inverse = True),html.Br(),get_spinner(),generate_toast(),feteched_accordian]),
+                dbc.Col([dbc.Card(dbc.CardBody(html.H2("Filter")),outline=True,color='#0d91fd', inverse = True),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, completed_at_datetime,verified_at_datetime, html.Hr(),fetch_button], width = 4),
+                dbc.Col( [dbc.Card(dbc.CardBody(html.H2("Results" )),outline = True, color = '#0d91fd', inverse = True),html.Br(),get_spinner(),generate_toast(),feteched_accordian,load_more_button]),
             ],
             align="start",
         ),
 ],
 )
 
+"""
+#----Fetch Next Set of Results----#
+@dash.callback_context(
+    Output('fetched-audio-row','children'),
+    Input('load-more','n_clicks'),
+    State('language-dropdown','value'), 
+    State('state-dropdown','value'), 
+    State('district-dropdown','value'), 
+    State('category-dropdown','value'),
+    State('completed-between-picker-range','start_date'),
+    State('completed-between-picker-range','end_date'),
+    State('verified-between-picker-range','start_date'),
+    State('verified-between-picker-range','end_date'),
+    State('fetched-audio-row','children'),
+)
+def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_district,selected_category, completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date, old_row):
+    fetched_results = sql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category, n_clicks)
+    if len(fetched_results) == 0:
+            return [], True, "No Results Found !"
+    return old_row+[get_accordian_items(fetched_results)]
 
-
-#----Load mor Audio----#
+    #retunr old_row +  
+"""
+#----Load more Audio----#
 
 @dash.callback(
     #Output("paragraph_id", "children"),
@@ -174,10 +231,16 @@ app.layout = dbc.Container([
      Output('positioned-toast','children')],
     #Output('update_progress-spinner', 'style'),
     Input("button_id", "n_clicks"),
+    Input("load-more",'n_clicks'),
     State('language-dropdown','value'), 
     State('state-dropdown','value'), 
     State('district-dropdown','value'), 
     State('category-dropdown','value'),
+    State('completed-between-picker-range','start_date'),
+    State('completed-between-picker-range','end_date'),
+    State('verified-between-picker-range','start_date'),
+    State('verified-between-picker-range','end_date'),
+
     background=True,
     running=[
         (Output("button_id", "disabled"), True, False),
@@ -185,19 +248,31 @@ app.layout = dbc.Container([
         (Output('progress-spinner','style'),
          {'display':'block','visibility':'visible !important'},
             {'display':'none'}
+        ),
+        (Output('load-more','style'),
+        {'display':'none'},
+         {'display':'block'}
         )
     ],
     cancel=Input("cancel_button_id", "n_clicks"),
     #progress=[Output("progress_bar", "value"), Output("progress_bar", "max")],
     prevent_initial_call=True
 )
-def update_progress(n_clicks,selected_language, selected_state,selected_district,selected_category):
+def update_progress(n_clicks,load_more_click,selected_language, selected_state,selected_district,selected_category, completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date):
+
 
     print(selected_language, selected_state, selected_district, selected_category)
     if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
-        #set_progress((3, 5))
- 
-        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category)
+        #set_progress((3, 5))i
+        dates = []
+        for d in [completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date]:
+
+            temp_object = date.fromisoformat(d)
+            dates.append(temp_object.strftime('%B %d, %Y'))
+
+        print(dates)
+        global page_number
+        fetched_results, page_number = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category,load_more_click)
         #set_progress((5, 5))
         print("result recived")
         if len(fetched_results) == 0:
