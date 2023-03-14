@@ -25,8 +25,16 @@ def get_database_connection():
     print('Database session created')
     return session
 
-def fetch_audio(t_id):
-    return session.execute(text(f"select input::jsonb->'files'->>'recording',output::jsonb->'data' from microtask where task_id = '{t_id[0]}' and input::jsonb->'chain'->'workerId' = '{w_id[0]}' and output is not null and  (output::text like '%\"decision\":\"accept\"%' or  output::text like '%\"decision\":\"excellent\"%');")).fetchall()
+def fetch_audio(w,category,t_id):
+    if category == "Accepted":
+        q_category = "(output::text like '%\"decision\":\"accept\"%' or  output::text like '%\"decision\":\"excellent\"%')" 
+    else:
+        ?!?jedi=35, q_category = "(output::text not like '%\"decision\":\"accept\"%' and  output::text not like '%\"decision\":\"excellent\"%')"?!? (*_**values: object*_*, sep: Optional[str]=..., end: Optional[str]=..., file: Optional[SupportsWrite[str]]=..., flush: bool=...) ?!?jedi?!?" ' \" \" \" \" ' ' \" \" \" \" ' "
+    print(category,q_category, w)
+    return session.execute(text(f"select input::jsonb->'files'->>'recording',output::jsonb->'data' from microtask where task_id = '{t_id[0]}' and input::jsonb->'chain'->'workerId' = '{w[0]}' and output is not null and {q_category}  ;")).fetchall()
+
+
+
 def fetch_data(state, district, language, category, offset):
     if offset == None:
         offset = 0
@@ -62,8 +70,8 @@ def fetch_data(state, district, language, category, offset):
              #print(get_worker_command)
              worker_id = session.execute(get_worker_command).fetchall()
              task_id = session.execute(f"select id from task where itags::jsonb->'itags' ?& array['{language.lower()}','full-verification-ai4b']").fetchall()
-             #print(worker_id)
-             #print(task_id)
+             print(worker_id)
+             print(task_id)
              #cartesion = list(product([session],worker_id,task_id))
              #print(cartesion)
 
@@ -71,10 +79,10 @@ def fetch_data(state, district, language, category, offset):
              results = []
              for w in tqdm(worker_id):
 
-                 global  w_id
-                 w_id = w
-                
-                 res = Parallel(n_jobs = -1,prefer="threads")(delayed(fetch_audio)(t_id) for t_id in task_id)
+                 #global  w_id
+                 #w_id = w
+
+                 res = Parallel(n_jobs = -1,prefer="threads")(delayed(fetch_audio)(w,category, t_id) for t_id in task_id)
                  #print("res")
                  for r in res:
                      if len(r)!=0:

@@ -46,15 +46,15 @@ district_dropdown =  html.Div([
 ])
 
 category_dropdown =  html.Div([
-    dcc.Dropdown(['Accepted', 'Rejeccted'], placeholder = "Select Category", id='category-dropdown', style = {"marginTop":"10px"}),
+    dcc.Dropdown(['Accepted', 'Rejected'], placeholder = "Select Category", id='category-dropdown', style = {"marginTop":"10px"}),
     html.Div(id='categoy-dd-output-container')
 ])
 
-completed_at_datetime = html.Div([dbc.Col([
-    html.Div("Completed Between :"),
+datetime_picker = html.Div([dbc.Col([
+    #html.Div("Completed Between :"),
     html.Div([
     dcc.DatePickerRange(
-        id='completed-between-picker-range',
+        id='date-between-picker-range',
         min_date_allowed=date(1995, 8, 5),
         max_date_allowed=date.today(),
         initial_visible_month=date.today(),
@@ -66,7 +66,13 @@ completed_at_datetime = html.Div([dbc.Col([
     style = {"marginTop":"10px"}
 
 )
+date_dropdown =  html.Div([
+    dcc.Dropdown(['Completed Between', 'Verified Between'], placeholder = "Select Date filter", id='date-dropdown', style = {"marginTop":"10px"}),
+    html.Div(id='date-dd-output-container')
+])
 
+
+"""
 verified_at_datetime = html.Div([dbc.Col([
     html.Div("Verified Between :"),
     html.Div([
@@ -83,7 +89,7 @@ verified_at_datetime = html.Div([dbc.Col([
     style = {"marginTop":"10px"}
 
 )
-
+"""
 # corresponding audio-file.
 encoded_sound = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
 
@@ -163,7 +169,7 @@ fetch_button = html.Div(
     ]
 )
 
-load_more_button = html.Div(dbc.Button("Load Next...", id="load-more", style = {'display':'none'}),className = "d-grid gap-2 col-6 mx-auto", )
+load_more_button = html.Div(dbc.Button("Load Next...", id="load-more", style = {'display':'none'}),className = "d-grid gap-2 col-6 mx-auto", style={'margin-top':'8'})
 """
 fetched_row = dbc.Row(
     [   audio,
@@ -191,8 +197,8 @@ app.layout = dbc.Container([
 
     dbc.Row(
             [
-                dbc.Col([dbc.Card(dbc.CardBody(html.H2("Filter")),outline=True,color='#0d91fd', inverse = True),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, completed_at_datetime,verified_at_datetime, html.Hr(),fetch_button], width = 4),
-                dbc.Col( [dbc.Card(dbc.CardBody(html.H2("Results" )),outline = True, color = '#0d91fd', inverse = True),html.Br(),get_spinner(),generate_toast(),feteched_accordian,load_more_button]),
+                dbc.Col([dbc.Card(dbc.CardBody(html.H2("Filter")),outline=True,color='#0d91fd', inverse = True),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown, datetime_picker, html.Hr(),fetch_button], width = 4),
+                dbc.Col( [dbc.Card(dbc.CardBody(html.H2("Results" )),outline = True, color = '#0d91fd', inverse = True),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(),load_more_button]),
             ],
             align="start",
         ),
@@ -236,10 +242,11 @@ def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_di
     State('state-dropdown','value'), 
     State('district-dropdown','value'), 
     State('category-dropdown','value'),
-    State('completed-between-picker-range','start_date'),
-    State('completed-between-picker-range','end_date'),
-    State('verified-between-picker-range','start_date'),
-    State('verified-between-picker-range','end_date'),
+    State('date-dropdown','value'),
+    State('date-between-picker-range','start_date'),
+    State('date-between-picker-range','end_date'),
+    #State('verified-between-picker-range','start_date'),
+    #State('verified-between-picker-range','end_date'),
 
     background=True,
     running=[
@@ -258,14 +265,14 @@ def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_di
     #progress=[Output("progress_bar", "value"), Output("progress_bar", "max")],
     prevent_initial_call=True
 )
-def update_progress(n_clicks,load_more_click,selected_language, selected_state,selected_district,selected_category, completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date):
+def update_progress(n_clicks,load_more_click,selected_language, selected_state,selected_district,selected_category, date_category,completed_between_start_date, completed_between_end_date):
 
 
     print(selected_language, selected_state, selected_district, selected_category)
     if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
         #set_progress((3, 5))i
         dates = []
-        for d in [completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date]:
+        for d in [completed_between_start_date, completed_between_end_date]:
 
             temp_object = date.fromisoformat(d)
             dates.append(temp_object.strftime('%B %d, %Y'))
