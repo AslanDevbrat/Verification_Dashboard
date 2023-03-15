@@ -1,0 +1,4 @@
+select microtask.input::jsonb->'files'->>'recording',microtask.output::jsonb->'data',* from microtask,microtask_assignment where microtask.task_id = '2070' and microtask.input::jsonb->'chain'->>'assignmentId' = microtask_assignment.id::text and microtask.input::jsonb->'chain'->'workerId' = '281474976711941' and microtask.output i
+s not null;
+
+select microtask.input::jsonb->'files'->>'recording',microtask.output::jsonb->'data',* from microtask,microtask_assignment where microtask.task_id = '2070' and microtask.id = microtask_assignment.microtask_id and microtask.input::jsonb->'chain'->'workerId' = '281474976711941' and microtask.output is not null;

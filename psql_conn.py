@@ -25,13 +25,15 @@ def get_database_connection():
     print('Database session created')
     return session
 
-def fetch_audio(w,category,t_id):
+def fetch_audio(w_id,category,t_id):
     if category == "Accepted":
         q_category = "(output::text like '%\"decision\":\"accept\"%' or  output::text like '%\"decision\":\"excellent\"%')" 
     else:
-        ?!?jedi=35, q_category = "(output::text not like '%\"decision\":\"accept\"%' and  output::text not like '%\"decision\":\"excellent\"%')"?!? (*_**values: object*_*, sep: Optional[str]=..., end: Optional[str]=..., file: Optional[SupportsWrite[str]]=..., flush: bool=...) ?!?jedi?!?" ' \" \" \" \" ' ' \" \" \" \" ' "
-    print(category,q_category, w)
-    return session.execute(text(f"select input::jsonb->'files'->>'recording',output::jsonb->'data' from microtask where task_id = '{t_id[0]}' and input::jsonb->'chain'->'workerId' = '{w[0]}' and output is not null and {q_category}  ;")).fetchall()
+        q_category = "(output::text not like '%\"decision\":\"accept\"%' and  output::text not like '%\"decision\":\"excellent\"%')"
+    print(category,q_category, w_id)
+    temp_t_id = tuple([str(x[0]) for x in t_id])
+    temp_w_id = tuple([str(x[0]) for x in w_id])
+    return session.execute(text(f"select input::jsonb->'files'->>'recording',output::jsonb->'data' from microtask where task_id in {temp_t_id} and input::jsonb->'chain'->'workerId' in {temp_w_id} and output is not null and {q_category} ;")).fetchall()
 
 
 
@@ -50,7 +52,7 @@ def fetch_data(state, district, language, category, offset):
              ssh_username="karya",
              ssh_password="karya@ai4bharat", 
              remote_bind_address=('localhost', 5432)) as server:
-            
+
              server.start()
              print("server connected")
              local_port = str(server.local_bind_port)
@@ -59,14 +61,14 @@ def fetch_data(state, district, language, category, offset):
              Session = sessionmaker(bind=engine)
              global session
              session = Session()
-             
+
 
              print('Database session created')
              #cur = conn.cursor()
              #test data retrieval
              temp = session.execute("SELECT id FROM task")
              #print(temp)
-             get_worker_command = f"select id from worker where profile is not null and profile::jsonb->>'primary_language' ='{language}' and profile->>'native_place_state' = '{state}' and profile->>'native_place_district' ='{district}' OFFSET {offset*5} ROWS FETCH FIRST 5 ROW ONLY;" 
+             get_worker_command = f"select id from worker where profile is not null and profile::jsonb->>'primary_language' ='{language}' and profile->>'native_place_state' = '{state}' and profile->>'native_place_district' ='{district}' " 
              #print(get_worker_command)
              worker_id = session.execute(get_worker_command).fetchall()
              task_id = session.execute(f"select id from task where itags::jsonb->'itags' ?& array['{language.lower()}','full-verification-ai4b']").fetchall()
@@ -77,6 +79,7 @@ def fetch_data(state, district, language, category, offset):
 
              #return res
              results = []
+             return fetch_audio(worker_id,category, task_id)
              for w in tqdm(worker_id):
 
                  #global  w_id

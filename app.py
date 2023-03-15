@@ -2,6 +2,7 @@ from dash import Dash, dcc, html, Input, Output, State, DiskcacheManager
 import diskcache
 import dash_auth
 import dash_bootstrap_components as dbc
+import dash_mantine_components as dmc
 import base64
 import dash
 import time
@@ -114,7 +115,7 @@ def generate_toast():
         ]
     )
 
-
+#disableChevronRotation
 #----Spinner----#
 def get_spinner():
     return html.Div(
@@ -142,14 +143,49 @@ def render_report(report_obj):
     )for key,value in report_obj.items()])
         ])
 
+def create_accordion_content(content):
+    return dmc.AccordionPanel(render_report(content))
+
+
+def create_accordion_label(label, audio_name, description):
+    return dmc.AccordionControl([html.Div(audio_name),dmc.Group([dmc.Badge(key, color = "red") if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
+
+
+def get_accordian(results):
+    return dmc.Accordion(
+        disableChevronRotation = False,
+        chevronPosition="right",
+        variant="contained",
+        children=[
+            dmc.AccordionItem(
+                [
+                    create_accordion_label(
+                        res[1], res[0], res[1]['comments']
+                    ),
+                    #create_accordion_content(res[1]),
+                ],
+                value=res[0],
+            )
+            for res in results
+        ],
+    )
+
 def get_accordian_items(results):
 
-    return  dbc.Accordion([dbc.AccordionItem(
-            [   html.Div("Audio goes here"),
-                html.Div(render_report(res[1]))
+    return  dmc.Accordion([dmc.AccordionItem(
+            #create_accordion_content
+            #dmc.AccordionControl([f"Item {res}", dmc.Badge("New")]),
+            dmc.AccordionPanel(
+            [   html.Div("Audio"),
+                html.Div(render_report(res[1])),
+
+
             ],
-            title = f"Item {res[0]}",
-        )for res in results])
+value = f"{res[0]}"
+            ),
+
+
+        )for res in results ], dbc.Badge("New"))
 
 feteched_accordian = html.Div(
      id= 'fetched-audio-row'
@@ -279,12 +315,13 @@ def update_progress(n_clicks,load_more_click,selected_language, selected_state,s
 
         print(dates)
         global page_number
-        fetched_results, page_number = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category,load_more_click)
+        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category,load_more_click)
+        print(fetched_results)
         #set_progress((5, 5))
         print("result recived")
         if len(fetched_results) == 0:
             return [], True, "No Results Found !"
-        return [get_accordian_items(fetched_results)] ,False,""
+        return [get_accordian(fetched_results)] ,False,""
     else:
         return [] ,True,"Select values for all fields"
 
