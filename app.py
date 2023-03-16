@@ -7,17 +7,29 @@ import base64
 import dash
 import time
 import psql_conn
-from datetime import date
+from datetime import date ,datetime, timedelta
+from flask import request
+import pandas as pd
 
+from dash_iconify import DashIconify
 import psycopg2
 from sshtunnel import SSHTunnelForwarder
 from sqlalchemy.orm import sessionmaker #Run pip install sqlalchemy
 from sqlalchemy import create_engine
 
 
+from dash.exceptions import PreventUpdate
+
+
+
+
 # Keep this out of source code repository - save in a file or a database
+
+df = pd.read_csv("./filters.csv")
+
 VALID_USERNAME_PASSWORD_PAIRS = {
-    'hello': 'world'
+    'CF': 'world',
+    'AF':'world'
 }
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -30,55 +42,143 @@ auth = dash_auth.BasicAuth(
     app,
     VALID_USERNAME_PASSWORD_PAIRS
 )
+print(auth)
+def get_themeicon(icon_name):
+    return dmc.ThemeIcon(
+        size="lg",
+        color="orange",
+        variant="light",
+        radius = "lg",
+        children=DashIconify(icon=icon_name ,width=25)
+    )
 
-language_dropdown = html.Div([
-    dcc.Dropdown(['Bengali', 'Odia', 'Maithili'],placeholder="Select Langauge", id='language-dropdown', style = {"marginTop":"10px"}),
-    html.Div(id='language-dd-output-container')
-])
-state_dropdown = html.Div([
-    dcc.Dropdown(['West Bengal', 'Odisha', 'Jharkhand','Bihar'], placeholder="Select State", id='state-dropdown', style = {"marginTop":"10px"}),
-    html.Div(id='state-dd-output-container')
-])
+print(df['Language'].dropna().unique())
+language_dropdown = html.Div(
+    [
+        dmc.Select(
+            withAsterisk = True,
+            label="Select Language",
+            radius = 100,
+            placeholder="Select one",
+            id="language-dropdown",
+            #value="ng",
+            searchable = True,
+            icon= get_themeicon("material-symbols:location-on-outline-rounded"),
+            #DashIconify(icon="radix-icons:magnifying-glass"),
+            rightSection=DashIconify(icon="radix-icons:chevron-down"),
+            nothingFound = "No Options Found!",
+            data= df['Language'].dropna().unique(),
+            style={"width": 'auto', "marginBottom": 10},
+        ),
+        #dmc.Text(id="selected-value"),
+    ],
+    style = {"marginTop":"10px"}
+)
 
 
-district_dropdown =  html.Div([
-    dcc.Dropdown(['Birbhum','Ranchi', 'Bokaro', 'Sambalpur'],placeholder= "Select Distrct", id='district-dropdown', style = {"marginTop":"10px"}),
-    html.Div(id='district-dd-output-container')
-])
 
-category_dropdown =  html.Div([
-    dcc.Dropdown(['Accepted', 'Rejected'], placeholder = "Select Category", id='category-dropdown', style = {"marginTop":"10px"}),
-    html.Div(id='categoy-dd-output-container')
-])
+state_dropdown = html.Div(
+    [
+        dmc.Select(
+            withAsterisk = True,
+            transition = 'skew-down',
+            label="Select State",
+            radius = 100,
+            placeholder="Select one",
+            id="state-dropdown",
+            #value="ng",
+            searchable = True,
+            icon= get_themeicon("material-symbols:location-on-outline-rounded"),
+            #DashIconify(icon="radix-icons:magnifying-glass"),
+            rightSection=DashIconify(icon="radix-icons:chevron-down"),
+            nothingFound = "No Options Found!",
+            data= [],
+            style={"width": 'auto', "marginBottom": 10},
+        ),
+        #dmc.Text(id="selected-value"),
+    ],
+    style = {"marginTop":"10px"}
+)
 
-datetime_picker = html.Div([dbc.Col([
+ 
+
+
+
+district_dropdown =  html.Div(
+    [
+        dmc.Select(
+            withAsterisk = True,
+            label="Select District",
+            radius = 100,
+            placeholder="Select one",
+            id="district-dropdown",
+            #value="ng",
+            searchable = True,
+            icon= get_themeicon("material-symbols:location-on-outline-rounded"),
+            #DashIconify(icon="radix-icons:magnifying-glass"),
+            rightSection=DashIconify(icon="radix-icons:chevron-down"),
+            nothingFound = "No Options Found!",
+            data=[
+                'Birbhum','Ranchi', 'Bokaro', 'Sambalpur'
+                ],
+            style={"width": 'auto', "marginBottom": 10},
+        ),
+        #dmc.Text(id="selected-value"),
+    ],
+    style = {"marginTop":"10px"}
+)
+
+
+
+
+category_dropdown =  html.Div(
+    [
+        dmc.Select(
+            withAsterisk = True,
+            label="Select Category",
+            radius = 100,
+            placeholder="Select one",
+            id="category-dropdown",
+            #value="ng",
+            searchable = True,
+            icon= get_themeicon("radix-icons:magnifying-glass"),
+            #DashIconify(icon="radix-icons:magnifying-glass"),
+            rightSection=DashIconify(icon="radix-icons:chevron-down"),
+            nothingFound = "No Options Found!",
+            data=[
+                'Accepted', 'Rejected'
+                ],
+            style={"width": 'auto', "marginBottom": 10},
+        ),
+        #dmc.Text(id="selected-value"),
+    ],
+    style = {"marginTop":"10px"}
+)
+
+date_picker = html.Div(
+    [
+        dmc.DateRangePicker(
+            withAsterisk = True,
+            id="date-range-picker",
+            icon= get_themeicon("bi:calendar-date"),
+            #label="Date Range",
+            description="Select a Date Range",
+            minDate=date(2020, 8, 5),
+            value=[date(2022,1,1), datetime.now().date()],
+            style={"width": "load_more_buttono"},
+        ),
+        dmc.Space(h=10),
+        dmc.Text(id="selected-date-date-range-picker"),
+    ],
+style = {"marginTop":"10px"}
+
+)
+"""
+html.Div([dbc.Col([
     #html.Div("Completed Between :"),
     html.Div([
     dcc.DatePickerRange(
-        id='date-between-picker-range',
-        min_date_allowed=date(1995, 8, 5),
-        max_date_allowed=date.today(),
-        initial_visible_month=date.today(),
-        #end_date=date(2017, 8, 25)
-    ),
-    #html.Div(id='output-container-date-picker-range')
-])
-    ])] ,
-    style = {"marginTop":"10px"}
-
-)
-date_dropdown =  html.Div([
-    dcc.Dropdown(['Completed Between', 'Verified Between'], placeholder = "Select Date filter", id='date-dropdown', style = {"marginTop":"10px"}),
-    html.Div(id='date-dd-output-container')
-])
-
-
-"""
-verified_at_datetime = html.Div([dbc.Col([
-    html.Div("Verified Between :"),
-    html.Div([
-    dcc.DatePickerRange(
-        id='verified-between-picker-range',
+        id='date-range-picker',
         min_date_allowed=date(1995, 8, 5),
         max_date_allowed=date.today(),
         initial_visible_month=date.today(),
@@ -91,6 +191,84 @@ verified_at_datetime = html.Div([dbc.Col([
 
 )
 """
+"""
+html.Div(
+    [
+        dmc.DateRangePicker(
+            id="date-range-picker",
+            label="Date Range",
+            description="You can also provide a description",
+            minDate=date(2020, 8, 5),
+            value=[datetime.now().date(), datetime.now().date() + timedelta(days=5)],
+            style={"width": 330},
+        ),
+        dmc.Space(h=10),
+        dmc.Text(id="selected-date-date-range-picker"),
+    ]
+)
+"""
+"""
+html.Div(
+    [
+        dmc.DatePicker(
+            id="date-range-picker",
+            label="Start Date",
+            description="You can also provide a description",
+            minDate=date(2020, 8, 5),
+            value=datetime.now().date(),
+            style={"width": 200},
+        ),
+        dmc.Space(h=10),
+        dmc.Text(id="selected-date"),
+    ]
+)
+"""
+"""
+html.Div(
+    [
+        dmc.DateRangePicker(
+            withAsterisk = True,
+            id="date-picker",
+            icon= get_themeicon("bi:calendar-date"),
+            #label="Date Range",
+            description="Select a Date Range",
+            minDate=date(2020, 8, 5),
+            value=[datetime.now().date(), datetime.now().date() + timedelta(days=5)],
+            style={"width": "auto"},
+        ),
+        dmc.Space(h=10),
+        #dmc.Text(id="selected-date-date-range-picker"),
+    ],
+style = {"marginTop":"10px"}
+
+)
+"""
+date_dropdown =  html.Div(
+    [
+        dmc.Select(
+            withAsterisk = True,
+            label="Select Date filter",
+            radius = 100,
+            placeholder="Select one",
+            id="date-dropdown",
+            #value="ng",
+            searchable = True,
+            icon= get_themeicon("radix-icons:magnifying-glass"),
+            #DashIconify(icon="radix-icons:magnifying-glass"),
+            rightSection=DashIconify(icon="radix-icons:chevron-down"),
+            nothingFound = "No Options Found!",
+            data=[
+                'Completed Between', 'Verified Between'
+                ],
+            style={"width": 'auto', "marginBottom": 10},
+        ),
+        #dmc.Text(id="selected-value"),
+    ],
+    style = {"marginTop":"10px"}
+)
+
+
+
 # corresponding audio-file.
 encoded_sound = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
 
@@ -136,6 +314,11 @@ def get_spinner():
 
 #----Accordian----#
 number_of_results = 0
+
+badge_color = {
+    'sst': 'gray', 'noise': 'red', 'chatter': 'pink', 'comments': '', 'decision': 'reject', 'book_read':'grape', 'off_topic': 'violet', 'low_volume': 'indigo', 'stretching': 'blue', 'long_pauses': 'lime', 'unclear_audio': 'yellow', 'reading_prompt': 'orange', 'mispronunciation': 'green', 'repeating_content': 'brown','bad_extempore_quality':'bright-pink',
+    'bad_read_quality':'ocean-blue'
+}
 def render_report(report_obj):
     return html.Div(
         [
@@ -148,7 +331,8 @@ def create_accordion_content(content):
 
 
 def create_accordion_label(label, audio_name, description):
-    return dmc.AccordionControl([html.Div(audio_name),dmc.Group([dmc.Badge(key, color = "red") if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
+    print("creating labels")
+    return dmc.AccordionControl([html.Div(audio_name),dmc.Group([dmc.Badge(key, color = badge_color[key]) if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
 
 
 def get_accordian(results):
@@ -172,7 +356,8 @@ def get_accordian(results):
 
 def get_accordian_items(results):
 
-    return  dmc.Accordion([dmc.AccordionItem(
+    return  html.Div(
+        dmc.Accordion([dmc.AccordionItem(
             #create_accordion_content
             #dmc.AccordionControl([f"Item {res}", dmc.Badge("New")]),
             dmc.AccordionPanel(
@@ -185,10 +370,14 @@ value = f"{res[0]}"
             ),
 
 
-        )for res in results ], dbc.Badge("New"))
+        )for res in results ], dbc.Badge("New")
+        ),
+        style={"maxHeight": "500px", "overflow": "scroll"}
+    )
 
 feteched_accordian = html.Div(
-     id= 'fetched-audio-row'
+     id= 'fetched-audio-row',
+    style={"maxHeight": "400px", "overflow": "scroll"}
 )
 
 fetch_button = html.Div(
@@ -200,6 +389,7 @@ fetch_button = html.Div(
             ]
         ),
         html.Div([
+            #audio,
         dbc.Button(id="button_id", children="Fetch Results", ),
         dbc.Button(id="cancel_button_id", color = "danger", children="Cancel Running Job!"),],className="d-grid gap-2",)
     ]
@@ -213,57 +403,139 @@ fetched_row = dbc.Row(
     ], id = 'fetched-audio-row', style={'width': '100%'}
 )
 """
-app.layout = dbc.Container([
+def get_card(title, content):
+    return dmc.Card(
+        children = [
+            dmc.Text(html.H4(title), color = "white")
+        ],
+    withBorder=True,
+    shadow="sm",
+    radius="lg",
+    bg = '#ffad13'
+    )
+
+
+def get_dropdows():
+
+    language = df['Language'].unique()
+    state = df['State/UT'].unique()
+
+
+tabs = dmc.Tabs(
+    [
+        dmc.TabsList(
+            [
+                dmc.Tab(
+                    "Verification",
+                    icon=get_themeicon('ic:outline-domain-verification'),
+                    value="verification",
+                    color= '#ffad13'
+                ),
+                dmc.Tab(
+                    "Analytics",
+                    icon=get_themeicon('mdi:graph-box-outline'),
+                    value="analytics",
+                ),
+            ]
+        ),
+    ],
+    value="verification",
+    id = 'tabs-example'
+)
+
+
+verification_component = dbc.Row(
+            [
+                dbc.Col([get_card("Filter",""),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown,date_picker, html.Hr(),fetch_button], width = 4),
+                dbc.Col( [get_card("Results",""),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(),]),
+            ],
+            align="start",
+        )
+
+analytics_component =  html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
+                style={"height": "1000px", "width": "100%"})
+
+common_tab = dbc.Container([
     html.Br(),
-    dbc.Card([
+    
+    dmc.Card([
         dbc.Row([
             dbc.Col(
-        dbc.CardBody([
+        dmc.Text([
     html.H1('Welcome to the app'),
-    html.H3('You are successfully authorized')])
+    html.H3('You AccordionItem successfully authorized')], 
+        color="white"
+        )
            
             ),dbc.Col(dbc.CardImg(
                         src="./static/images/logo.png",
                         className="img-fluid rounded-start",
             ),className="col-md-2"),
 
-        ])],
-        color = "primary",inverse=True),
-    html.Hr(),
-
-    dbc.Row(
-            [
-                dbc.Col([dbc.Card(dbc.CardBody(html.H2("Filter")),outline=True,color='#0d91fd', inverse = True),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown, datetime_picker, html.Hr(),fetch_button], width = 4),
-                dbc.Col( [dbc.Card(dbc.CardBody(html.H2("Results" )),outline = True, color = '#0d91fd', inverse = True),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(),load_more_button]),
-            ],
-            align="start",
+        ])],withBorder=True,
+    shadow="sm",
+    radius="md",
+    bg = 'orange'
         ),
+    html.Hr(),
+    tabs,
+    html.Br(),
+    html.Div(
+        verification_component,
+    id = 'main-content'
+    )
 ],
+
 )
 
+app.layout = html.Div(common_tab, style ={'backgroundColor':'#fffce5'} )
 """
-#----Fetch Next Set of Results----#
-@dash.callback_context(
-    Output('fetched-audio-row','children'),
-    Input('load-more','n_clicks'),
-    State('language-dropdown','value'), 
-    State('state-dropdown','value'), 
-    State('district-dropdown','value'), 
-    State('category-dropdown','value'),
-    State('completed-between-picker-range','start_date'),
-    State('completed-between-picker-range','end_date'),
-    State('verified-between-picker-range','start_date'),
-    State('verified-between-picker-range','end_date'),
-    State('fetched-audio-row','children'),
+@app.callback(
+    Output('language-dropdown','data'),
+    Input('language-dropdown','value')
 )
-def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_district,selected_category, completed_between_start_date, completed_between_end_date, verified_between_start_date, verified_between_end_date, old_row):
-    fetched_results = sql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category, n_clicks)
-    if len(fetched_results) == 0:
-            return [], True, "No Results Found !"
-    return old_row+[get_accordian_items(fetched_results)]
-
-    #retunr old_row +  
+def set_language(val):
+    df = pd.read_csv('./filters.csv')
+    return df['Language'].unique()
 """
+@app.callback(
+    Output('state-dropdown','data'),
+    Input('language-dropdown','value')
+)
+def get_state(seleted_language):
+    username = request.authorization['username']
+    #print(df[df['User']== username]['State/UT'].dropna().unique())
+    return sorted(df[df['User']== username]['State/UT'].dropna().unique())
+
+@app.callback(
+    Output('district-dropdown','data') ,
+    Input('state-dropdown','value')
+)
+def set_disrict_value(selected_state): 
+
+    return sorted(df[df['State/UT'] == selected_state]['District'].dropna().values.tolist())
+
+
+@app.callback(
+    Output("selected-date-date-range-picker", "children"),
+    Input("date-range-picker", "value"),
+)
+def update_output(dates):
+    prefix = "You have selected: "
+    if dates:
+        return prefix + "   -   ".join(dates)
+    else:
+        raise PreventUpdate
+
+
+
+@app.callback(Output("main-content", "children"), Input("tabs-example", "value"))
+def render_content(active):
+    if active == "verification":
+        return verification_component
+    else:
+        return analytics_component
+
 #----Load more Audio----#
 
 @dash.callback(
@@ -273,15 +545,15 @@ def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_di
      Output('positioned-toast','children')],
     #Output('update_progress-spinner', 'style'),
     Input("button_id", "n_clicks"),
-    Input("load-more",'n_clicks'),
+    #Input("load-more",'n_clicks'),
     State('language-dropdown','value'), 
     State('state-dropdown','value'), 
     State('district-dropdown','value'), 
     State('category-dropdown','value'),
     State('date-dropdown','value'),
-    State('date-between-picker-range','start_date'),
-    State('date-between-picker-range','end_date'),
-    #State('verified-between-picker-range','start_date'),
+    State('date-range-picker','value'),
+    #State('date-range-picker','end_date'),
+    #State('date-range-picker','start_date'),
     #State('verified-between-picker-range','end_date'),
 
     background=True,
@@ -292,85 +564,39 @@ def load_next_set_of_data(n_clicks,selected_language, selected_state,selected_di
          {'display':'block','visibility':'visible !important'},
             {'display':'none'}
         ),
-        (Output('load-more','style'),
-        {'display':'none'},
-         {'display':'block'}
-        )
     ],
     cancel=Input("cancel_button_id", "n_clicks"),
     #progress=[Output("progress_bar", "value"), Output("progress_bar", "max")],
     prevent_initial_call=True
 )
-def update_progress(n_clicks,load_more_click,selected_language, selected_state,selected_district,selected_category, date_category,completed_between_start_date, completed_between_end_date):
+def update_progress(n_clicks,selected_language, selected_state,selected_district,selected_category, date_category, dates):
 
 
     print(selected_language, selected_state, selected_district, selected_category)
     if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
         #set_progress((3, 5))i
-        dates = []
+        #dates = []
+        """
         for d in [completed_between_start_date, completed_between_end_date]:
 
-            temp_object = date.fromisoformat(d)
+            temp_object = date.fromisoformat(str(d))
             dates.append(temp_object.strftime('%B %d, %Y'))
 
         print(dates)
-        global page_number
-        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category,load_more_click)
-        print(fetched_results)
+        """
+        #print(date)
+        #global page_number
+        #print(dates)
+        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category, date_category, dates[0], dates[1])
+        #print(fetched_results[0][1])
         #set_progress((5, 5))
         print("result recived")
+        
         if len(fetched_results) == 0:
             return [], True, "No Results Found !"
         return [get_accordian(fetched_results)] ,False,""
     else:
         return [] ,True,"Select values for all fields"
-
-    """
-    total = 5
-    for i in range(total + 1):
-        set_progress((str(i), str(total)))
-        time.sleep(1)
-    return f"Clicked {n_clicks} times"
-    """
-
-"""
-@app.callback(
-    #Output('output','children'),
-    #Output('result-report','children'),
-    Output('fetched-audio-row','children'),
-    Input('language-dropdown','value'), 
-    Input('state-dropdown','value'), 
-    Input('district-dropdown','value'), 
-    Input('category-dropdown','value'),
-    #State('output','children'),
-    #State('result-report','children'),
-    State('fetched-audio-row','children')
-)
-def more_output(selected_language, selected_state,selected_district,selected_category,old_row):
-    if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
-        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category)
-        return [get_accordian_items(fetched_results)]
-"""
-"""
-@app.callback(
-    Output('output','children'),
-    [Input('load-new-content','n_clicks')],
-    [State('output','children')])
-def more_output(n_clicks,old_output):
-    if n_clicks==0:
-        raise Exception 
-    return old_output + [audio]
-"""
-#----Get Langugae----#
-@app.callback(
-    Output("language-dd-output-container",'children'),
-    Input("language-dropdown","value"),
-)
-def update_language(value):
-    print(value)
-    #return f"You have selected {value}"
-
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)

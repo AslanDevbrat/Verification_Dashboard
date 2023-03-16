@@ -25,23 +25,25 @@ def get_database_connection():
     print('Database session created')
     return session
 
-def fetch_audio(w_id,category,t_id):
+def fetch_audio(w_id,category,t_id, date_category, start_date, end_date):
     if category == "Accepted":
-        q_category = "(output::text like '%\"decision\":\"accept\"%' or  output::text like '%\"decision\":\"excellent\"%')" 
+        q_category = "(microtask.output::text like '%\"decision\":\"accept\"%' or  microtask.output::text like '%\"decision\":\"excellent\"%')" 
     else:
-        q_category = "(output::text not like '%\"decision\":\"accept\"%' and  output::text not like '%\"decision\":\"excellent\"%')"
+        q_category = "(microtask.output::text not like '%\"decision\":\"accept\"%' and  microtask.output::text not like '%\"decision\":\"excellent\"%')"
+    if date_category != "Completed Between":
+        temp_date_q = "microtask.input::jsonb->'chain'->>'assignmentId' = microtask_assignment.id::text"
+    else:
+        temp_date_q = "microtask.id = microtask_assignment.microtask_id"
     print(category,q_category, w_id)
     temp_t_id = tuple([str(x[0]) for x in t_id])
     temp_w_id = tuple([str(x[0]) for x in w_id])
-    return session.execute(text(f"select input::jsonb->'files'->>'recording',output::jsonb->'data' from microtask where task_id in {temp_t_id} and input::jsonb->'chain'->'workerId' in {temp_w_id} and output is not null and {q_category} ;")).fetchall()
+    print(temp_t_id)
+    print(temp_w_id)
+    return session.execute(text(f"select microtask.input::jsonb->'files'->>'recording', microtask.output::jsonb->'data' from microtask,microtask_assignment where {temp_date_q} and  microtask.task_id in {temp_t_id} and microtask.input::jsonb->'chain'->'workerId' in {temp_w_id} and microtask.output is not null and {q_category} and date(completed_at)>='{start_date}' and date(completed_at)<='{end_date}';")).fetchall()
 
 
 
-def fetch_data(state, district, language, category, offset):
-    if offset == None:
-        offset = 0
-    else:
-        offset = int(offset)
+def fetch_data(state, district, language, category,date_category, start_date, end_date):
     print("fetch_data called")
     try:
 
@@ -79,7 +81,7 @@ def fetch_data(state, district, language, category, offset):
 
              #return res
              results = []
-             return fetch_audio(worker_id,category, task_id)
+             return fetch_audio(worker_id,category, task_id, date_category, start_date, end_date)
              for w in tqdm(worker_id):
 
                  #global  w_id
