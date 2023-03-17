@@ -10,7 +10,7 @@ import psql_conn
 from datetime import date ,datetime, timedelta
 from flask import request
 import pandas as pd
-
+import dash_player
 from dash_iconify import DashIconify
 import psycopg2
 from sshtunnel import SSHTunnelForwarder
@@ -67,7 +67,7 @@ language_dropdown = html.Div(
             #DashIconify(icon="radix-icons:magnifying-glass"),
             rightSection=DashIconify(icon="radix-icons:chevron-down"),
             nothingFound = "No Options Found!",
-            data= df['Language'].dropna().unique(),
+            #data= df['Language'].dropna().unique(),
             style={"width": 'auto', "marginBottom": 10},
         ),
         #dmc.Text(id="selected-value"),
@@ -164,8 +164,9 @@ date_picker = html.Div(
             #label="Date Range",
             description="Select a Date Range",
             minDate=date(2020, 8, 5),
-            value=[date(2022,1,1), datetime.now().date()],
-            style={"width": "load_more_buttono"},
+
+            value=[date(2023,1,1), datetime.now().date()],
+            style={"width": "auto"},
         ),
         dmc.Space(h=10),
         dmc.Text(id="selected-date-date-range-picker"),
@@ -331,7 +332,7 @@ def create_accordion_content(content):
 
 
 def create_accordion_label(label, audio_name, description):
-    print("creating labels")
+    #print("creating labels")
     return dmc.AccordionControl([html.Div(audio_name),dmc.Group([dmc.Badge(key, color = badge_color[key]) if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
 
 
@@ -443,17 +444,55 @@ tabs = dmc.Tabs(
     id = 'tabs-example'
 )
 
+def get_audio_data():
+    data = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
+    return data
+
+
+
+audio_player = html.Div(
+    [
+        html.Div(
+            [
+                html.Div(
+                    style={"width": "100%", "margin": "16px"},
+                    children=[
+                        dash_player.DashPlayer(
+                            #id="player",
+                            url='data:audio/mpeg;base64,{}'.format(get_audio_data().decode()),
+                            controls=True,
+                            width="100%",
+                            height='50px',
+                            playing=True,
+                            playsinline=True,
+                            # style={"background":"lightgrey"}
+                        ),
+                        # dcc.Slider(0, max=0, id='player_slider',
+                        #     step=0.01, updatemode='mouseup',
+                        #     marks={0: '-:--'}),
+                    ],
+                ),
+           ],
+            id='player',
+            style={
+                "display": "none",
+            },
+        ),
+    ]
+)
 
 verification_component = dbc.Row(
             [
                 dbc.Col([get_card("Filter",""),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown,date_picker, html.Hr(),fetch_button], width = 4),
-                dbc.Col( [get_card("Results",""),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(),]),
+                dbc.Col( [get_card("Results",""),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(), audio_player]),
             ],
             align="start",
         )
 
 analytics_component =  html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
                 style={"height": "1000px", "width": "100%"})
+
+
 
 common_tab = dbc.Container([
     html.Br(),
@@ -488,16 +527,20 @@ common_tab = dbc.Container([
 
 )
 
-app.layout = html.Div(common_tab, style ={'backgroundColor':'#fffce5'} )
-"""
+app.layout = html.Div(common_tab, style ={'backgroundColor':'#fffce5','height':'100vh'} )
+
 @app.callback(
     Output('language-dropdown','data'),
     Input('language-dropdown','value')
 )
 def set_language(val):
-    df = pd.read_csv('./filters.csv')
-    return df['Language'].unique()
-"""
+    #df = pd.read_csv('./filters.csv')
+    username = request.authorization['username']
+    language = {
+        'CF':['Bengali','Odia'],
+        'AF':['Maithili']
+    }
+    return language[username]
 @app.callback(
     Output('state-dropdown','data'),
     Input('language-dropdown','value')
@@ -564,6 +607,10 @@ def render_content(active):
          {'display':'block','visibility':'visible !important'},
             {'display':'none'}
         ),
+        (Output('player','style'),
+            {'display':'none'},
+            {'display':'block','visibility':'visible !important'}
+        )
     ],
     cancel=Input("cancel_button_id", "n_clicks"),
     #progress=[Output("progress_bar", "value"), Output("progress_bar", "max")],

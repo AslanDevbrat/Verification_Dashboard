@@ -39,7 +39,9 @@ def fetch_audio(w_id,category,t_id, date_category, start_date, end_date):
     temp_w_id = tuple([str(x[0]) for x in w_id])
     print(temp_t_id)
     print(temp_w_id)
-    return session.execute(text(f"select microtask.input::jsonb->'files'->>'recording', microtask.output::jsonb->'data' from microtask,microtask_assignment where {temp_date_q} and  microtask.task_id in {temp_t_id} and microtask.input::jsonb->'chain'->'workerId' in {temp_w_id} and microtask.output is not null and {q_category} and date(completed_at)>='{start_date}' and date(completed_at)<='{end_date}';")).fetchall()
+    final_query = text(f"select microtask.input::jsonb->'files'->>'recording', microtask.output::jsonb->'data' from microtask,microtask_assignment where {temp_date_q} and  microtask.task_id in {temp_t_id} and microtask.input::jsonb->'chain'->'workerId' in {temp_w_id} and microtask.output is not null and {q_category} and date(completed_at)>='{start_date}' and date(completed_at)<='{end_date}';")
+
+    return session.execute(final_query).fetchall()
 
 
 
@@ -73,7 +75,11 @@ def fetch_data(state, district, language, category,date_category, start_date, en
              get_worker_command = f"select id from worker where profile is not null and profile::jsonb->>'primary_language' ='{language}' and profile->>'native_place_state' = '{state}' and profile->>'native_place_district' ='{district}' " 
              #print(get_worker_command)
              worker_id = session.execute(get_worker_command).fetchall()
+             if len(worker_id) == 0:
+                return []
              task_id = session.execute(f"select id from task where itags::jsonb->'itags' ?& array['{language.lower()}','full-verification-ai4b']").fetchall()
+             if len(task_id) == 0:
+                 return []
              print(worker_id)
              print(task_id)
              #cartesion = list(product([session],worker_id,task_id))
