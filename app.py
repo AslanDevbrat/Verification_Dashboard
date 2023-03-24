@@ -10,39 +10,38 @@ import psql_conn
 from datetime import date ,datetime, timedelta
 from flask import request
 import pandas as pd
-import dash_player
+# import dash_player
 from dash_iconify import DashIconify
 import psycopg2
-from sshtunnel import SSHTunnelForwarder
-from sqlalchemy.orm import sessionmaker #Run pip install sqlalchemy
-from sqlalchemy import create_engine
+from gevent.pywsgi import WSGIServer
+
+# from sshtunnel import SSHTunnelForwarder
+# from sqlalchemy.orm import sessionmaker #Run pip install sqlalchemy
+# from sqlalchemy import create_engine
 
 
 from dash.exceptions import PreventUpdate
-
-
-
+df2 = None
 
 # Keep this out of source code repository - save in a file or a database
 
 df = pd.read_csv("./filters.csv")
 
 VALID_USERNAME_PASSWORD_PAIRS = {
-    'CF': 'world',
-    'AF':'world'
+    'CF': 'calcutta@123',
+    'AI4B':'ai4b@123'
 }
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 cache = diskcache.Cache("./cache")
 background_callback_manager = DiskcacheManager(cache)
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], background_callback_manager=background_callback_manager)
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], background_callback_manager=background_callback_manager,url_base_pathname='/vdash/')
 auth = dash_auth.BasicAuth(
     app,
     VALID_USERNAME_PASSWORD_PAIRS
 )
-print(auth)
+# print(auth)
 def get_themeicon(icon_name):
     return dmc.ThemeIcon(
         size="lg",
@@ -52,7 +51,7 @@ def get_themeicon(icon_name):
         children=DashIconify(icon=icon_name ,width=25)
     )
 
-print(df['Language'].dropna().unique())
+# print(df['Language'].dropna().unique())
 language_dropdown = html.Div(
     [
         dmc.Select(
@@ -100,9 +99,6 @@ state_dropdown = html.Div(
     style = {"marginTop":"10px"}
 )
 
- 
-
-
 
 district_dropdown =  html.Div(
     [
@@ -118,9 +114,9 @@ district_dropdown =  html.Div(
             #DashIconify(icon="radix-icons:magnifying-glass"),
             rightSection=DashIconify(icon="radix-icons:chevron-down"),
             nothingFound = "No Options Found!",
-            data=[
-                'Birbhum','Ranchi', 'Bokaro', 'Sambalpur'
-                ],
+            # data=[
+            #     # 'Birbhum','Ranchi', 'Bokaro', 'Sambalpur'
+            #     ],
             style={"width": 'auto', "marginBottom": 10},
         ),
         #dmc.Text(id="selected-value"),
@@ -146,7 +142,7 @@ category_dropdown =  html.Div(
             rightSection=DashIconify(icon="radix-icons:chevron-down"),
             nothingFound = "No Options Found!",
             data=[
-                'Accepted', 'Rejected'
+                'Accept','Borderline Accept' , 'Reject'
                 ],
             style={"width": 'auto', "marginBottom": 10},
         ),
@@ -155,25 +151,43 @@ category_dropdown =  html.Div(
     style = {"marginTop":"10px"}
 )
 
-date_picker = html.Div(
-    [
-        dmc.DateRangePicker(
-            withAsterisk = True,
-            id="date-range-picker",
-            icon= get_themeicon("bi:calendar-date"),
-            #label="Date Range",
-            description="Select a Date Range",
-            minDate=date(2020, 8, 5),
-
-            value=[date(2023,1,1), datetime.now().date()],
-            style={"width": "auto"},
-        ),
-        dmc.Space(h=10),
-        dmc.Text(id="selected-date-date-range-picker"),
-    ],
-style = {"marginTop":"10px"}
-
+date_picker = html.Div([dbc.Col([
+    #html.Div("Completed Between :"),
+    html.Div([
+    dcc.DatePickerRange(
+        id='date-range-picker',
+        min_date_allowed=date(1995, 8, 5),
+        max_date_allowed=date.today(),
+        initial_visible_month=date.today(),
+        #end_date=date(2017, 8, 25)
+    ),
+    # dmc.Text(id="selected-date-date-range-picker"),
+    #html.Div(id='output-container-date-picker-range')
+])
+    ])] ,
+    style = {"marginTop":"10px"}
 )
+
+
+# # date_picker = html.Div(
+# #     [
+# #         dmc.DateRangePicker(
+# #             withAsterisk = True,
+# #             id="date-range-picker",
+# #             icon= get_themeicon("bi:calendar-date"),
+# #             #label="Date Range",
+# #             description="Select a Date Range",
+# #             # minDate=date(2020, 8, 5),
+
+# #             value=[datetime.now().date(), datetime.now().date() ],
+# #             style={"width": "auto"},
+# #         ),
+# #         dmc.Space(h=10),
+# #         dmc.Text(id="selected-date-date-range-picker"),
+# #     ],
+# # style = {"marginTop":"10px"}
+
+# )
 """
 html.Div([dbc.Col([
     #html.Div("Completed Between :"),
@@ -270,11 +284,11 @@ date_dropdown =  html.Div(
 
 
 
-# corresponding audio-file.
-encoded_sound = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
+# # corresponding audio-file.
+# encoded_sound = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
 
-report = html.Div("Report Goes Here", id = "result-report")
-audio =  html.Audio(id = 'audioplayer',src='data:audio/mpeg;base64,{}'.format(encoded_sound.decode()), controls = True, autoPlay = False, style = {"width":"8"})
+# report = html.Div("Report Goes Here", id = "result-report")
+# audio =  html.Audio(id = 'audioplayer',src='data:audio/mpeg;base64,{}'.format(encoded_sound.decode()), controls = True, autoPlay = False, style = {"width":"8"})
 
 #----Toast----#
 def generate_toast():
@@ -331,13 +345,15 @@ def create_accordion_content(content):
     return dmc.AccordionPanel(render_report(content))
 
 
-def create_accordion_label(label, audio_name, description):
+def create_accordion_label(label,sentence, audio_name, description):
     #print("creating labels")
-    return dmc.AccordionControl([html.Div(audio_name),dmc.Group([dmc.Badge(key, color = badge_color[key]) if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
+    # return dmc.AccordionControl([html.Div(f'Filename: Sample_8{audio_name}'),dmc.Text(sentence),dmc.Group([dmc.Badge(key, color = badge_color[key]) if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
+    return dmc.AccordionControl([dmc.Text(sentence),dmc.Group([dmc.Badge(key, color = badge_color[key]) if value == True else ""for key,value in label.items()]), dmc.Text(description, size="sm", weight=400, color="dimmed"),])
 
 
 def get_accordian(results):
     return dmc.Accordion(
+        id='fetched-accordian',
         disableChevronRotation = False,
         chevronPosition="right",
         variant="contained",
@@ -345,7 +361,7 @@ def get_accordian(results):
             dmc.AccordionItem(
                 [
                     create_accordion_label(
-                        res[1], res[0], res[1]['comments']
+                        res[1],res[2], res[0], res[1]['comments']
                     ),
                     #create_accordion_content(res[1]),
                 ],
@@ -377,6 +393,7 @@ value = f"{res[0]}"
     )
 
 feteched_accordian = html.Div(
+        get_accordian([]),
      id= 'fetched-audio-row',
     style={"maxHeight": "400px", "overflow": "scroll"}
 )
@@ -444,8 +461,8 @@ tabs = dmc.Tabs(
     id = 'tabs-example'
 )
 
-def get_audio_data():
-    data = base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read())
+def get_audio_data(filename):
+    data = base64.b64encode(open(filename, 'rb').read())
     return data
 
 
@@ -453,43 +470,68 @@ def get_audio_data():
 audio_player = html.Div(
     [
         html.Div(
-            [
-                html.Div(
-                    style={"width": "100%", "margin": "16px"},
-                    children=[
-                        dash_player.DashPlayer(
-                            #id="player",
-                            url='data:audio/mpeg;base64,{}'.format(get_audio_data().decode()),
-                            controls=True,
-                            width="100%",
-                            height='50px',
-                            playing=True,
-                            playsinline=True,
-                            # style={"background":"lightgrey"}
-                        ),
-                        # dcc.Slider(0, max=0, id='player_slider',
-                        #     step=0.01, updatemode='mouseup',
-                        #     marks={0: '-:--'}),
-                    ],
-                ),
-           ],
-            id='player',
+        #     [
+        #         # html.Div(id = 'accordian-item'),
+        #         # html.Audio(id = 'player', controls = True, autoPlay = False, style = {"width":"8"})
+        #             # dash_player.DashPlayer(
+        #             #     id="player",
+        #             #     # url='data:audio/mpeg;base64,{}'.format(get_audio_data().decode()),
+        #             #     controls=True,
+        #             #     width="100%",
+        #             #     height='50px',
+        #             #     playing=False,
+        #             #     playsinline=False,
+        #             #     # style={"background":"lightgrey"}
+        #             # ),
+        #    ],
+            id='player_container',
             style={
                 "display": "none",
+                "width":'1'
             },
         ),
     ]
 )
 
+color_tags = html.Div([
+    dmc.CheckboxGroup([
+        dmc.Badge(dmc.Checkbox(label=k, size='xs',value=k,radius=100), variant="unfilled",color=v, id = f'{k}_badge') for k,v in badge_color.items()
+    ],spacing="xs", id='color_tags_group', size='xs') ,dmc.Text(id="checkbox-group-output"),
+])
+
+
+@app.callback(Output("checkbox-group-output", "children"), Input("color_tags_group", "value"))
+def checkbox(value):
+    print("inside checkbox", value)
+    global df2
+    print(df2.head())
+    return ", ".join(value) if value else None
+# @app.callback(Output("player_container", "children"), Input("fetched-accordian", "value"),
+# background=True,
+# running=[(Output('progress-spinner','style'),
+#          {'display':'block','visibility':'visible !important'},
+#             {'display':'none'}
+#         )])
+# def filter_by_batch(value):
+#     if value is None:
+#         return
+    
+#     print('Entered show_state',value)
+#     a = html.Audio(id = 'player',src='data:audio/mpeg;base64,{}'.format(get_file(value).decode()), controls = True, autoPlay = False, style = {"width":"100%"})
+#     return a
+
+
+
+
 verification_component = dbc.Row(
             [
-                dbc.Col([get_card("Filter",""),html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown,date_picker, html.Hr(),fetch_button], width = 4),
-                dbc.Col( [get_card("Results",""),html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(), audio_player]),
+                dbc.Col([html.Br(), language_dropdown, state_dropdown, district_dropdown,category_dropdown, date_dropdown,html.Center(date_picker), html.Hr(),fetch_button], width = 4),
+                dbc.Col([html.Br(),color_tags,html.Br(),get_spinner(),generate_toast(),feteched_accordian,html.Hr(), audio_player]),
             ],
             align="start",
         )
 
-analytics_component =  html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
+analytics_component =  html.Iframe(src="https://ai4bdmukaryaserver.eastus2.cloudapp.azure.com/grafana/dashboard/snapshot/DxmlxDmb8iCVAHxLJuK4JBloMgXsD5ov",
                 style={"height": "1000px", "width": "100%"})
 
 
@@ -497,28 +539,28 @@ analytics_component =  html.Iframe(src="https://www.ons.gov.uk/visualisations/dv
 common_tab = dbc.Container([
     html.Br(),
     
-    dmc.Card([
-        dbc.Row([
-            dbc.Col(
-        dmc.Text([
-    html.H1('Welcome to the app'),
-    html.H3('You AccordionItem successfully authorized')], 
-        color="white"
-        )
+    # dmc.Card([
+    #     dbc.Row([
+    #         dbc.Col(
+    #     dmc.Text([
+    # html.H1('Welcome to the app'),
+    # html.H3('You AccordionItem successfully authorized')], 
+    #     color="white"
+    #     )
            
-            ),dbc.Col(dbc.CardImg(
-                        src="./static/images/logo.png",
-                        className="img-fluid rounded-start",
-            ),className="col-md-2"),
+    #         ),dbc.Col(dbc.CardImg(
+    #                     src="./static/images/logo.png",
+    #                     className="img-fluid rounded-start",
+    #         ),className="col-md-2"),
 
-        ])],withBorder=True,
-    shadow="sm",
-    radius="md",
-    bg = 'orange'
-        ),
-    html.Hr(),
+    #     ])],withBorder=True,
+    # shadow="sm",
+    # radius="md",
+    # bg = 'orange'
+    #     ),
+    # html.Hr(),
     tabs,
-    html.Br(),
+    # html.Br(),
     html.Div(
         verification_component,
     id = 'main-content'
@@ -559,16 +601,16 @@ def set_disrict_value(selected_state):
     return sorted(df[df['State/UT'] == selected_state]['District'].dropna().values.tolist())
 
 
-@app.callback(
-    Output("selected-date-date-range-picker", "children"),
-    Input("date-range-picker", "value"),
-)
-def update_output(dates):
-    prefix = "You have selected: "
-    if dates:
-        return prefix + "   -   ".join(dates)
-    else:
-        raise PreventUpdate
+# @app.callback(
+#     Output("selected-date-date-range-picker", "children"),
+#     Input("date-range-picker", "value"),
+# )
+# def update_output(dates):
+#     prefix = "You have selected: "
+#     if dates:
+#         return prefix + "   -   ".join(dates)
+#     else:
+#         raise PreventUpdate
 
 
 
@@ -578,6 +620,8 @@ def render_content(active):
         return verification_component
     else:
         return analytics_component
+
+
 
 #----Load more Audio----#
 
@@ -594,9 +638,9 @@ def render_content(active):
     State('district-dropdown','value'), 
     State('category-dropdown','value'),
     State('date-dropdown','value'),
-    State('date-range-picker','value'),
-    #State('date-range-picker','end_date'),
-    #State('date-range-picker','start_date'),
+    # State('date-range-picker','value'),
+    State('date-range-picker','start_date'),
+    State('date-range-picker','end_date'),
     #State('verified-between-picker-range','end_date'),
 
     background=True,
@@ -607,7 +651,7 @@ def render_content(active):
          {'display':'block','visibility':'visible !important'},
             {'display':'none'}
         ),
-        (Output('player','style'),
+        (Output('player_container','style'),
             {'display':'none'},
             {'display':'block','visibility':'visible !important'}
         )
@@ -616,11 +660,11 @@ def render_content(active):
     #progress=[Output("progress_bar", "value"), Output("progress_bar", "max")],
     prevent_initial_call=True
 )
-def update_progress(n_clicks,selected_language, selected_state,selected_district,selected_category, date_category, dates):
+def update_progress(n_clicks,selected_language, selected_state,selected_district,selected_category, date_category, start_date, end_date):
 
 
     print(selected_language, selected_state, selected_district, selected_category)
-    if selected_language is not None and selected_state is not None and selected_district is not None and selected_category is not None:
+    if selected_language is not None and selected_state is not None and selected_district is not None and date_category is not None:
         #set_progress((3, 5))i
         #dates = []
         """
@@ -634,16 +678,77 @@ def update_progress(n_clicks,selected_language, selected_state,selected_district
         #print(date)
         #global page_number
         #print(dates)
-        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category, date_category, dates[0], dates[1])
+        fetched_results = psql_conn.fetch_data( selected_state,selected_district,selected_language, selected_category, date_category, start_date, end_date)
         #print(fetched_results[0][1])
         #set_progress((5, 5))
         print("result recived")
         
         if len(fetched_results) == 0:
             return [], True, "No Results Found !"
+        # print(fetched_results[:10])
+        df = pd.DataFrame(fetched_results)
+        df1 = pd.DataFrame.from_dict(df[1].to_list())
+        df1['filename'] = df[0]
+        df1['label'] = df[2]
+        #print(df1.head())
+        
+        df2 = df1.copy()
         return [get_accordian(fetched_results)] ,False,""
     else:
         return [] ,True,"Select values for all fields"
 
+import tarfile
+import requests
+import io
+import os
+
+file_path = '/data/bucket'
+os.makedirs(file_path,exist_ok= True)
+def get_file(filename):
+    if os.path.exists(f'{file_path}/{filename}'):
+        with open(f'{file_path}/{filename}','rb') as reader:
+            encoded_sound = base64.b64encode(reader.read())
+    else:
+        if len(filename) > 15+4:
+            data = requests.get(url=f'https://ai4bdmukarya.blob.core.windows.net/role-play-convs/{filename.split(".")[0]}.wav?sp=r&st=2023-03-22T14:16:18Z&se=2025-12-31T22:16:18Z&spr=https&sv=2021-12-02&sr=c&sig=KkW8E8KRNRmCW6%2FUOhEvJ4FDusgumKBQBefQbXRPOBM%3D')
+            with open(f'{file_path}/{filename}','wb') as writer:
+                writer.write(data.content)
+            encoded_sound = base64.b64encode(data.content)
+        else:
+            data = requests.get(url=f'https://ai4bdmukarya.blob.core.windows.net/microtask-assignment-output/{filename.split(".")[0]}.tgz?sp=r&st=2023-03-21T04:41:45Z&se=2026-01-01T12:41:45Z&spr=https&sv=2021-12-02&sr=c&sig=0I5haNNC%2FufmGgJLGW11uLLK7c2TdaPbFh5iB%2BFpvYg%3D')
+            # print(data.status_code,data.content)
+            if data.status_code == 200:
+                io_bytes = io.BytesIO(data.content)
+                tar = tarfile.open(fileobj=io_bytes, mode='r:gz')
+                with open(f'{file_path}/{tar.firstmember.name}','wb') as writer:
+                    f1 = tar.extractfile(tar.firstmember)
+                    writer.write(f1.read())
+                f = tar.extractfile(tar.firstmember)
+                encoded_sound = base64.b64encode(f.read())
+    return encoded_sound
+
+@dash.callback(Output("player_container", "children"), Input("fetched-accordian", "value"),
+background=True,
+running=[(Output('progress-spinner','style'),
+         {'display':'block','visibility':'visible !important'},
+            {'display':'none'}
+        )])
+def show_state(value):
+    if value is None:
+        return
+    
+    print('Entered show_state',value)
+    a = html.Audio(id = 'player',src='data:audio/mpeg;base64,{}'.format(get_file(value).decode()), controls = True, autoPlay = False, style = {"width":"100%"})
+    return a
+
+
+
+
+
+
+
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # run app in debug mode on port 5000
+    # app.run(debug=False, port=6060)
+    http_server = WSGIServer(('', 6060), app.server)
+    http_server.serve_forever()
