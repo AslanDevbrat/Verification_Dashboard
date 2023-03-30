@@ -1,0 +1,1508 @@
+typer	name	role1	role2	toc
+general	General	Accountant	Business owner	Discussing financial management and tax preparation
+general	General	Accountant	Business Owner	Reviewing financial records
+general	General	Accountant	Client	What are your income sources?
+general	General	Accountant	Client	Income related discussions
+general	General	Accountant	Client	Donation related discussion
+general	General	Accountant	Client	Discussions related to Tax and its filing
+general	General	Accountant	Client	Discussion about loans, types of loans, which one to choose.
+general	General	Actor	casting director	Auditioning for a role
+general	General	Addiction Counselor	Patient	Discussing addiction and recovery support
+general	General	Advocate	Client	Approaching a lawyer
+general	General	Advocate	Client	Asking about the case(what happened)
+general	General	Advocate	Client	How long the case last
+general	General	Advocate	Client	Paperwork
+general	General	Advocate	Client	Fees
+general	General	Advocate	Client	Confidentiality
+general	General	Airline staff	Traveler	Informing about the missed flight
+general	General	Airline staff	Traveler	Inquiring about a missing baggage
+general	General	Airline staff	Traveler	Complaining about a delayed flight
+general	General	Airline staff	Traveler	Complaining about any bad experience you had in the flight
+general	General	Airline staff	Traveler	Seeking assistance for a differently abled child
+general	General	Animal Trainer	Pet owner	Discussing training techniques and behavior modification
+general	General	Archaeologist	Museum Curator	Discussing a artifact collection
+general	General	Archaeologist	Museum visitor	Discussing a historical excavation and its significance
+general	General	Art (Music, Dance) tutor	Parent	Parent Asking about the performance of the child
+general	General	Art (Music, Dance) tutor	Parent	Tutor Complaining about student's bad behaviour to parent
+general	General	Art (Music, Dance) tutor	Parent	Home tutor Complaining about the environment
+general	General	Art (Music, Dance) tutor	Parent	Fees
+general	General	Art (Music, Dance) tutor	Student	Asking about the schedule of class
+general	General	Art (Music, Dance) tutor	Student	Student Asking what to do today
+general	General	Art Gallery Owner	Art Collector	Discussing art and acquisitions
+general	General	Artist	Art Gallery Curator	Discussing an art exhibition and selection process
+general	General	Artist	Gallery Owner	Discussing a potential art show
+general	General	Astronomer	Science Enthusiast	Discussing a space-related topic
+general	General	Auto rickshaw driver	passenger	Discussing the fare
+general	General	Auto rickshaw driver	passenger	Discussing the location
+general	General	Auto rickshaw driver	passenger	Taking a share auto
+general	General	Automobile service person	Customer	Customer picking up car from general servicing
+general	General	Automobile service person	Customer	Customer calls service person because car won't start
+general	General	Automobile service person	Customer	Tyre change
+general	General	Automobile service person	Customer	Engine trouble
+general	General	Automobile service person	Customer	Fixing a scrape on the body
+general	General	Baker	Customer	Ordering a cake(flavour)
+general	General	Baker	Customer	For what occasion do you need the cake?
+general	General	Baker	Customer	What is the desired weight of the cake?
+general	General	Baker	Customer	Price of the cake
+general	General	Baker	Customer	What to write on the cake?
+general	General	Baker	Customer	Do you want any customizable design?
+general	General	Bank officer	Customer	Customer comes in to open an account
+general	General	Bank officer	Customer	Customer wants to close account
+general	General	Bank officer	Customer	Customer complains about rude behaviour of employee
+general	General	Bank officer	Customer	Customer complains about large number of phone calls
+general	General	Bank officer	Customer	Customer asks about minor account
+general	General	Banker	Customer	Discussing financial services and products
+general	General	Barber	Client	Discussing a haircut and styling options
+general	General	Bicycle Seller	Buyer	Availability of some bicycle
+general	General	Bicycle Seller	Buyer	Looking for a bike in a specific budget
+general	General	Bicycle Seller	Buyer	Searching for good options in car
+general	General	Bicycle Seller	Buyer	Briefing about a car by the seller
+general	General	Bicycle Seller	Buyer	Availability of service centres nearby
+general	General	Booking Clerk (Railway station,Bus station)	Passenger	Booking a sleeper ticket to Chennai
+general	General	Booking Clerk (Railway station,Bus station)	Passenger	Inquiring about trains to Amritsar from Delhi
+general	General	Booking Clerk (Railway station,Bus station)	Passenger	Inquiring about cancellation and refund policies of AirIndia flight
+general	General	Booking Clerk (Railway station,Bus station)	Passenger	Inquiring about postponing a train ticket due to personal reasons
+general	General	Booking Clerk (Railway station,Bus station)	Passenger	Booking a bus ticket to Bangalore from Chennai (to and fro)
+general	General	Bookshop owner	Customer	Do they have the books you want?
+general	General	Bookshop owner	Customer	Discount on the books
+general	General	Bookshop owner	Customer	Do they sell/buy pre–owned books?
+general	General	Bookshop owner	Customer	Price for selling/buying old books
+general	General	Bookshop owner	Customer	Pre–ordering a book
+general	General	Cab driver	Customer	Confusion about location
+general	General	Cab driver	Customer	Complaining about fare manipulation.
+general	General	Cab driver	Customer	Driver Complaining about destination
+general	General	Cab driver	Customer	Asking for AC
+general	General	Cab driver	Customer	Complaining about reckless driving and mode of payment
+general	General	Canteen owner	Customer	Complaining about the bad quality of food
+general	General	Canteen owner	Customer	Inquiring about delivering of snacks for a department seminar
+general	General	Canteen owner	Customer	Suggesting token system to reduce long queues
+general	General	Canteen owner	Customer	Suggesting addition of a few dishes to the menu
+general	General	Canteen owner	Customer	Complaining about the insanitization
+general	General	Car wash operator	Customer	Asking for prices
+general	General	Car wash operator	Customer	Home service
+general	General	Car wash operator	Customer	Simple cleaning/detailing.
+general	General	Car wash operator	Customer	Type of the vehicle.
+general	General	Car wash operator	Customer	Complaining about the wash.
+general	General	Carpenter	Customer	Carpenter asked to make a bed to order
+general	General	Carpenter	Customer	Modular kitchen order
+general	General	Carpenter	Customer	Customer enquiring to sell antique chairs
+general	General	Carpenter	Customer	Buying readymade furniture
+general	General	Carpenter	Customer	Customer discussing cupboard options with carpenter
+general	General	Celebrity	Fan	Discussing the celebrity's career and personal life
+general	General	Chef	Food Critic	Discussing a meal and restaurant
+general	General	Chef	Food Critic	Reviewing a restaurant meal
+general	General	Chiropractor	Person with chronic back pain	Discussing chronic pain management and spinal health
+general	General	Coach	Athlete	Discussing training and performance
+general	General	Computer repair shop owner	Customer	Cost of repairing a broken screen.
+general	General	Computer repair shop owner	Customer	Upgradation of system
+general	General	Computer repair shop owner	Customer	Installation of software
+general	General	Computer repair shop owner	Customer	Diagnosing a software related problem
+general	General	Computer repair shop owner	Customer	Repairing hardwares
+general	General	Computer Technician	Computer user	Discussing technical issues and solutions
+general	General	Conductor	passenger	Conductor issuing ticket
+general	General	Conductor	passenger	Bus break down
+general	General	Conductor	passenger	Stop for lunch
+general	General	Conductor	passenger	Passenger gets on the wrong bus
+general	General	Conductor	passenger	Passenger requests seat change
+general	General	Construction Worker	Project Manager	Discussing a construction project and timelines
+general	General	Counsellor	Client	Marriage counsellor Asking client about the problem
+general	General	Counsellor	Client	Mental health counsellor Asking client about the problem
+general	General	Counsellor	Client	Fees
+general	General	Counsellor	Client	Enquiring about the therapy sessions
+general	General	Counsellor	Client	How many session required for a certain problem
+general	General	Counsellor	Client	Does this counselling help people
+general	General	Counsellor	Client	Confidentiality
+general	General	Counselor	Client	Dealing with stress and anxiety
+general	General	Counselor	Client	Discussing mental health and coping strategies
+general	General	Customer	Salesperson	Buying a new car
+general	General	Delivery Person	Customer	Returning the package
+general	General	Delivery Person	Customer	Complaining about the preopened package
+general	General	Delivery Person	Customer	Asking for the reason behind delayed delivery
+general	General	Delivery Person	Customer	Cash on Delivery
+general	General	Delivery Person	Customer	Thanking for the service
+general	General	Dental Hygienist	Patient	Discussing dental health and hygiene
+general	General	Dermatologist	Patient	Discussing skin health and treatment options
+general	General	Doctor	Patient	Discussing a medical condition
+general	General	Driving school instructor	Customer	Customer comes to ask about driving license procedure
+general	General	Driving school instructor	Customer	Customer asks about availability of female teacher only
+general	General	Driving school instructor	Customer	Customer asks about possibility of extra lessons
+general	General	Driving school instructor	Customer	Instructor reviews skills with student
+general	General	Driving school instructor	Customer	Instructor compares Indian driving tests to other places
+general	General	Economist	Business Owner	Discussing market trends
+general	General	Electrical/Electronics shop salesperson	Customer	Electric fitting of a new house
+general	General	Electrical/Electronics shop salesperson	Customer	Discussing about wire quality
+general	General	Electrical/Electronics shop salesperson	Customer	Bargaining on some household electrical items
+general	General	Electrical/Electronics shop salesperson	Customer	Buying a TV
+general	General	Electrical/Electronics shop salesperson	Customer	Asking about warranty and return policies
+general	General	Electrician	Customer	Electrician summoned to fix a light
+general	General	Electrician	Customer	Electrician asked to fix earthing of house
+general	General	Electrician	Customer	Customer calls electrician to fix water motor
+general	General	Electrician	Customer	Stabilisers for fridge and washing machine
+general	General	Electrician	Customer	Customer calls electrician to change fuse
+general	General	Environmental Engineer	Industrialist	Discussing environmental impacts and regulations
+general	General	Environmentalist	Politician	Discussing environmental policies and legislation
+general	General	Event manager	Customer	Inquiring about various services offered
+general	General	Event manager	Customer	Inquiring about the event safety
+general	General	Event manager	Customer	Discussing about cancellation and refund policies
+general	General	Event manager	Customer	Providing a positive feedback for an event organized
+general	General	Event manager	Customer	Providing a negative feedback for an event organized
+general	General	Event Planner	Client	Discussing an event and its logistics
+general	General	Event Planner	Client	Discussing an event theme and decorations
+general	General	Factory/Workshop owner	Customer	Plastic basket weave bag making factory
+general	General	Factory/Workshop owner	Customer	T–shirt making workshop
+general	General	Factory/Workshop owner	Customer	Coconut oil making
+general	General	Factory/Workshop owner	Customer	Soap making factory
+general	General	Factory/Workshop owner	Customer	Chocolate workshop
+general	General	Farm labour	landowner	Cost of cleaning
+general	General	Farm labour	landowner	Cost of planting and harvesting
+general	General	Farm labour	landowner	Tools and equipments.
+general	General	Farm labour	landowner	Lunch facilities
+general	General	Farm labour	landowner	Complaining about the work
+general	General	Farmer	Agri shop salesperson	Asking for fertilizers
+general	General	Farmer	Agri shop salesperson	Asking for hybrid seeds.
+general	General	Farmer	Agri shop salesperson	Organic pesticides
+general	General	Farmer	Agri shop salesperson	Asking about different machineries.
+general	General	Farmer	Agri shop salesperson	Complaining about some products
+general	General	Financial Advisor	Client	Discussing investment and retirement planning
+general	General	Florist	Wedding planner	Discussing flower arrangements and wedding details
+general	General	Flower Vendor	Customer	Place an order for wedding decor
+general	General	Flower Vendor	Customer	Seeking flower recommendations based on the season
+general	General	Flower Vendor	Customer	Discussing about the portfolios and design style
+general	General	Flower Vendor	Customer	Inquiring about the payment and logistics
+general	General	Flower Vendor	Customer	Inquiring about various packages
+general	General	Footwear seller	Customer	Asking to show different types of footwears.
+general	General	Footwear seller	Customer	Discussing about the prices of different types of footwears.
+general	General	Footwear seller	Customer	Complaining
+general	General	Footwear seller	Customer	Asking about the reason of higher pricing
+general	General	Footwear seller	Customer	Discussing about the availability of a particular footwear type.
+general	General	Furniture Shop owner	Customer	What do you want to buy?
+general	General	Furniture Shop owner	Customer	What is your budget?
+general	General	Furniture Shop owner	Customer	What kind of material do you want?
+general	General	Furniture Shop owner	Customer	Price
+general	General	Furniture Shop owner	Customer	Exchange policy
+general	General	Furniture Shop owner	Customer	Refurbishing old furniture
+general	General	Furniture Shop owner	Customer	Asking if they have any smart furniture
+general	General	Garage owner	Customer	Asking to diagnose a problem
+general	General	Garage owner	Customer	Cost of body repair
+general	General	Garage owner	Customer	Basic servicing
+general	General	Garage owner	Customer	Modification
+general	General	Garage owner	Customer	Repairing rather than replacing
+general	General	Gardner	Customer	Inquiring about turning the balcony space into a garden
+general	General	Gardner	Customer	Inquiring about various indoor plants
+general	General	Gardner	Customer	Discussing on whether the decorative stones are really necessary?
+general	General	Gardner	Customer	Inquiring about various healing plants for outdoor
+general	General	Gardner	Customer	Inquiring about the best plants for pots
+general	General	Gas cylinder delivery person	Customer	Complaining about the increase in price
+general	General	Gas cylinder delivery person	Customer	Asking for the delivery timing
+general	General	Gas cylinder delivery person	Customer	Delivery charge
+general	General	Gas cylinder delivery person	Customer	Complaining about the weight
+general	General	Gas cylinder delivery person	Customer	Asking for offers
+general	General	Government officer	Customer	Seeking information on documents required for passport of minor
+general	General	Government officer	Customer	Inquiring about how to issue the caste certificate in the village Panchayat office
+general	General	Government officer	Customer	Complaining about the bad quality of water to an employee in the water authority
+general	General	Government officer	Customer	Seeking information the regarding availability of Covid–19 vaccine in the nearest govt.hospital
+general	General	Government officer	Customer	Seeking information regarding documents required for issuing the degree from the university
+general	General	Graphic Designer	Client	Discussing a design project and branding
+general	General	Graphic Designer	Client	Discussing a logo design
+general	General	Grocery shop billing assistant	Customer	Issues related to bill
+general	General	Grocery shop billing assistant	Customer	Late payment
+general	General	Grocery shop billing assistant	Customer	Discounts and cashbacks
+general	General	Grocery shop billing assistant	Customer	Exchange and return
+general	General	Grocery shop billing assistant	Customer	Asking for payment methods and change
+general	General	Grocery shop salesperson	Customer	Asking for a particular skincare product
+general	General	Grocery shop salesperson	Customer	Asking about different varieties of Rice
+general	General	Grocery shop salesperson	Customer	Complaining
+general	General	Grocery shop salesperson	Customer	Casual conversation with a regularCustomer
+general	General	Grocery shop salesperson	Customer	Unavailability of product
+general	General	Hair stylist	Customer	Inquiring about different style–packages for any occassion
+general	General	Hair stylist	Customer	Booking an appointment with the nearest hair stylist for keretin treatment
+general	General	Hair stylist	Customer	Asking about the availabity of the stylist on a particular day.
+general	General	Hair stylist	Customer	Giving a positive feedback for the hair cut/color previously done
+general	General	Hair stylist	Customer	Informing theCustomer about the prerequisites
+general	General	Handicraft worker	Customer	Interested in buying a particular item
+general	General	Handicraft worker	Customer	Asking to make some custom–made decorative items
+general	General	Handicraft worker	Customer	Price of various items
+general	General	Handicraft worker	Customer	Bulk ordering brass/copper dining ware for a new restaurant
+general	General	Handicraft worker	Customer	Giving feedback/review
+general	General	Health Center manager/supervisor	Patient	Inquing about the availability of AB–ve blood
+general	General	Health Center manager/supervisor	Patient	Complaining about the poor medical care
+general	General	Health Center manager/supervisor	Patient	Inquiring about the Mediwell insurance coverage
+general	General	Health Center manager/supervisor	Patient	Inquiring about various facilities in the hospital
+general	General	Health Center manager/supervisor	Patient	Complaining about the unnecessary additional charges
+general	General	Healthcare worker	Patient	Pregnant woman with doctor's assistant
+general	General	Healthcare worker	Patient	Nurse hired for elderly care
+general	General	Healthcare worker	Patient	Aasha worker visiting house
+general	General	Healthcare worker	Patient	Covid vaccination centre
+general	General	Healthcare worker	Patient	Dentist–patient conversation
+general	General	Historian	Museum curator	Discussing historical artifacts and exhibitions
+general	General	Historian	Student	Discussing a historical event
+general	General	Hotel Manager	Guest	Discussing a hotel stay and amenities
+general	General	Hotel staff	Visitor	Cannot open the door
+general	General	Hotel staff	Visitor	Calling for room service
+general	General	Hotel staff	Visitor	Calling for laundry
+general	General	Hotel staff	Visitor	ordering food
+general	General	Hotel staff	Visitor	cannot connect to the wifi
+general	General	Hotel staff	Visitor	Insect/animal in the room
+general	General	Hotel staff	Visitor	something is not working
+general	General	House broker	Client	What kind of home are you looking for?
+general	General	House broker	Client	In which location you want it?
+general	General	House broker	Client	Looking for rent only
+general	General	House broker	Client	renting for business
+general	General	House broker	Client	Looking to buy a property
+general	General	House broker	Client	What kind of additional features are you looking for?
+general	General	House broker	Client	Brokerage fees
+general	General	Housecook	Employer	What to cook tonight?
+general	General	Housecook	Employer	Cooking for a special event.
+general	General	Housecook	Employer	Cooking according to a diet plan
+general	General	Housecook	Employer	Complaining about the food
+general	General	Housecook	Employer	Price and availability
+general	General	Housekeeping person	employer	Time management instructions
+general	General	Housekeeping person	employer	Cleaning instructions
+general	General	Housekeeping person	employer	Salary discussion.
+general	General	Housekeeping person	employer	Discussing complaints that employer received fromCustomer.
+general	General	Housekeeping person	employer	Rewards and promotion
+general	General	Housemaid/Nanny	house owner	Assigning the domestic help his/her work
+general	General	Housemaid/Nanny	house owner	Asking can the nanny work extra time tomorrow
+general	General	Housemaid/Nanny	house owner	Complaining about the work
+general	General	Housemaid/Nanny	house owner	Telling the nanny what to do during emergency
+general	General	Housemaid/Nanny	house owner	Negotiating payment
+general	General	HR	Candidate	Resignation
+general	General	HR	Candidate	Work experience
+general	General	HR	Candidate	Salary discussion
+general	General	HR	Candidate	Soft skills
+general	General	HR	Candidate	Guidelines
+general	General	Insurance agent	Customer	Life insurance
+general	General	Insurance agent	Customer	Car insurance
+general	General	Insurance agent	Customer	Health insurance
+general	General	Insurance agent	Customer	Travel insurance
+general	General	Insurance agent	Customer	Property insurance
+general	General	Insurance Agent	Policyholder	Discussing coverage and claims
+general	General	Insurance Agent	Policyholder	Reviewing coverage options
+general	General	Interior Designer	Homeowner	Discussing a home renovation project
+general	General	Interior Designer	Homeowner	Discussing home design and renovations
+general	General	Interior Designer/architect	Customer	Architect being hired to build house
+general	General	Interior Designer/architect	Customer	Architect checking stability of old building
+general	General	Interior Designer/architect	Customer	Architect discussing plans for office space with CEO
+general	General	Interior Designer/architect	Customer	Renovation of old house discussion
+general	General	Interior Designer/architect	Customer	Customer approaching architect for a 'builder floor'
+general	General	Interviewer	Job Applicant	Discussing the applicant's qualifications and experience
+general	General	Interviewer	Job Candidate	Applying for a job
+general	General	Jeweller	Customer	What do you want to buy?
+general	General	Jeweller	Customer	Budget
+general	General	Jeweller	Customer	Ordering custom–designed jewellery
+general	General	Jeweller	Customer	What material do you want?
+general	General	Jeweller	Customer	For what occasion do you want to buy?
+general	General	Jeweller	Customer	Asking for authenticity certificate
+general	General	Journalist	Source	Interviewing for a news story
+general	General	Landlord	Tenant	Discussing a rental property or lease agreement
+general	General	Landlord	Tenant	Negotiating a lease agreement
+general	General	Landscape Architect	Homeowner	Discussing garden design and outdoor spaces
+general	General	Landscape Designer	Homeowner	Discussing a garden design
+general	General	Landscaper	Homeowner	Discussing a landscaping project and design
+general	General	Laundryman	Customer	What kind of clothes
+general	General	Laundryman	Customer	What kind of cleaning do you need?
+general	General	Laundryman	Customer	How long will it take?
+general	General	Laundryman	Customer	Why is it taking so long?
+general	General	Laundryman	Customer	Price
+general	General	Laundryman	Customer	Some item are missing
+general	General	Law Enforcement Officer	Citizen	Discussing community
+general	General	Lawyer	Client	Discussing a legal case or problem
+general	General	Lawyer	Client	Discussing a legal issue
+general	General	Librarian	Library patron	Discussing books and library resources
+general	General	Librarian	Library Patron	Recommending a book
+general	General	Librarian	Reader	Inquiring about a specific book
+general	General	Librarian	Reader	Complaining about the improper arrangement of books
+general	General	Librarian	Reader	Inquiring about fine for late submission of books
+general	General	Librarian	Reader	Seeking information regarding books related to a particular subject
+general	General	Librarian	Reader	Seeking guidance on how to place a request for a book
+general	General	Loan executive	Customer	Home loan
+general	General	Loan executive	Customer	Personal loan
+general	General	Loan executive	Customer	Education loan
+general	General	Loan executive	Customer	Defaulting on instalment
+general	General	Loan executive	Customer	Small business loan
+general	General	Makeup Artist	Model	Discussing makeup looks and photoshoots
+general	General	Manager	Employee	Discussing work performance and goals
+general	General	Manager	Employee	Performance review
+general	General	Mason	Customer	Tiling of old bathroom
+general	General	Mason	Customer	Building a small storage room on rooftop
+general	General	Mason	Customer	Building compound wall
+general	General	Mason	Customer	Inserting a door in a wall to join two flats
+general	General	Mason	Customer	Job of access to a water pipe within a wall
+general	General	Meat shop	Customer	Placing a bulk order for mutton/chicken
+general	General	Meat shop	Customer	Complaining about the quality of meat received
+general	General	Meat shop	Customer	Ordering fish from a meat brand shop
+general	General	Meat shop	Customer	Inquiring about the home delivery services
+general	General	Meat shop	Customer	Seeking information regarding the quality of meat
+general	General	Mechanic	Car Owner	Discussing car repair options
+general	General	Mechanic	Car Owner	Discussing car troubles and repair options
+general	General	Mechanic (A/C, Fridge)	Customer	Fridge making a noise
+general	General	Mechanic (A/C, Fridge)	Customer	Fridge not cooling properly
+general	General	Mechanic (A/C, Fridge)	Customer	Fridge doesn't work on inverter as per claim
+general	General	Mechanic (A/C, Fridge)	Customer	Fridge freezer accumulates too much ice
+general	General	Mechanic (A/C, Fridge)	Customer	Fridge mechanic recommends different model
+general	General	Media professional	Locals	Asking what happened
+general	General	Media professional	Locals	Asking for direction
+general	General	Media professional	Locals	Asking for the locals' opinion on the matter
+general	General	Media professional	Locals	Reason for the incident
+general	General	Media professional	Locals	What is the current status of the incident
+general	General	Mental Health Counselor	Teenager	Discussing adolescent development and mental health issues
+general	General	Meteorologist	News Anchor	Discussing weather forecasts and reports
+general	General	Milk vendor	Customer	Complaining about the quality of milk
+general	General	Milk vendor	Customer	Inquiring about the availability of milk
+general	General	Milk vendor	Customer	Asking about the reasons for price hike
+general	General	Milk vendor	Customer	Placing a bulk order for milk for an occasion
+general	General	Milk vendor	Customer	Inform about discontinuing the purchasing of milk due to personal reasons
+general	General	Mobile shop person	Customer	Availability of a new One Plus phone
+general	General	Mobile shop person	Customer	Complaining about a recently bought phone.
+general	General	Mobile shop person	Customer	Availability of exclusive online models.
+general	General	Mobile shop person	Customer	Good phone under 10k.
+general	General	Mobile shop person	Customer	Price and discounts and emi options
+general	General	Musician	Music critic	Discussing a performance and review
+general	General	Musician	Music producer	Discussing a recording and album release
+general	General	Musician	Music Producer	Discussing a recording project
+general	General	Naturopath	Patient	Discussing holistic health and natural remedies
+general	General	Newspaper boy	Customer	Telling him to deliver newspaper from tomorrow
+general	General	Newspaper boy	Customer	Asking if he has extra newspaper
+general	General	Newspaper boy	Customer	Asking if he delivers weekly/monthly magazines as well
+general	General	Newspaper boy	Customer	Monthly bill
+general	General	Newspaper boy	Customer	Complaining
+general	General	Nurse	Patient	Inquiring about the health condition of the patient
+general	General	Nurse	Patient	Expressing concern over a sudden sharp pain in the chest
+general	General	Nurse	Patient	Informing the patient about the Uterus Ultrasound
+general	General	Nurse	Patient	Informing the patient about the food restrictions
+general	General	Nurse	Patient	Informing about the health progress of the patient
+general	General	Nutritionist	Athlete	Discussing sports nutrition and performance
+general	General	Nutritionist	Diabetic	Discussing diabetes management and nutrition
+general	General	Nutritionist	Patient	Discussing diet and health goals
+general	General	Nutritionist	Person with digestive issues	Discussing gut health and dietary needs
+general	General	Nutritionist	Vegan	Discussing plant-based diets and nutrition
+general	General	Office admin	Employee	College teacher (employee) requesting payslips
+general	General	Office admin	Employee	Employee complaint about boss to HR
+general	General	Office admin	Employee	Salary negotiation between new employee and HR
+general	General	Office admin	Employee	Sick leave discussion between admin and employee
+general	General	Office admin	Employee	HR interview round for teacher at University
+general	General	Opticals owner	Customer	Inquiring about a particular frame
+general	General	Opticals owner	Customer	Inquiring about any available discounts for the products
+general	General	Opticals owner	Customer	Buying sunglasses
+general	General	Opticals owner	Customer	Complaining about the quality of the spectacle received
+general	General	Opticals owner	Customer	Informing about the featuteres of the lens
+general	General	Optometrist	Patient	Discussing vision and eyewear needs
+general	General	Painter	Customer	House exterior painting job discussion
+general	General	Painter	Customer	Flat interior painting job discussion
+general	General	Painter	Customer	Special decorative wall options
+general	General	Painter	Customer	Discussion of colour options
+general	General	Painter	Customer	Rusted window grills paint job
+general	General	Parent	Child	Discussing a problem or decision
+general	General	Parent	Child	Setting household rules
+general	General	Patient	Doctor	Discussing a medical condition and treatment options
+general	General	Pediatrician	Parent	Discussing child development and health concerns
+general	General	Personal Chef	Client	Discussing meal planning and dietary preferences
+general	General	Personal Shopper	Client	Choosing an outfit
+general	General	Personal Trainer	Client	Setting fitness goals
+general	General	Personal Trainer	Gym member	Discussing fitness goals and workouts
+general	General	Personal Trainer	Vegetarian	Discussing vegetarianism and fitness goals
+general	General	Pet Groomer	Pet Owner	Discussing grooming options
+general	General	Petrol pump employee	Customer	Customer asks directions while filling petrol
+general	General	Petrol pump employee	Customer	Customer asks to use toilet
+general	General	Petrol pump employee	Customer	Customer asks employee if he will take a photo
+general	General	Petrol pump employee	Customer	Petrol pump employee warnsCustomer of price hike
+general	General	Petrol pump employee	Customer	Customer asks for nearest mechanic
+general	General	Pharmacist	Patient	Discussing medication and health concerns
+general	General	Pharmacy salesperson	Customer	Availability of a particular medicine
+general	General	Pharmacy salesperson	Customer	Asking for doctor's prescription
+general	General	Pharmacy salesperson	Customer	Availability of Ayurvedic meds
+general	General	Pharmacy salesperson	Customer	Availability of some rare medicines
+general	General	Pharmacy salesperson	Customer	Closing time and day
+general	General	Photo studio	Customer	Customer for passport size photos
+general	General	Photo studio	Customer	Booking photographer for event
+general	General	Photo studio	Customer	Photographer on wedding video
+general	General	Photo studio	Customer	Customer for engagement coverage
+general	General	Photo studio	Customer	Photographer discussing modeling withCustomer
+general	General	Photocopier shop owner	Customer	Customer order to copy and bind
+general	General	Photocopier shop owner	Customer	Colour xerox for child's project
+general	General	Photocopier shop owner	Customer	Poster printing order
+general	General	Photocopier shop owner	Customer	Customer unhappy with errors in copying and binding
+general	General	Photocopier shop owner	Customer	Discussion of price
+general	General	Photographer	Customer	Asking for wedding/pre–wedding shoot
+general	General	Photographer	Customer	Pre–wedding shoot
+general	General	Photographer	Customer	Complaining about final product not being ready
+general	General	Photographer	Customer	Telling about the budget and Asking what to expect within that budget
+general	General	Photographer	Customer	Telling the cameraman what to shoot
+general	General	Photographer	Model	Discussing a photoshoot theme
+general	General	Physical Therapist	Elderly patient	Discussing aging and mobility issues
+general	General	Pilot	Air Traffic Controller	Discussing a flight plan and clearance
+general	General	Plumber	Customer	Plumber called to fix leaking tap
+general	General	Plumber	Customer	Plumber checks leakage from toilet
+general	General	Plumber	Customer	Plumber gives estimate for changing drainage pipes
+general	General	Plumber	Customer	Discussing unfinished pipe job and timeline of work
+general	General	Plumber	Customer	Appointment/Price negotiations betweenCustomer and plumber
+general	General	Plumber	Homeowner	Discussing plumbing problems and repairs
+general	General	Police	Complainent	Informing about a theft in the neighbourhood
+general	General	Police	Complainent	Complaining about an eve– teasing experience
+general	General	Police	Complainent	Lodging a complaint for a missing bag
+general	General	Police	Complainent	Informing about going on a long holiday
+general	General	Police	Complainent	Informing about frequent threats received online
+general	General	Politician	Constituent	Discussing a community issue
+general	General	Postman/courier office helper	Customer	Inquiring about a delayed delivery/Checking status
+general	General	Postman/courier office helper	Customer	Informing about a change in the delivery address
+general	General	Postman/courier office helper	Customer	Inquiring about the return policy of a delivery
+general	General	Postman/courier office helper	Customer	Complaining about the irresponsive attitude of the delivery agent
+general	General	Postman/courier office helper	Customer	Complaining about the careless handling of a fragile product
+general	General	Preist	Others	Seeking information about baptism for your child
+general	General	Preist	Others	Inquiring about Grah–Shanti pooja to be conducted in your home
+general	General	Preist	Others	Discussing about why is Confession so important?
+general	General	Preist	Others	Explaing how to offer prayer in Dargah to a non–muslim
+general	General	Preist	Others	Conducting Annadaanam on your parents' anniversary
+general	General	Psychologist	Client	Discussing a mental health issue
+general	General	Psychologist	Couple	Discussing relationship issues and therapy
+general	General	Psychologist	Patient	Discussing mental health and therapy
+general	General	Psychologist	Person with depression	Discussing depression treatment and self-care
+general	General	Publicist	Celebrity	Discussing a media campaign
+general	General	Real Estate Agent	Home Buyer	Touring a house
+general	General	Real Estate Agent	Homebuyer	Discussing properties and offers
+general	General	Receptionist	Customer	Inquiring about the avalability of rooms in XYZ resort
+general	General	Receptionist	Customer	Seeking information regarding various healthcare packages
+general	General	Receptionist	Customer	Inquiring about Skin treatment at AB beauty salon
+general	General	Receptionist	Customer	Complaining about the uncomfortable stay at any hotel
+general	General	Receptionist	Customer	Providing positive feedback for the services at a hotel
+general	General	Religious Leader	Parishioner	Discussing a spiritual matter
+general	General	Restaurant Manager	Server	Discussing customer service and the dining experience
+general	General	Salesperson	Customer	Discussing a product or service
+general	General	Scientist	Science journalist	Discussing a research study and its findings
+general	General	Screenwriter	Director	Discussing a film script
+general	General	Security	visitor	Visitor arrives with only name and no flat number
+general	General	Security	visitor	Security interacts with newly appointed maid
+general	General	Security	visitor	Swiggy delivery man interacts with security
+general	General	Security	visitor	Visitor asking about emplty flats for rent
+general	General	Security	visitor	Security returns umbrella left behind by visitor
+general	General	Service station attendants (Petrol pumps)	Customer	How much petrol needed
+general	General	Service station attendants (Petrol pumps)	Customer	Asking if they provide in bottle
+general	General	Service station attendants (Petrol pumps)	Customer	Asking if they accept card/UPI payment
+general	General	Service station attendants (Petrol pumps)	Customer	Complaining about water in oil
+general	General	Service station attendants (Petrol pumps)	Customer	Complaining about giving less oil
+general	General	Share market adviser	Investor	Inquiring about different sectors to invest in stock market
+general	General	Share market adviser	Investor	Discussing about various reasons for a share market fall
+general	General	Share market adviser	Investor	Discussing about the need for Demat account
+general	General	Share market adviser	Investor	Inquiring about various benefits in investing on share markets
+general	General	Share market adviser	Investor	Inquiring about Securities and Exchange Board of India
+general	General	Shop helper	Customer	Clothing shop conversation
+general	General	Shop helper	Customer	Old man asking help in a grocery shop
+general	General	Shop helper	Customer	Helper in mobile phone shop
+general	General	Shop helper	Customer	Assistant in electronics shop
+general	General	Shop helper	Customer	Footwear shop helper
+general	General	Shopkeeper	Customer	Customer Complaining to shopkeeper
+general	General	Shopkeeper	Customer	Availability of exotic fruits
+general	General	Shopkeeper	Customer	Bargaining
+general	General	Shopkeeper	Customer	Types of fruits
+general	General	Shopkeeper	Shopkeeper	Conversation between two shopkeepers
+general	General	Social Worker	Client	Discussing a social issue
+general	General	Social Worker	Client	Discussing social services and support
+general	General	Social Worker	Elderly client	Discussing aging-related challenges and support services
+general	General	Software Developer	User	Discussing a software program and its features
+general	General	Software engineer	Supervisor	Introducing new member to the team
+general	General	Software engineer	Supervisor	Poor performance of an employee
+general	General	Software engineer	Supervisor	Breifing on a new project
+general	General	Software engineer	Supervisor	Transfer to another city
+general	General	Software engineer	Supervisor	Raise and Promotion
+general	General	Sports coach	Sportsperson	Talking about the training routine
+general	General	Sports coach	Sportsperson	Being late for training
+general	General	Sports coach	Sportsperson	Punishment for being late/undisciplined
+general	General	Sports coach	Sportsperson	Motivating a depressed player
+general	General	Sports coach	Sportsperson	Asking the coach what equipment is the best
+general	General	Sports coach	Sportsperson	Coach talking about the performance
+general	General	Stationary shop owner	Customer	What do you want?
+general	General	Stationary shop owner	Customer	Discount
+general	General	Stationary shop owner	Customer	Asking for a particular item your child is demanding
+general	General	Stationary shop owner	Customer	Bill
+general	General	Stationary shop owner	Customer	Quality of the stationary
+general	General	Streetside stall owner	Customer	Old street food vendor
+general	General	Streetside stall owner	Customer	Chaiwala outside University with student
+general	General	Streetside stall owner	Customer	Road side dosa vendor gives menu toCustomer
+general	General	Streetside stall owner	Customer	Vendor explaining why part of the menu was scrapped
+general	General	Streetside stall owner	Customer	Vendor selling momos shares recipe
+general	General	Student	Teacher	Discussion of subject choice in college
+general	General	Student	Teacher	Teacher encouraging student to stand for student elections
+general	General	Student	Teacher	Student approaches teacher for extension of deadline for a project
+general	General	Student	Teacher	Teacher encourages student to attempt a competitive exam
+general	General	Student	Teacher	Teacher speaks to student about poor attendance
+general	General	Supervisor	Team Member	Discussing work goals and expectations
+general	General	Surveyor	Surveyee	Nature of the survey
+general	General	Surveyor	Surveyee	Details of the family members
+general	General	Surveyor	Surveyee	Survey for polio vaccination
+general	General	Surveyor	Surveyee	Economic survey
+general	General	Surveyor	Surveyee	Annual/monthly company survey
+general	General	Surveyor	Surveyee	Taking consent from the surveyee
+general	General	Sweetmart owner	Customer	Inquiring about various sweet options available at the store
+general	General	Sweetmart owner	Customer	Placing an order online for a Christmas party
+general	General	Sweetmart owner	Customer	Inquiring about the various delivery options.
+general	General	Sweetmart owner	Customer	Complaining about the quality of the donuts delivered to you
+general	General	Sweetmart owner	Customer	Inquiring about international shipping
+general	General	Tailor	Customer	Taking measurements for a suit
+general	General	Tailor	Customer	Complaining about fitting of the shirt
+general	General	Tailor	Customer	Discussing the prices
+general	General	Tailor	Customer	Asking if the dress can be sewed urgently
+general	General	Tailor	Customer	Altering the previously sewed dress
+general	General	Tea/Coffee shop owner	Customer	Asking for the menu and varieties.
+general	General	Tea/Coffee shop owner	Customer	Customer's instructions
+general	General	Tea/Coffee shop owner	Customer	Complaining in College canteen
+general	General	Tea/Coffee shop owner	Customer	A casual conversation
+general	General	Tea/Coffee shop owner	Customer	Asking about the side dishes
+general	General	Teacher	Parent	Parent – Teacher meeting after first unit test
+general	General	Teacher	Parent	Parent Informing teacher about leave
+general	General	Teacher	Parent	Teacher requesting parent to allow the child to stay for 40 minutes after class time
+general	General	Teacher	Parent	sport teacher – Parent discussing about upcoming sports event
+general	General	Teacher	Parent	Teacher calling parent to pick up child from school who is sick
+general	General	Teacher	Student	Discussing a lesson or assignment
+general	General	Teacher	Student	Preparing for a test
+general	General	Teacher	Teacher	Instructions to first time invigilator
+general	General	Teacher	Teacher	Preparation for Independence Day celebration
+general	General	Teacher	Teacher	Impact of rain holidays on syllabus completion
+general	General	Teacher	Teacher	Learning loss discussion due to covid
+general	General	Teacher	Teacher	Discussion about particular student having difficulties
+general	General	Telecom services shop owner	Customer (SIM Cards, Bill payments)	Applying for a new SIM card
+general	General	Telecom services shop owner	Customer (SIM Cards, Bill payments)	New broadband internet connection.
+general	General	Telecom services shop owner	Customer (SIM Cards, Bill payments)	Bill payments
+general	General	Telecom services shop owner	Customer (SIM Cards, Bill payments)	3G to 4G conversion
+general	General	Telecom services shop owner	Customer (SIM Cards, Bill payments)	Sim transfer
+general	General	Tourist	Local	Discussing travel and local attractions
+general	General	Tourist Guide	Tourist	Inquiring about Rajasthani cuisine
+general	General	Tourist Guide	Tourist	Seeking information regarding street shopping in Delhi
+general	General	Tourist Guide	Tourist	Inquiring about the adventure travel in Munnar
+general	General	Tourist Guide	Tourist	Seeking information about the best hotels in Pondicherry
+general	General	Tourist Guide	Tourist	Inquiring about the local souvenir shops
+general	General	Traffic Police	Citizen	Inquiring about the driving licence
+general	General	Traffic Police	Citizen	Complaing about over speeding biker/ breaking traffic signal
+general	General	Traffic Police	Citizen	Complaining about dangerous driving by another vehicle driver
+general	General	Traffic Police	Citizen	Inquiring about the Registration Certificate
+general	General	Traffic Police	Citizen	Complaing about the missing bike
+general	General	Translator/Editor	Client	What kind of translation you want?
+general	General	Translator/Editor	Client	Price
+general	General	Translator/Editor	Client	What kind of text for editing/translation
+general	General	Translator/Editor	Client	How many years of experience
+general	General	Translator/Editor	Client	What are your field of expertise?
+general	General	Travel Agent	Business owner	Discussing corporate travel and group tours
+general	General	Travel Agent	Solo traveler	Discussing travel preferences and solo travel tips
+general	General	Travel Agent	Tourist	Planning a vacation
+general	General	Travel Agent	Traveler	Discussing vacation destinations and plans
+general	General	Truck or Bus driver	Customer	Customer Discussing about the truck fare.
+general	General	Truck or Bus driver	Passenger	A traveller inquiry
+general	General	Truck or Bus driver	Passenger	Passenger Complaining
+general	General	Truck or Bus driver	Passenger	Passenger Complaining about rash driving
+general	General	Utensils seller	Customer	Availability of types of utensils
+general	General	Utensils seller	Customer	Availability of good crockery sets
+general	General	Utensils seller	Customer	Searching for large utensils
+general	General	Utensils seller	Customer	Prices and discounts
+general	General	Utensils seller	Customer	Complaining about the quality
+general	General	Vegetable shop salesperson	Customer	Freshness of the vegetables
+general	General	Vegetable shop salesperson	Customer	Organic or inorganic
+general	General	Vegetable shop salesperson	Customer	Ordering a huge amount of vegetables for a wedding
+general	General	Vegetable shop salesperson	Customer	Fluctuations in price
+general	General	Vegetable shop salesperson	Customer	Availability of raw spices
+general	General	Veterinarian	Pet owner	Seeking information about any previous medical conditons of the pet
+general	General	Veterinarian	Pet owner	Inquiring about the living condtion of a dog
+general	General	Veterinarian	Pet owner	Inquiring about vaccinations for your pet cat
+general	General	Veterinarian	Pet owner	Visiting vet for monthly vaccination
+general	General	Veterinarian	Pet owner	Complaining about dog not eating food
+general	General	Veterinarian	Pet owner	Discussing a pet's health and treatment options
+general	General	Waiter	Customer	Inquiring about vegan options available in the restaurant
+general	General	Waiter	Customer	Inquiring about catering services for a party
+general	General	Waiter	Customer	Complaining about the delay in serving ordered dishes
+general	General	Waiter	Customer	Asking about the best dishes served
+general	General	Waiter	Customer	Seeking permission for taking pictures of the different dishes
+general	General	Waiter	Customer	Discussing a menu and ordering food
+general	General	Water supplier	Customer	Complaining about the chemicals in water.
+general	General	Water supplier	Customer	Complaining about the muddy water.
+general	General	Water supplier	Customer	Cost per 1000 litre
+general	General	Water supplier	Customer	Possibility of delivery.
+general	General	Water supplier	Customer	Timing or regularity issues.
+general	General	Wedding Planner	Bride	Discussing wedding details
+general	General	Wine shop owner	Customer	Asking for availability of a certain liquor
+general	General	Wine shop owner	Customer	Asking for age proof
+general	General	Wine shop owner	Customer	Asking for local drinks recommendation
+general	General	Wine shop owner	Customer	What is the reason for sudden price increase?
+general	General	Wine shop owner	Customer	Bulk order
+general	General	Writer	Book Club member	Discussing a book and its themes
+general	General	Writer	Editor	Reviewing a writing project
+general	General	Yoga instructor	Student	Inquiring about Yoga sessions for working women
+general	General	Yoga instructor	Student	Seeking information regarding benefits of Yoga
+general	General	Yoga instructor	Student	Inquiring about online Yoga sessions
+general	General	Yoga instructor	Student	Discussing about possible adverse effects of Yoga
+general	General	Yoga instructor	Student	Inquiring about Yoga sessions for kids
+general	General	Zoo Keeper	Zoo visitor	Discussing animal care and conservation
+general	General	Zoologist	Animal Lover	Discussing an animal species
+general	General	Zookeeper	Visitor	Discussion about the visitor's interests and preferences for their tour, such as specific animal exhibits or educational experiences.
+general	General	Zookeeper	Visitor	Discussion about the duration and schedule of the tour, and any flexibility for customizing the itinerary.
+general	General	Zookeeper	Visitor	Discussion about the zookeeper's role and responsibilities, and any insights or stories they can share about the animals and their care.
+general	General	Zookeeper	Visitor	Discussion about the zookeeper's recommendations for things to see and do at the zoo, and any insider tips or secrets they can share.
+general	General	Zookeeper	Visitor	Discussion about the visitor's questions or concerns about the animals and their welfare, and how the zookeeper can address them.
+general	General	Journalist	News Channel	Discussion about the journalist's pitch for a new story or feature.
+general	General	Journalist	News Channel	Discussion about the journalist's research and sources for the story.
+general	General	Journalist	News Channel	Discussion about the angle and focus of the story, and how it fits with the news channel's editorial guidelines.
+general	General	Journalist	News Channel	Discussion about the timeline and deadlines for the story's development and production.
+general	General	Journalist	News Channel	Discussion about the promotional and distribution plans for the story, and how it will be featured on the news channel's platforms.
+general	General	Journalist	Social Worker	Discussion about the social worker's area of expertise and the issues they work on.
+general	General	Journalist	Social Worker	Discussion about the social worker's experiences and insights working with clients and communities.
+general	General	Journalist	Social Worker	Discussion about the social worker's goals and vision for creating positive change in society.
+general	General	Journalist	Social Worker	Discussion about the social worker's current projects and initiatives, and how they can be highlighted in the media.
+general	General	Journalist	Social Worker	Discussion about the social worker's availability for interviews and how the journalist can best communicate their message to the public.
+general	General	Librarian	Reader	Discussion about the reader's interests and the types of books or materials they are looking for.
+general	General	Librarian	Reader	Discussion about the library's resources and services, including online databases and e-books.
+general	General	Librarian	Reader	Discussion about the process for borrowing and returning books or materials from the library.
+general	General	Librarian	Reader	Discussion about any special requests or recommendations the reader may have, and how the librarian can assist in finding the perfect book or material.
+general	General	Librarian	Reader	Discussion about any library programs or events the reader may be interested in, such as book clubs or author talks.
+general	General	Mobile Shop Owner	Customer	Discussion about the types and models of mobile phones available for purchase.
+general	General	Mobile Shop Owner	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Mobile Shop Owner	Customer	Discussion about the options for mobile phone plans and services.
+general	General	Mobile Shop Owner	Customer	Discussion about the process for repairing or servicing mobile phones.
+general	General	Mobile Shop Owner	Customer	Discussion about any special requests or requirements the customer may have, such as specific brands or features, and how we can accommodate them.
+general	General	Neighbour	Neighbour	Discussion about the schedule and duration of a planned construction project or home renovation.
+general	General	Neighbour	Neighbour	Discussion about any noise or disruption that may be caused by the project, and how it can be minimized.
+general	General	Neighbour	Neighbour	Discussion about any shared resources or amenities, such as driveways or fences, and how they can be used and maintained.
+general	General	Neighbour	Neighbour	Discussion about any concerns or issues the neighbours may have about each other's behavior or property, and how they can address them in a respectful and constructive manner.
+general	General	Neighbour	Neighbour	Discussion about any social or community events or initiatives the neighbours may be interested in participating in together.
+general	General	NGO Head	Villager	Discussion about the NGO's mission and the types of projects and programs it is currently implementing in the village.
+general	General	NGO Head	Villager	Discussion about the benefits and impact of the NGO's work on the community and its members.
+general	General	NGO Head	Villager	Discussion about the involvement and participation of the villagers in the NGO's projects and programs.
+general	General	NGO Head	Villager	Discussion about any challenges or issues the villagers are facing and how the NGO can support and address them.
+general	General	NGO Head	Villager	Discussion about any suggestions or feedback the villagers may have for improving the NGO's work in the community.
+general	General	Orchid Gardener	Customer	Discussing Market value of Orchid
+general	General	Orchid Gardener	Customer	Discussion about the types and varieties of orchids available for purchase.
+general	General	Orchid Gardener	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Orchid Gardener	Customer	Discussion about the delivery options and schedule for the orchids.
+general	General	Orchid Gardener	Customer	Discussion about the care and maintenance instructions for the orchids to ensure their health and longevity.
+general	General	Orchid Gardener	Customer	Discussion about any special requests or requirements the customer may have, such as specific colors or sizes, and how we can accommodate them.
+general	General	Paddy Seller	Buyer	Discussion about the types and quantities of paddy available for purchase.
+general	General	Paddy Seller	Buyer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Paddy Seller	Buyer	Discussion about the delivery options and schedule for the paddy.
+general	General	Paddy Seller	Buyer	Discussion about the storage and handling instructions for the paddy to ensure freshness and quality.
+general	General	Paddy Seller	Buyer	Discussion about any special requests or requirements the buyer may have, such as specific grades or varieties, and how we can accommodate them.
+general	General	Pharmacist	Customer	Discussion about the customer's prescription and the medications they need.
+general	General	Pharmacist	Customer	Discussion about the proper dosage and frequency of the medications, and any potential interactions or side effects.
+general	General	Pharmacist	Customer	Discussion about the availability and cost of the medications, and any insurance coverage or discounts that may apply.
+general	General	Pharmacist	Customer	Discussion about any over-the-counter products or supplements the customer may be interested in, and how they can complement their treatment plan.
+general	General	Pharmacist	Customer	Discussion about the proper storage and disposal of the medications, and any expiration dates or special handling instructions.
+general	General	Police	Suspect	Discussion about the suspect's involvement in the alleged crime and the evidence against them.
+general	General	Police	Suspect	Discussion about the suspect's rights and the legal process they will be going through.
+general	General	Police	Suspect	Discussion about the suspect's potential defenses and any witnesses or information they may have to offer.
+general	General	Police	Suspect	Discussion about the suspect's options for obtaining legal representation and assistance.
+general	General	Police	Suspect	Discussion about the suspect's cooperation with the investigation and any potential plea agreements or sentencing recommendations.
+general	General	Principal	Teacher	Discussion about the teacher's lesson plans and curriculum for the week or semester.
+general	General	Principal	Teacher	Discussion about the teacher's progress and performance evaluations.
+general	General	Principal	Teacher	Discussion about the teacher's professional development goals and opportunities for growth.
+general	General	Principal	Teacher	Discussion about any issues or concerns the teacher may be facing in their classroom or with their students.
+general	General	Principal	Teacher	Discussion about the school's policies and procedures, and how the teacher can best align their teaching practices with them.
+general	General	Property Dealer	Customer	Discussion about the types and locations of properties available for purchase or rent.
+general	General	Property Dealer	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Property Dealer	Customer	Discussion about the terms and conditions of the sale or rental agreement.
+general	General	Property Dealer	Customer	Discussion about the financing and mortgage options for the property.
+general	General	Property Dealer	Customer	Discussion about any special requests or requirements the customer may have, such as specific features or amenities, and how we can accommodate them.
+general	General	Real Estate Broker	Customer	Discussion about the customer's budget and the types of properties they are interested in purchasing or renting.
+general	General	Real Estate Broker	Customer	Discussion about the customer's preferences and priorities in terms of location, size, and features of the property.
+general	General	Real Estate Broker	Customer	Discussion about the availability and options for properties that match the customer's criteria.
+general	General	Real Estate Broker	Customer	Discussion about the process for viewing and touring the properties, and any documents or paperwork required for the sale or rental.
+general	General	Real Estate Broker	Customer	Discussion about the customer's timeline and goals for purchasing or renting a property, and how the real estate broker can assist them in achieving them.
+general	General	Reporter	Ex-Serviceman	Reporter asking Ex-serviceman about his posting
+general	General	Reporter	Ex-Serviceman	Discussion about the ex-serviceman's military service, including their rank, duties, and experiences.
+general	General	Reporter	Ex-Serviceman	Discussion about the ex-serviceman's transition to civilian life and any challenges or opportunities they have faced.
+general	General	Reporter	Ex-Serviceman	Discussion about the ex-serviceman's current work and personal goals, and how their military background has influenced or shaped them.
+general	General	Reporter	Ex-Serviceman	Discussion about the ex-serviceman's involvement in any veterans' organizations or advocacy groups, and the issues and causes they support.
+general	General	Reporter	Ex-Serviceman	Discussion about the ex-serviceman's perspective on current military or political events, and how they may impact the veteran community.
+general	General	Sheep Husbandry	Customer	Discussion about the types and quantities of sheep available for purchase.
+general	General	Sheep Husbandry	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Sheep Husbandry	Customer	Discussion about the delivery options and schedule for the sheep.
+general	General	Sheep Husbandry	Customer	Discussion about the care and feeding instructions for the sheep to ensure their health and growth.
+general	General	Sheep Husbandry	Customer	Discussion about any special requests or requirements the customer may have, such as specific breeds or ages, and how we can accommodate them.
+general	General	Shoeseller	Customer	Discussion about the types and styles of shoes available for purchase.
+general	General	Shoeseller	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Shoeseller	Customer	Discussion about the sizes and fit of the shoes, and any options for customization or special orders.
+general	General	Shoeseller	Customer	Discussion about the care and maintenance of the shoes, and any warranty or return policies.
+general	General	Shoeseller	Customer	Discussion about any special requests or requirements the customer may have, such as specific brands or features, and how we can accommodate them.
+general	General	Sister	Sister	Talking about death of their grandmother
+general	General	Sister	Sister	Discussion about the sisters' plans and activities for the day or weekend.
+general	General	Sister	Sister	Discussion about the sisters' recent experiences and achievements.
+general	General	Sister	Sister	Discussion about the sisters' goals and aspirations for the future.
+general	General	Sister	Sister	Discussion about any issues or concerns the sisters may be facing, and how they can support and help each other.
+general	General	Sister	Sister	Discussion about any special occasions or events coming up that the sisters need to prepare for or celebrate.
+general	General	Stationary Dealer	Customer	Discussion about the types and quantities of stationary items available for purchase.
+general	General	Stationary Dealer	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Stationary Dealer	Customer	Discussion about the options for customization or personalization of the stationary items, such as adding names or logos.
+general	General	Stationary Dealer	Customer	Discussion about the delivery options and schedule for the stationary items.
+general	General	Stationary Dealer	Customer	Discussion about any special requests or requirements the customer may have, such as specific colors or designs, and how we can accommodate them.
+general	General	Student	School Administration	Discussion about the student's academic performance and progress.
+general	General	Student	School Administration	Discussion about the student's attendance and behavior.
+general	General	Student	School Administration	Discussion about the student's extracurricular activities and involvement in school programs.
+general	General	Student	School Administration	Discussion about the student's career and educational goals, and how the school can support and prepare them for them.
+general	General	Student	School Administration	Discussion about any issues or concerns the student may be facing, such as personal or family problems, and how the school can provide assistance and resources.
+general	General	Teacher	Student	Discussion about the student's academic performance and progress.
+general	General	Teacher	Student	Discussion about the student's attendance and behavior.
+general	General	Teacher	Student	Discussion about the student's strengths and areas for improvement, and how they can work on them.
+general	General	Teacher	Student	Discussion about the student's goals and aspirations, and how the teacher can support and motivate them.
+general	General	Teacher	Student	Discussion about any issues or concerns the student may be facing, such as difficulties with coursework or personal problems, and how the teacher can provide assistance and resources.
+general	General	Teacher	Peon	Discussion about the peon's responsibilities and duties at the school.
+general	General	Teacher	Peon	Discussion about the peon's schedule and availability for tasks or errands.
+general	General	Teacher	Peon	Discussion about any issues or problems the peon may be facing in carrying out their duties, and how the teacher can assist or support them.
+general	General	Teacher	Peon	Discussion about any requests or needs the peon may have, such as additional supplies or equipment, and how the teacher can facilitate them.
+general	General	Teacher	Peon	Discussion about any feedback or suggestions the peon may have for improving the functioning or atmosphere of the school, and how the teacher can consider or act on them.
+general	General	Teacher	Teacher	Discussion about the teachers' plans and activities for the day or week.
+general	General	Teacher	Teacher	Discussion about the teachers' recent experiences and achievements in their classrooms or school.
+general	General	Teacher	Teacher	Discussion about the teachers' goals and aspirations for the future, both personally and professionally.
+general	General	Teacher	Teacher	Discussion about any issues or concerns the teachers may be facing, such as challenges with students or school policies, and how they can support and help each other.
+general	General	Teacher	Teacher	Discussion about any special occasions or events coming up that the teachers need to prepare for or celebrate.
+general	General	Tourist	Guide	Discussion about the tourist's interests and preferences for the tour, such as specific landmarks or cultural experiences.
+general	General	Tourist	Guide	Discussion about the duration and schedule of the tour, and any flexibility for customizing the itinerary.
+general	General	Tourist	Guide	Discussion about the modes of transportation and accommodation for the tour, and any options for upgrading or changing them.
+general	General	Tourist	Guide	Discussion about the cost and payment details for the tour, and any discounts or promotions being offered.
+general	General	Tourist	Guide	Discussion about any special requests or requirements the tourist may have, such as dietary restrictions or accessibility needs, and how the guide can accommodate them.
+general	General	Tourist	Trip Agent	Discussion about the tourist's interests and preferences for the trip, such as specific destinations or types of activities.
+general	General	Tourist	Trip Agent	Discussion about the duration and schedule of the trip, and any flexibility for customizing the itinerary.
+general	General	Tourist	Trip Agent	Discussion about the modes of transportation and accommodation for the trip, and any options for upgrading or changing them.
+general	General	Tourist	Trip Agent	Discussion about the cost and payment details for the trip, and any discounts or promotions being offered.
+general	General	Tourist	Trip Agent	Discussion about any special requests or requirements the tourist may have, such as dietary restrictions or accessibility needs, and how the trip agent can accommodate them.
+general	General	Tourist	Local Resident	Discussion about the tourist's interests and preferences for their visit, such as specific landmarks or cultural experiences.
+general	General	Tourist	Local Resident	Discussion about the tourist's schedule and plans for their visit, and any flexibility for customizing their itinerary.
+general	General	Tourist	Local Resident	Discussion about the local resident's recommendations for things to see and do in the area, and any insider tips or secrets they can share.
+general	General	Tourist	Local Resident	Discussion about the local culture and traditions, and any opportunities for the tourist to participate in or learn about them.
+general	General	Tourist	Local Resident	Discussion about the local resident's experience living in the area, and any insights or perspectives they can offer on the community and its history.
+general	General	Travel Agency	Tourist	Discussion about the tourist's interests and preferences for their trip, such as specific destinations or types of activities.
+general	General	Travel Agency	Tourist	Discussion about the duration and schedule of the trip, and any flexibility for customizing the itinerary.
+general	General	Travel Agency	Tourist	Discussion about the modes of transportation and accommodation for the trip, and any options for upgrading or changing them.
+general	General	Travel Agency	Tourist	Discussion about the cost and payment details for the trip, and any discounts or promotions being offered.
+general	General	Travel Agency	Tourist	Discussion about any special requests or requirements the tourist may have, such as dietary restrictions or accessibility needs, and how the travel agency can accommodate them.
+general	General	Husband	Wife	Discussion about the couple's plans for the day or week.
+general	General	Husband	Wife	Discussion about any household tasks or responsibilities that need to be taken care of.
+general	General	Husband	Wife	Discussion about any issues or concerns the couple may be facing in their relationship or personal lives, and how they can support and communicate with each other.
+general	General	Husband	Wife	Discussion about the couple's goals and aspirations for the future, both individually and as a couple.
+general	General	Husband	Wife	Discussion about the couple's social and leisure activities, and how they can enjoy quality time together.
+general	General	Hotel Manager	Customer	Discussion about the student's housing contract and the terms of their stay at the hostel.
+general	General	Hotel Manager	Customer	Discussion about the student's room assignment and any requests or preferences they may have.
+general	General	Hotel Manager	Customer	Discussion about the student's payment and billing for their stay at the hostel.
+general	General	Hotel Manager	Customer	Discussion about the rules and regulations of the hostel, including quiet hours and guest policies.
+general	General	Hotel Manager	Customer	Discussion about any maintenance or repair issues the student may be experiencing in their room, and how they can be addressed.
+general	General	Hospital Authority	Patient	Discussion about the patient's medical history and current health concerns.
+general	General	Hospital Authority	Patient	Discussion about the patient's treatment options and the potential risks and benefits of each option.
+general	General	Hospital Authority	Patient	Discussion about the patient's insurance coverage and any out-of-pocket costs for treatment.
+general	General	Hospital Authority	Patient	Discussion about the patient's discharge and follow-up care plan, including any medication or therapy recommendations.
+general	General	Hospital Authority	Patient	Discussion about the patient's rights and responsibilities as a hospital patient, including privacy and confidentiality.
+general	General	Gym Trainer	Newcomer	Discussion about the newcomer's goals and expectations for their fitness journey.
+general	General	Gym Trainer	Newcomer	Discussion about the newcomer's current fitness level and any injuries or limitations to consider.
+general	General	Gym Trainer	Newcomer	Discussion about the type of training program and schedule that would be most suitable for the newcomer.
+general	General	Gym Trainer	Newcomer	Discussion about the gym's equipment and facilities, and how they can be utilized in the training program.
+general	General	Gym Trainer	Newcomer	Discussion about the nutrition and hydration recommendations for optimal results in the training program.
+general	General	Flower Nursery Owner	Customer	Discussion about the types and quantities of flowers and plants available for purchase.
+general	General	Flower Nursery Owner	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Flower Nursery Owner	Customer	Discussion about the delivery options and schedule for the flowers and plants.
+general	General	Flower Nursery Owner	Customer	Discussion about the care and maintenance instructions for the flowers and plants to ensure their health and longevity.
+general	General	Flower Nursery Owner	Customer	Discussion about any special requests or requirements the customer may have, such as specific colors or varieties, and how we can accommodate them.
+general	General	Father	Daughter	Father conversing with her far away daughter
+general	General	Father	Daughter	Discussion about the daughter's day at school or work.
+general	General	Father	Daughter	Discussion about the daughter's plans and activities for the weekend.
+general	General	Father	Daughter	Discussion about the daughter's goals and aspirations for the future.
+general	General	Father	Daughter	Discussion about any challenges or problems the daughter is facing and how the father can support and guide her.
+general	General	Father	Daughter	Discussion about the daughter's relationships and social life, and how the father can offer advice and encouragement.
+general	General	Electrician	Household Owner	Discussion about the electrical issues or problems the household owner is experiencing.
+general	General	Electrician	Household Owner	Discussion about the scope of the electrical work needed and the estimated cost and timeline for the project.
+general	General	Electrician	Household Owner	Discussion about the materials and equipment needed for the electrical work.
+general	General	Electrician	Household Owner	Discussion about any potential hazards or risks associated with the electrical work, and how they will be addressed.
+general	General	Electrician	Household Owner	Discussion about the maintenance and safety recommendations for the household's electrical system.
+general	General	Dairy Owner	Customer	Discussion about the types and quantities of dairy products available for purchase.
+general	General	Dairy Owner	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Dairy Owner	Customer	Discussion about the delivery options and schedule for the dairy products.
+general	General	Dairy Owner	Customer	Discussion about the storage and handling instructions for the dairy products to ensure freshness and quality.
+general	General	Dairy Owner	Customer	Discussion about any special requests or requirements the customer may have, such as specific brands or flavors, and how we can accommodate them.
+general	General	Bookseller	Customer	Discussion about the types of books and genres available at the bookshop.
+general	General	Bookseller	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Bookseller	Customer	Discussion about the options for ordering books that are not currently in stock.
+general	General	Bookseller	Customer	Discussion about the process for returning or exchanging books.
+general	General	Bookseller	Customer	Discussion about any special requests or recommendations the customer may have, and how the bookseller can assist in finding the perfect book.
+general	General	Black Smith	Customer	Discussion about the types of metalwork and tools the blacksmith specializes in creating.
+general	General	Black Smith	Customer	Discussion about the materials and finishes available for the metalwork and tools.
+general	General	Black Smith	Customer	Discussion about the process of creating custom pieces, including design consultations and estimates.
+general	General	Black Smith	Customer	Discussion about the timeline and delivery options for the metalwork and tools.
+general	General	Black Smith	Customer	Discussion about the maintenance and care instructions for the metalwork and tools.
+general	General	Artisan	Customer	Discussion about the artisan's craft and the process of creating their products.
+general	General	Artisan	Customer	Discussion about the materials and techniques used in the artisan's craft.
+general	General	Artisan	Customer	Discussion about the availability and pricing of the artisan's products.
+general	General	Artisan	Customer	Discussion about the options for custom orders and special requests.
+general	General	Artisan	Customer	Discussion about the delivery and shipping options for the artisan's products.
+general	General	Administration	Employee	Discussion about the employee's job responsibilities and performance.
+general	General	Administration	Employee	Discussion about the employee's goals and career development within the organization.
+general	General	Administration	Employee	Discussion about any challenges or issues the employee is facing in their role, and how the administration can support them.
+general	General	Administration	Employee	Discussion about the employee's work schedule and time off requests.
+general	General	Administration	Employee	Discussion about the employee's benefits and compensation, including salary and perks.
+general	General	Friend	Friend	Talking about FIFA
+general	General	Friend	Friend	Organising a picnic
+general	General	Friend	Friend	Talking about Astrology
+general	General	Friend	Friend	Talking about their third friends sucess
+general	General	Friend	Friend	Batchmate conversations
+general	General	Friend	Friend	Discussion about plans for the weekend.
+general	General	Friend	Friend	Discussion about the latest news or events in each other's lives.
+general	General	Friend	Friend	Discussion about mutual interests or hobbies.
+general	General	Friend	Friend	Discussion about any challenges or problems each friend is facing and how they can support each other.
+general	General	Friend	Friend	Discussion about future goals and plans, and how each friend can help each other achieve them.
+general	General	PHE Department Official	Customer	Complaining regarding his water connection.
+general	General	PHE Department Official	Customer	Discussion about the availability and schedule for water supply in the area.
+general	General	PHE Department Official	Customer	Discussion about the quality and safety of the water being supplied.
+general	General	PHE Department Official	Customer	Discussion about the process for reporting and addressing any issues or disruptions with the water supply.
+general	General	PHE Department Official	Customer	Discussion about the billing and payment process for water usage.
+general	General	PHE Department Official	Customer	Discussion about any conservation or water management efforts being implemented in the area and how customers can participate.
+general	General	Civil Engineer	Client	Discussion about the scope and objectives of the engineering project.
+general	General	Civil Engineer	Client	Discussion about the timeline and budget for the project.
+general	General	Civil Engineer	Client	Discussion about the resources and materials needed for the project.
+general	General	Civil Engineer	Client	Discussion about the potential challenges and risks of the project, and how they can be mitigated.
+general	General	Civil Engineer	Client	Discussion about the communication and reporting processes for the project, and how progress will be tracked and reviewed.
+general	General	Chicken Farm Owner	Customer	Discussion about the types and quantities of chickens available for purchase.
+general	General	Chicken Farm Owner	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Chicken Farm Owner	Customer	Discussion about the delivery options and schedule for the chickens.
+general	General	Chicken Farm Owner	Customer	Discussion about the care and feeding instructions for the chickens to ensure their health and well-being.
+general	General	Chicken Farm Owner	Customer	Discussion about any special requests or requirements the customer may have, such as specific breeds or ages, and how we can accommodate them.
+general	General	Chicken Farm Owner	Customer	Discussion about the pickup or delivery options for the baked goods.
+general	General	Cement Seller	Customer	Discussion about the types and quantities of cement available for purchase.
+general	General	Cement Seller	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Cement Seller	Customer	Discussion about the delivery options and schedule for the cement.
+general	General	Cement Seller	Customer	Discussion about the storage and handling instructions for the cement to ensure quality.
+general	General	Cement Seller	Customer	Discussion about any special requests or requirements the customer may have, such as specific brands or mix ratios, and how we can accommodate them.
+general	General	Carpenter	Customer	Discussion about the types of furniture and home decor items the carpenter specializes in creating.
+general	General	Carpenter	Customer	Discussion about the materials and finishes available for the furniture and home decor items.
+general	General	Carpenter	Customer	Discussion about the process of creating custom pieces, including design consultations and estimates.
+general	General	Carpenter	Customer	Discussion about the timeline and delivery options for the furniture and home decor items.
+general	General	Carpenter	Customer	Discussion about the maintenance and care instructions for the furniture and home decor items.
+general	General	Baker	Customer	Asking about cake order
+general	General	Baker	Customer	Discussion about the types of baked goods and desserts available today.
+general	General	Baker	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Baker	Customer	Discussion about the ingredients and allergens in the baked goods.
+general	General	Baker	Customer	Discussion about the options for custom orders and special requests.
+general	General	Artisan	Researcher	Discussion about the techniques and materials used in traditional artisanal crafts.
+general	General	Artisan	Researcher	Discussion about the history and cultural significance of the artisan's craft.
+general	General	Artisan	Researcher	Discussion about the process of creating a specific craft or artwork.
+general	General	Artisan	Researcher	Discussion about the challenges and rewards of being an artisan.
+general	General	Artisan	Researcher	Discussion about the future of artisanal crafts and how they can be preserved and promoted.
+general	General	Winter Wear Shopkeeper	Customer	Discussion about the types and sizes of winter wear we have in stock.
+general	General	Winter Wear Shopkeeper	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Winter Wear Shopkeeper	Customer	Discussion about the materials and features of the winter wear, such as insulation, waterproofing, and wind resistance.
+general	General	Winter Wear Shopkeeper	Customer	Discussion about the return and exchange policy for the winter wear.
+general	General	Winter Wear Shopkeeper	Customer	Discussion about any special requests or preferences the customer may have, such as a specific color or style, and how we can accommodate them.
+general	General	Wholesaler	Agent	Discussion about the new product line we will be launching next month.
+general	General	Wholesaler	Agent	Discussion about the terms of our contract and how we can improve our partnership.
+general	General	Wholesaler	Agent	Discussion about the impact of the recent market trends on our sales and how we can adapt our strategy.
+general	General	Wholesaler	Agent	Discussion about the feedback we've received from customers and how we can improve the quality of our products.
+general	General	Wholesaler	Agent	Discussion about the potential for expanding our distribution to new territories and the resources needed to do so.
+general	General	Medical Wholesaler	Retailer	Discussion about the new products and brands we will be carrying in our inventory.
+general	General	Medical Wholesaler	Retailer	Discussion about the terms of our contract and any updates or changes to the agreement.
+general	General	Medical Wholesaler	Retailer	Discussion about the pricing and discounts for the medical products we offer.
+general	General	Medical Wholesaler	Retailer	Discussion about the delivery and transportation arrangements for the medical products.
+general	General	Medical Wholesaler	Retailer	Discussion about any potential challenges or issues that may affect the supply or demand of medical products, and how we can work together to mitigate them.
+general	General	Village committee head	Member	Discussion about the progress of the community development projects we have underway.
+general	General	Village committee head	Member	Discussion about the budget and financial resources available for community projects.
+general	General	Village committee head	Member	Discussion about the plans for upcoming community events and how we can involve more members of the village.
+general	General	Village committee head	Member	Discussion about any issues or concerns raised by village members and how we can address them.
+general	General	Village committee head	Member	Discussion about the long-term goals and vision for the village and how we can work together to achieve them.
+general	General	Vegetable Seller	Customer	Discussion about the types and quantities of vegetables available for purchase today.
+general	General	Vegetable Seller	Customer	Discussion about the prices and any discounts or promotions currently being offered.
+general	General	Vegetable Seller	Customer	Discussion about the delivery options and schedule for the vegetables.
+general	General	Vegetable Seller	Customer	Discussion about the storage and handling instructions for the vegetables to ensure freshness and quality.
+general	General	Vegetable Seller	Customer	Discussion about any special requests or dietary concerns the customer may have and how we can accommodate them.
+general	General	Vegetable dealer	Farmer	Discussion about the prices and quantities of the vegetables we are interested in purchasing from your farm.
+general	General	Vegetable dealer	Farmer	Discussion about the delivery schedule and transportation arrangements for the vegetables.
+general	General	Vegetable dealer	Farmer	Discussion about the storage and handling requirements for the vegetables to ensure freshness and quality.
+general	General	Vegetable dealer	Farmer	Discussion about the potential for a long-term partnership and how we can mutually benefit from it.
+general	General	Vegetable dealer	Farmer	Discussion about any potential challenges or risks that may affect the supply of vegetables from your farm, and how we can work together to mitigate them.
+general	General	University Incharge	Lecturer	Discussion about the new policies for grading and student evaluation.
+general	General	University Incharge	Lecturer	Discussion about the request for additional funding for research projects.
+general	General	University Incharge	Lecturer	Discussion about the new academic calendar for next semester.
+general	General	University Incharge	Lecturer	Discussion about the difficulties with classroom scheduling.
+general	General	University Incharge	Lecturer	Discussion about the potential implementation of a new online learning platform.
+state	Bihar	A local person from rajgir district	A person from out of bihar	They are discussing about local monument and places.
+state	Bihar	A person from Bihar	Visitor	They are discussing about local foods of Bihar.
+state	Bihar	A person from Gaya.(guide)	A tourist	They are talking about history of Mahabodhi temple.
+state	Bihar	A person who travels in a local train from darbhanga distric..	A person in the same train from chapra district	They discussing the current poltical scenerio of Bihar.
+state	Bihar	A folk artist	A person from other state	they discussing about local folk arts.
+state	Bihar	A Coolie on Patna railway station	A visitor	They discussing about the way of Buddha smriti park
+state	Bihar	A local shopkeeper nearby the Indo-Nepal border	A car driver	They discussing about the current situation of the Indo-Nepal border
+state	Bihar	Guide	A tourist	Visit to the Valmiki tiger reserve
+state	Bihar	A farmer	A student	Discussion regarding the cultivation of mushroom.
+state	Bihar	A census surveyor	Head of the family	Details of his family.
+state	Bihar	A Scientist	A student	Explaining about an experiment
+state	Bihar	A student	A youth	Discussion on unemployment
+state	Bihar	Senior citizen	Senior citizen	Discussion on rising inflation
+state	Bihar	A hindu lady	Visitor	Discussion on Chhath festival.
+state	Bihar	A local singer	Local singer	Discussion on the folk music of bihar.
+state	Bihar	A student from Darbhanga District	A student from Vaishali District	Discussion on the languages of bihar.
+state	Bihar	A artist	Artist	Theatre system of bihar.
+state	Bihar	A Youth	Youth	Discussion on the next assembly election
+state	Bihar	Senior Citizen	Youth	Dimensions of social medial.
+state	Bihar	Youth	Youth	Discussion on their favourite food.
+state	Bihar	A Youth from Madhubani	A visitor from the Nepal	Discussion on the Mithila kingdom
+state	Bihar	A person from the Mithila state association	A youth	Discussion on the importance of the Mithila raj.
+state	Bihar	A historian	Student	Nalanda University
+state	Bihar	A meteorological scientist	Common man	Present environmental condition of Bihar.
+state	Bihar	A person fron an NGO	Villager	Explaining about the schemes of government.
+state	Bihar	A news anchor	A flood victim	Talking about flood disaster in the state.
+state	Bihar	A pilgrimage	A sweeper in ganga ghat	About namami gange project .
+state	Bihar	A farmer	A shopkeeper who is going to buy his rice	About the quality and price of rice .
+state	Bihar	A hotel manager	A tourist	Talking about stay and quality of the room.
+state	Bihar	A green entrepreuner	A farmer	Talking about green enterprise.
+state	Bihar	A historian	A common man	Historical aspect of bihar
+state	Bihar	A bauddha monk	Visitor	Discussing about rising of bauddh religion in bihar
+state	Bihar	A person from Jain religion	Visitor	Relation of mahavir from bihar
+state	Bihar	College proffesor	Student	Ancient capital- patliputra
+state	Bihar	Senior citizen	Youth	Fridom fighters of bihar
+state	Bihar	A bihari film maker	An audience	Bihari's cinema
+state	Bihar	Artist	Audience	Cultural personalities of bihar
+state	Bihar	A doctor	Patient	Current health system of bihar
+state	Bihar	Educationalist	Youth	Current educational espects of bihar
+state	Bihar	Economist	Youth	Current economical condition
+state	Bihar	Sports Coach	Sports Trainee	Sports apportunities in bihar
+district	Dharbanga	A mithila painting artist	A buyer of that painting	They talking about cultural value of Mithila painting.
+district	Dharbanga	A Professor from lnmu	A student of lnmu	They talking about Rambagh fort,Darbhanga
+district	Dharbanga	A person from darbhanga district	A person from another region.	They are talking about local climatic change and drastic flood situation.
+district	Dharbanga	A senior citizen of darbhanga district	A young man of the same district	They talking about changing trend and situation of community feast.
+district	Dharbanga	A farmer from Darbhanga district	A common man from same district.	They are talking about cultivation of makhana.
+district	Dharbanga	A fisherman	A youth	Types of fish in darbhanga district
+district	Dharbanga	A nursery owner	A buyer of mango tree	Types of mango in this reason
+district	Dharbanga	A historian	A student of lnmu	Historical fact on harahi pond.
+district	Dharbanga	A organizer	An audience	The cultural fest -vidyapati smriti parv samahroh
+district	Dharbanga	A youth	A youth	Newly made planetarium
+district	Dharbanga	A bike rider	A car driver	Traffic zam
+district	Dharbanga	A Professor	A student	Mithila university .
+district	Dharbanga	A watchman	A visitor	Nargona palace.
+district	Dharbanga	A linguist	A student of maithili language	Mithilakshar script
+district	Dharbanga	A priest	A visitor	Shyama mai mandir
+district	Dharbanga	A maithili poet	A reader of the Vidyapati's poetry	Poetries of mahakavi Vidyapati.
+district	Dharbanga	A professor	A student	Sanskrit university
+district	Dharbanga	A folk dancer	Her fan	Folk dance jhijhiya and jat jatin
+district	Dharbanga	A maithili folk singer	A hindi singer	Folk song of Maithili
+district	Dharbanga	A senior citizen of darbhanga district	A visitor	Local food
+district	Dharbanga	A women from village	A women from metro city	Cultural festival like sama chakeva and madhusravani .
+district	Dharbanga	A sinior citizen	A youth	Development of darbhanga in last five years
+district	Dharbanga	A local guide	A visitor	Ahilyasthan
+district	Dharbanga	A Villager	A villager	Maithili language
+district	Dharbanga	A sinior citizen	A youth	Cultural attire of mithila
+district	Dharbanga	A fiirst time voter	An experienced voter	Recently completed municipal election
+district	Dharbanga	A cricket coach	A tranee	Nagendra jha stadium
+district	Dharbanga	A shopkeeper from darbhanga airport	A passenger	Darbhanga airport
+district	Dharbanga	A historian	A local public	Historical fact about darbhanga
+district	Dharbanga	A darbhanga maharaja's relative	A tourist	Kingdom of darbhanga mahraja .
+district	Dharbanga	A film maker	A common man	Maithili cinema
+district	Dharbanga	A women	A women from another culture	Mithila culture
+district	Dharbanga	A health worker	A tourist	Health system in darbhanga
+district	Dharbanga	A sports men	A person	Sports opportunities in darbhanga
+district	Dharbanga	Educationalist	Youth	Educational aspects of darbhanga
+district	Dharbanga	Senior citizen	Youth	Freedom fighters of darbhanga
+district	Dharbanga	Journalist	Student of journalism	Journalism of darbhanga
+district	Dharbanga	Local Guide	Visitor	Tourist places in darbhanga
+district	Dharbanga	Environmentalist	Visitor	Bird watching in kusheswar asthan
+district	Dharbanga	Priest	Youth	upnayan sanskar
+district	Birbhum	Father	Admission officer	Preparing to take my son's admission in G.N.M. Training Centre, Purulia
+district	Birbhum	Teacher	Student	Understanding  technology at Birbhum Institute of Engineering & Technology
+district	Birbhum	Doctor	Patient	Visit the Rampurhat Medical College And Hospital
+district	Birbhum	Shopkeeper	Customer	New dresses shall arrive in Cosmo Bazaar 
+district	Birbhum	Friend	Friend	A drive to Suri on Sunday morning for tea
+district	Birbhum	Trade person	Employee	Going to Bolpur to buy goods from Sonajhuri haat for business
+district	Birbhum	Mother	Daughter	Buying new clothes for  Basanta Utsav
+district	Birbhum	Friend	Friend	Discussing the new joy rides at Hindupur
+district	Birbhum	Wife	Husband	Discussing about vegetables from Tinazar 
+district	Birbhum	Worker	Worker	Making a list of spices to be bought from Jogai 
+district	Birbhum	Elderly person	Friend	Discussing politics at Sahid Bhagat Singh Park 
+district	Birbhum	Bengali Father	son	Discussions on annual revenue in a ration shop in Dekhuria
+district	Birbhum	Textile trader	Employee	Explaining  business in Dunigram Rd, Joykrishnapur,
+district	Birbhum	Sanitary trader	Plumber	Discussing on fixing pipeline problems in apartments in Sri Bhumi Pally
+district	Birbhum	Goods carrier	Business owner	Discussing cargo load to be delivered at the Bolpur Industrial Estate
+district	Birbhum	Neighbour	Neighbour	Discussion on religious ceremony at the Bharat Sebashram Sangha,Tarapith
+district	Birbhum	Teacher	Student	A field trip to the  Visva Bharati University at Santiniketan
+district	Birbhum	Classmate	Classmate	Discussing about Pathfinder - Rampurhat  for medical coaching
+district	Birbhum	Journalist	mahali tribe people	Discussing the history of art and craft goods being made from bamboo
+district	Birbhum	Morobba factory owner	Cook	Explaining the demand of Morobba in birbhum 
+district	Birbhum	Friend	Friend	A bike trip to Bhubandanga to enjoy Khai Khai Roll
+district	Birbhum	Uncle	Niece	Shopping from the Avik Shopping Mall  on Sibpur
+district	Birbhum	Aunt	Nephew	Shopping for the occasion of  Jaydev Kenduli Baul Mela
+district	Birbhum	Journalist	Press owner	Discusssing the quality of the schools of Birbhum district.
+district	Birbhum	Student	Teacher	Discussion on courses of Bengal Law College, Santiniketan
+district	Birbhum	Teacher	Student	Discussing with students at the Seacom Skills University, Birbhum
+district	Birbhum	Classmate	Classmate	Discussing the degree course of National Institute Of Oxberry,Suri
+district	Birbhum	Mother-in-law	Daughter-in-law	A pilgrimage to the Bhagabanbati Durga Mandir 
+district	Birbhum	Daughter-in-law	Mother-in-law	Discussing the fast to be kept for  Manasa  Puja  
+district	Birbhum	Sisterin in law	Friend	On exploring the best  Keemar Doi Bora at Nalhatir 
+district	Birbhum	Teacher	Student	Attending the Christmas carol recitation at the Al Saints Church,Suri
+district	Birbhum	Father	Son	Paying respect to ancestors at Tekedda (cemetry) 
+district	Birbhum	Friend	Friend	Discussing a bike trip to Lalbadth lake
+district	Birbhum	Friend	Friend	On enjoying Langcha from Misti Mohol,chowhatta
+district	Birbhum	Family member	Youngest son	Purchasing Bhetki Macher Paturi for dinner
+district	Birbhum	Lawyer	Lawyer	On the difficulties of practicing Litigation at Calcutta High Court
+district	Birbhum	Sanitation worker	Sanitation worker	On insufficient wage to  intensify the cleanliness drive in Rampurhat
+district	Birbhum	Teacher	Student	Discussing the history of Chhatimtala
+district	Birbhum	Batchmate	Batchmate	Preparation for the debate competition at Seacom Skills University
+district	Birbhum	Man	Receptionist	Procedure to get a child admitted to the life line hospital
+state	West Bengal	Customer	Vendor	Purchasing Pradeep from puja shop
+state	West Bengal	Customer	Vendor	Purchasing rui and Tilapia fish
+state	West Bengal	Customer	Vendor	Purchasing Puchka and Urad Dal Vada from the roadside stall
+state	West Bengal	Tourist	Taxi driver	A trip to Bakkhali
+state	West Bengal	Chaatwala	Customer	Eating chaat at Calcutta Chiit Chaat
+state	West Bengal	Mom	Son	Buying Mecha sandesh for guests at home
+state	West Bengal	Friend	Friend	Plucking kaccha aam in summer at village
+state	West Bengal	Farmer	Farmer	Harvest rituals around the festival of Poush Mela
+state	West Bengal	Friend	Friend	Good bars in Park Street area
+state	West Bengal	Teacher	Student	History of the Dakshineshwar Temple
+state	West Bengal	Daughter	Father	Buying new clothes for Durga Puja
+state	West Bengal	Vendor	Customer	Explaining the intricacies of chur and pati har
+state	West Bengal	Artisan	Vendor	Negotiating labour prices for the jewellery industry in bengal
+state	West Bengal	Rice seller	Customer	Rising prices of Kalonunia and Badshabhog rice
+state	West Bengal	Friend	Friend	Discussing the best Dhabas in the Howrah
+state	West Bengal	Friend	Friend	Discussing having the famous rasmalai at Jadubabur Bazar
+state	West Bengal	Father	Son	Discussing the month's ration and dividing expenses
+state	West Bengal	Teacher	Student	Doing a project on the various festivals of West Bengal like dolyatra,jagaddhatripuja,poila falgun
+state	West Bengal	Sister	Sister	Merriment and leisure during Dolyatra
+state	West Bengal	Friend	Friend	Using Sal leaf plate for serving during the feast.
+state	West Bengal	Bank Colleague	Bank Colleague	Catching trains from other districts to Calcutta on weekends
+state	West Bengal	Colleague	Colleague	Planning a picnic to Haldia  for new year's
+state	West Bengal	Auto driver	Tourist	Visit Bolpur and explore Shanti Niketon by exploring the photogllery
+state	West Bengal	Customer	Customer	 The best Luchi-Alur Dom makers have a better alu-dum than Ghuguni
+state	West Bengal	Tourist	Guide	Trip to Sundarbans National Park
+state	West Bengal	Landlord	Woman	Please pay the monthly rent before Durga Puja
+state	West Bengal	Wife	Husband	 Planning to shop at Burrabazar Market at Daolyatra
+state	West Bengal	Restaurent owner	Customer	Why should you have luchi and poha together in Raichak 
+state	West Bengal	Stallwala	Customer	Best stalls of Kathi roll and Jhalmuri in Durgapur
+state	West Bengal	Customer	misti doi owner	How is the dessert Mishti Doi prepared in West Bengal
+state	West Bengal	Elderly friend	Elderly friend	Ilish Maccher Jhol  preparation and taste in Nadia
+state	West Bengal	labourer 	labourer 	Choosing between Jalpaiguri,Purulia, Kolkata as the city to find work in and migrate to
+state	West Bengal	Friend	Friend	Finding achar, garlic chutney with Luchi-Alur Dom stalls in Burdwan
+state	West Bengal	Farmer	Farmer	The diverse variety of green vegetables grown in Bhatpara, North 24 Parganas
+state	West Bengal	Tourist	auto driver	Best places to buy Kantha from
+state	West Bengal	Tourist	Guide/Friends	Best places to buy Garad Saree from
+state	West Bengal	Son	Father	Discussing the better MBA course between IISWBM and IIM Calcutta 
+state	West Bengal	Grand father	grand son	Outing to the Kolkata Victoria Memorial
+state	West Bengal	Grand mother	grand daughter	Outing to the Shree Kiriteswari Shakti Peeth Temple Kiriteswar, West Bengal
+state	West Bengal	Friend	Friend	Playing football at  Salt Lake Stadium,Bidhannagar
+state	Odisha	Customer	Vendor	Purchasing sanja salita from puja shop
+state	Odisha	Customer	Vendor	Purchasing pohala and magura fish
+state	Odisha	Customer	Vendor	Purchasing bara and piaji from the roadside stall
+state	Odisha	Friend	Friend	A trip to Naraj
+state	Odisha	Friend	Friend	Eating chaat at Rupali chaka
+state	Odisha	Mom	Son	Buying Chenna Poda for guests at home
+state	Odisha	Friend	Friend	Plucking raw mangoes in summer at village
+state	Odisha	Farmer	Farmer	Harvest rituals around the festival of Raja
+state	Odisha	Friend	Friend	Good bars in Patia area
+state	Odisha	Teacher	Student	History of the Konark temple
+state	Odisha	Daughter	Father	Buying new clothes for Raja festival
+state	Odisha	Vendor	Customer	explaining the intricacies of silver filigree jewellery
+state	Odisha	Artisan	Vendor	negotiating labour prices for the silver filigree craftsmanship
+state	Odisha	Rice seller	Customer	rising prices of Arua and single Usuna rice
+state	Odisha	Friend	friend	Discussing the best Dhabas in the city/town
+state	Odisha	Friend	Friend	Discussing having the famous Ravi Bara at Unit 6.
+state	Odisha	Father	Son	Discussing the month's ration and dividing expenses
+state	Odisha	Teacher	Student	Doing a project on the various Osaa/Brata (fasting festivals) of Odisha
+state	Odisha	Sister	Sister	Merriment and leisure during Raja
+state	Odisha	Friend	Friend	Using banana or khali leaf plate for serving during the feast.
+state	Odisha	Bank Colleague	Bank Colleague	Catching trains from other districts to Bhubaneswar on weekends
+state	Odisha	Colleague	Colleague	Planning a picnic to Keonjhar for new year's
+state	Odisha	Auto driver	Tourist	Visit Old Town and explore Kalingan heritage by exploring old temples and maths
+state	Odisha	Customer	Customer	The best Dahibara Aludum makers have a better alu-dum than Ghuguni
+state	Odisha	Tourist	Guide	Trip to Nandankanan Zoological Park
+state	Odisha	Woman	Woman	Paying off the landlord and accumulating debts from households they are working in
+state	Odisha	Woman	Woman	Planning to shop at Gandhi Shilpa Bazar at Bali Jatra
+state	Odisha	Friend	Friend	Why should you have puri and upma together in Berhampur
+state	Odisha	Friend	Friend	Best stalls of Chaula bara and tentula chutney in Bolangir
+state	Odisha	Friend	Friend	How is the dessert Sarasatia prepared in Sambalpur
+state	Odisha	Elderly friend	Elderly friend	Padma Naada (lotus stem) curry preparation and taste in Koraput
+state	Odisha	Man	Man	Choosing between Bangalore, Surat, and Kolkata as the city to find work in and migrate to
+state	Odisha	Friend	Friend	Finding bara, garlic chutney with aludum stalls in Dhenkanal
+state	Odisha	Farmer	Farmer	The diverse variety of green vegetables grown in Pipili, Puri
+state	Odisha	Tourist	Guide/Friends	Best places to buy Pipili Chandua from
+state	Odisha	Tourist	Guide/Friends	Best places to buy Sambalpuri Patta saree from
+state	Odisha	Son	Father	Discussing the better MBA course between XIMB and KIIT
+state	Odisha	Family	Family	Outing to the Mayurbhanj royal palace
+state	Odisha	Family	Family	Outing to the Khira Choraa Gopinath Temple in Balasore
+state	Odisha	Friend	Friend	Playing football at Satyabrata Ground, Indoor Stadium, Cuttack
+district	Sambalpur	Father	Son	Preparing to take admission in VSS Medical College
+district	Sambalpur	Teacher	Student	Learning cutting-edge finance and Human Resource related problems at IIM, Sambalpur
+district	Sambalpur	Family member	Family member	A trip to Maa Samaleswari temple
+district	Sambalpur	Uncle	Nephew	A quick round of marketing from Fatka Bazar
+district	Sambalpur	Brahmin father	Daughter	Preparation for Shitalasasthi
+district	Sambalpur	Tribal community member	An audience member	Explaining the history of Sambalpur Lok Mahotsav
+district	Sambalpur	Guide	Tourist	A tour of Hirakud Dam
+district	Sambalpur	Mother	Son	Preparation for exams to get admission in Gangadhar Meher University
+district	Sambalpur	Factory owner	Manager	To increase the output of Bidi manufacturing
+district	Sambalpur	Worker	Factory owner	Increase wages for labourers manually making Bidis
+district	Sambalpur	Worker	Factory owner	Increase wages for women engaged in collection of kendu leaves used for making bidis
+district	Sambalpur	Merchant	Son	How to expand their store in Gole Bazaar
+district	Sambalpur	A Rickshaw puller	Trader	Increase transport fares of goods from Gole Bazar to Khetrarajpur
+district	Sambalpur	Mother	Son	On making a trip outside Sambalpur for the summers due to unbearable heat
+district	Sambalpur	Industrialist	Employee	Regarding the annual revenue of all units of Mahanadi Coal Fields in the district
+district	Sambalpur	Employee	Industrialist	Regarding people protesting over land grab and mining in different areas
+district	Sambalpur	Farmer	Wife	Offering the first paddy harvest to God on Nuakhai
+district	Sambalpur	Sister	Brother	Shopping for Nuakhai
+district	Sambalpur	Sister	Brother	Seeking gifts on the occassion of Bhai-juntia
+district	Sambalpur	Engineer	Government	Regarding the clean coal combustion technology used at Hindalco
+district	Sambalpur	Tribal community member	Tribal community member	Using Muhuri, Murdung, and Ghumra as the major instruments for a performance
+district	Sambalpur	Tribal community member	Tribal community member	Preparing for a performance of Dalkhai and Koisabadi dance
+district	Sambalpur	Friend	Friend	Best places in the city to try Chaula bara and tental jhola
+district	Sambalpur	Teacher	Student	Discussing the military achievements of Veer Surendra Sai
+district	Sambalpur	Mother	Son	Discussing the literary contribution of Gangadhar Meher and Bhima Bhoi
+district	Sambalpur	Aunt	Sister	The best place for shopping for Sambalpuri Paata Saree is Meher Ganesh Bastralaya in Gole Bazaar
+district	Sambalpur	Patient	Receptionist	Asking for the procedure to admit a child in the pediatric department at the VSS Hospital
+district	Sambalpur	Doctor	Patient	Buy medicines for free from the government-sponsored shops outside the Hospital in Burla
+district	Sambalpur	Father	Son	Happiness for getting admission to VSSUT government Engineering
+district	Sambalpur	Linguist	Student	The number of vowels and phonemes in the Sambalpuri language
+district	Sambalpur	History teacher	Student	Discussing the imposition of Hindi language in Sambalpur
+district	Sambalpur	Professor	PhD aspirant	Discussing the power struggle between Bhonsles and Marathas for the control of Sambalpur
+district	Sambalpur	Student	Student	Discussing the power struggle between Marathas and the British, before the British took over
+district	Sambalpur	Municipal Commissioner	Employee	The establishment of the Municipal Corporation in 1857 and its increasing detorioration
+district	Sambalpur	Municipality official	Worker	Regarding cleanliness and beautification drive in the city
+district	Sambalpur	Teacher	Student	The conflict over Sambalpur's transfer to Cuttack division.
+district	Sambalpur	Colleague	Colleague	Discussing the other districts of Odisha that border Sambalpur district
+district	Sambalpur	Govt. official	Govt. official	Discussing the percentage coverage of rural electrification in Sambalpur district
+district	Sambalpur	Designer	Intern	Discussing the intricacies of Baandha fabric
+district	Sambalpur	Grandfather	Grand-daughter	Reading the poetry of Haladhar Nag in Sambalpuri language
+state	Kerala	Tourist	Guide	Visit to hill stations like Munnar, Idukki, Thekkady, the cost, places to explore, no of days required
+state	Kerala	Cook	Tourist	Famous breakfast items of Kerala
+state	Kerala	Tourist	Guide	Famous festivals celebrated in Kerala ?
+state	Kerala	Tourist	Guide	Art forms that represent the tradition of Kerala
+state	Kerala	Cook	Tourist	Famous dishes in seafood
+state	Kerala	Patient	Guide	Specialty hospitals in Kerala
+state	Kerala	Student	Career Counsellor	ISRO facility in Kerala
+state	Kerala	Student	Career Counsellor	IT as a career in Kerala
+state	Kerala	Local	Tourist	Good restaurants for seafood
+state	Kerala	Resident-1	Resident-2	Toddy shops in Kerala
+state	Kerala	Local -1	Local-2	Raise of viewership for OTT platforms and the slide of DTH channels
+state	Kerala	Taxi driver	Tourist	Aggregator business - is it a boon or bane ?
+state	Kerala	Manager	Security	Security drill in an IT Park
+state	Kerala	Guide	Tourist	History & Culture of Kerala
+state	Kerala	Tourist	Cab driver	Unique accommodations or homestays available in Kerala?
+state	Kerala	Student	Dance Teacher	Major arts and dance forms of Kerala
+state	Kerala	Local-1	Local-2	Football in Kerala and FIFA-2022 World Cup
+state	Kerala	Customer	Banking (Loan)	Startup initiatives and opportunities in Kerala?
+state	Kerala	Wholeseller	Agent	Tea industry in Kerala
+state	Kerala	Faculty	Social worker	Social sector organization and their contribution in Kerala
+state	Kerala	Textile salesman	Customer	Buying dresses for Onam from a textile store
+state	Kerala	Football coach	Student	Enrolling for football coaching
+state	Kerala	Insurance Agent	Customer	Enrolling for a new insurance product with an insurance agent
+state	Kerala	Customer	Gold loan (Manager)	Enquiring to avail a gold loan from a bank
+state	Kerala	Ayurvedic Wellness Centre	Tourist	Ayurvedic treatment
+state	Kerala	Resident-1	Resident-2	Famous Retreat Centre in Kerala
+state	Kerala	Tourist	Guide	Places known for Tea
+state	Kerala	Tourist	Guide	Rubber producing districts in Kerala
+state	Kerala	Resident	SHG Member	SHG movement in Kerala
+state	Kerala	Tourist	Resident	Wildlife sanctuaries in Kerala
+state	Kerala	traditional house owner	friend	Traditional 'Kerala' style houses
+state	Kerala	Tourist	Guide	Seafood specialty in Kerala
+state	Kerala	Tourist	Restaurant Owner	Traditional food in Kerala
+state	Kerala	Coconut farmer	Customer	Coconut - synonymous with Kerala
+state	Kerala	Coconut oil mill	Customer	Usage of coconut oil
+state	Kerala	2 wheeler rental company	Tourist	Bike rentals in Kerala
+state	Kerala	Church Priest	Local	Christian weddings and their rituals in Kerala
+state	Kerala	Local priest	Resident 2	Hindu weddings in Kerala
+state	Kerala	Doctor	Resident	Handling of COVID-19 by the State Govt
+state	Kerala	Tourist	Massage centre owner	Ayurvedic massages/treatments in Kerala
+state	Kerala	Tourist	Resident	Literacy ratio - highest in the country
+state	Kerala	Local-1	Local-2	Ayurvedic Eye Hospital in Kerala
+state	Kerala	Tourist	Guide	India ranks 4th in global rubber production and 90% of it comes from Kerala
+state	Kerala	Resident	Tourist	Why is Kerala called "God's Own Country" ?
+state	Kerala	Tourist	Resident	Kerala and coconut trees
+state	Kerala	Guide	Tourist	Richest Temple of the World
+state	Kerala	Professor	student	Kerala - matriarchial society
+state	Kerala	Resident-1	Resident-2	Gold and textile shopping in Kerala
+state	Kerala	Resident	Tourist	Lottery business in Kerala
+district	Palakkad	Tourist	Travel Agent	Travel options in Palakkad to plan a trip to Munnar and Idukki
+district	Palakkad	Wholesaler	Customer	vegetable farming in Palakkad (snake gourd, little gourd, cucumber)
+district	Palakkad	Tourist	Guide	Traditional festivals (Nemmara Vallanghy Vela)
+district	Palakkad	Teacher	Student	Palakkad is the oldest railway division under Southern Railway
+district	Palakkad	Counsellor	Student	Medical Education opportunities in Palakkad
+district	Palakkad	Medical Tourist	Local	Ahalia campus-is there good care and facilities for heart ailments in Palakkad ?
+district	Palakkad	Tourist	Guide	Visit to the Parambikulam Tiger Reserve in Palakkad
+district	Palakkad	Rice dealer	Customer	Types of rice native to Palakkad / Kerala
+district	Palakkad	Resident-1	Resident-2	Visit to the Pooram festival in Kongad Bhagavathy temple
+district	Palakkad	Classical Singer-1	Classical Singer-2	Palakkad is a powerhouse of Carnatic music
+district	Palakkad	Alumni from Victoria College	3rd year degree student	Govt Victoria College-oldest higher educational institution in the state opened in 1888. Current standards and improcvement over the years
+district	Palakkad	Mason	House owner	Construction of an independent house in traditional 'tharavad' style
+district	Palakkad	Medical representative	Doctor (Oncologist)	Meeting the Oncologist at Karuna Medical College-Palakkad to brief about a new drug for cancer
+district	Palakkad	Customer	Car Sales Executive	To buy Hyundai CRETA from Grand Hyundai-Palakkad
+district	Palakkad	Cab driver	Tourist	Engaging a cab in Palakkad to visit Kodumbu Subramaniya Swamy Temple
+district	Palakkad	Tourist	Handicraft sales person	Arts & crafts shops in Palakkad to buy wooden boat
+district	Palakkad	Tourist	Travel Agent	Visit to Dhoni and athirapaly waterfalls by taxi - the cost and time it would take
+district	Palakkad	Person 1	person 2	Visit to Vadakanthara Sree Thirupuraikkal Bhagavathi Temple by tempo traveller
+district	Palakkad	local guide	tourist	Visit to the historic Palakkad Fort
+district	Palakkad	Tourist	Resident	To visit the biggest church in Palakkad - St. Raphael Cathedral
+district	Palakkad	Flower seller	Resident	buying various types of flowers for onam
+district	Palakkad	Local-1	Local-2	to eat fish moilee and kerala beef fry at Malabar restaurant
+district	Palakkad	Local-1	Local-2	chenda melam at the Pooram festival at Bhagawathi Amman Temple
+district	Palakkad	Local mahila-1	Kudambashree Member	how to join in the revolutionary Kudambashree SHG group in Palakkad
+district	Palakkad	Resident-1	Resident-2	to discuss on the success/failure of Malayalam movies released in 2022 (Hridayam Vs Gold)
+district	Palakkad	Local-1	Local-2	KJ Yesudhas-icon of Palakkad
+district	Palakkad	Cab driver	Tourist	Visit to the Siruvani dam by taxi
+district	Palakkad	Guide	Tourist	Visit to the Gedee Car Museum, District Heritage Museum and Gass Forest Museum in Palakkad. Cost of van for 10 people and the time taken to visit all the places
+district	Palakkad	Guide	Tourist	To visit Ayur Palana-ayurvedic treatment centre in Palakkad
+district	Palakkad	Guide	Tourist	Visit to the Choolanur Peacock Sanctuary
+district	Palakkad	School Principal	Parent	admission for children for classes lkg and 2nd std in Carmel School
+district	Palakkad	College Principal	Student	principal interviewing the student for b tech admission in Rajadhani Institute of Science and Technology
+district	Palakkad	Resident-1	Resident-2	visit to Burger Tree restaurant in Palakkad
+district	Palakkad	DTH aggregator	Resident	installing TATA DTH services for home
+district	Palakkad	Resident-1	Resident-2	To buy fresh fish from the famous Hi-TECH FISH MARKET
+district	Palakkad	Multi brand car dealer	Customer	buying a budget car from a MEZMO-multi brand outlet in Palakkad
+district	Palakkad	Travel Agent	Tourist	engaging cab services for 3 days to visit Ooty for a family of 6
+district	Palakkad	Applicances Store	Customer	buying tv, fridge, washing machine and ac for a new home from Kochukudiyil Agencies-Palakkad
+district	Palakkad	Resident-1	Resident-2	Discussion on Palakkad as the multi-modal transport hub with world class infrastructure
+district	Palakkad	Carpenter	Resident	to construct a water proof water tank with 15000 litres with allied pipe works and buying materials from Sivadam Hardware
+district	Palakkad	Traditional cook	Resident	"Prasadham" menu
+district	Tiswadi	Person	Person	Old Goa churches/world heritage site/ / St. Francis xavier/ the exposition
+district	Tiswadi	Student	Student	Old schools of the town/rise of international schools in tiswadi
+district	Tiswadi	Parent	Parent	Rise of coaching institutes panjim
+district	Tiswadi	Artist	Person	Kala Academy
+district	Tiswadi	Librarian	Person	Goa State Central Library Panjim
+district	Tiswadi	Taleigao Farmer	Tourist	GI tagged Taleigao Brinjals/ local vegetables of taleigao/community farming of taleigao
+district	Tiswadi	St Andre Farmer	Tourist	Khazan lands of St. Andre
+district	Tiswadi	Catholic Person	Catholic Person	Tavshanche fest/ pejech fest
+district	Tiswadi	Person	Person	Mahalaxmi temple Panjim
+district	Tiswadi	Person	Person	Fontainhas of Panjim
+district	Tiswadi	Local resident	Friend	Famous breakfast joints of the city(cafe real/cafe aram)
+district	Tiswadi	Local resident	Tourist	Famous traditional  tavern of the city
+district	Tiswadi	Divar Local Resident	Outsider	Bonderam Festival/ potekar festival of Divar
+district	Tiswadi	Ribander local resident	Tourist	Ribander floats for new year
+district	Tiswadi	Local resident	Friend	Ferry boats in the taluka
+district	Tiswadi	Local resident	Tourist	Salt panes in the taluka
+district	Tiswadi	Linguist	Local	The accent and dialect of tiswadi taluka
+district	Tiswadi	Local	Friend	Beaches in tiswadi taluka
+district	Tiswadi	Resident	Outsider	IFFI festival and its effects on the locals
+district	Tiswadi	Nature Lover	Person	Birding spots like Dr. salim Ali bird sanctaury, carambolim lake
+district	Tiswadi	Local resident	Person	Mangrooves in the taluka
+district	Tiswadi	Local guide	Tourist	The authenticity of the legend of dona paula
+district	Tiswadi	Local	Tourist	Portuguese hetitage buildings in panjim
+district	Tiswadi	Historian	Student	Forts in the taluka (reis magos/ corjuvem forst/ st estevam fort)
+district	Tiswadi	Tourist guide	Tourist	Casinos in panjim
+district	Tiswadi	Cruise performer	Tourist	River cruises in panjim
+district	Tiswadi	Local	Tourist	New infrastructure like the ATAL setu in the city
+district	Tiswadi	Local	Tourist	Heritage bakeries of panjim(cafe central/geeta bakery/ Confeitaria 31 De Janeiro)
+district	Tiswadi	Island local	Friend	Islands in the taluka(divar/chorao/St. Estevam/Cumbarjua /Vanxim)
+state	Goa	Fish Seller	Customer	Goan Local Fish Like Karbot, Manshechi Sungta, Kalundar
+state	Goa	Dry Fish Seller	Customer	Types Of Dried Fish In Goa
+state	Goa	Cashew Plucker	Tourist	The Process And The Season Of Cashew Plucking In Goa/ Types & Grades Of Cashew
+state	Goa	Guide	Tourist	Goan Traditional Houses, Architecture And Influence Of Various Cultures
+state	Goa	Cashew Joice Extractor	Visitor	Niro, The Local Nonalcoholic Drink Of Goa
+state	Goa	Feni Distiller	Customer 	The Quality Of Urrak And Feni Sold 
+state	Goa	Water Sports Organizer	Customer	Types Of Water Sports In Goa
+state	Goa	Spice Farm Employee	Tourist	Introduction To The Common Spices Planted In Goa
+state	Goa	Vegetable Seller	Customer	Goan Local Veggetables(Taligao Brinjols/7 Shiranche Bhende) And The Farming Practices
+state	Goa	Student	Student	Engineering Colleges In Goa
+state	Goa	Job Councellor	Student	Employment Opportunities In Goa
+state	Goa	Govt Employee	Student	Goa Public Service Comission Opportunities And Examination Process
+state	Goa	Flower Seller	Customer 	Local Flowers And Their Seasons,
+state	Goa	Temple Priest	Tourist	Local Deities Of Goa (Santeri, Bhumika, Ravalnath, Shantadurga)
+state	Goa	Priest	Villager	Protector Deities Of Goa (Vetal, Rakhankar, Bodgeshwar, Katamgal Dada)
+state	Goa	Church Priest	Friend	Unique Customs Of Church In Goa (Offering The First Harvest To God, Procession Of All Saints)
+state	Goa	Church Priest	Tourist	Exposition Of St. Francis Xavier Relics (Deccenial-Recurring Once Every Ten Years)
+state	Goa	Local	Tourist	Good Restaurants In Goa(Ritz Classic/Sharada Classic/Vinayak/Anand)
+state	Goa	Taxi Driver	Tourist	Rising Taxi Fares In Goa(Opposition To Ola/Uber By Taxi Mafia)
+state	Goa	Heritage Trail Organizer	Tourist	Foraging Fruits (Kanna/Chunna/Asale) From The Forests Of Goa
+state	Goa	Homemaker	Child	Monsoon Delicacies From Goa (Mushorroms, Bamboo Shoots(Killa), Talkhilo, Kudduchi Bhaji)
+state	Goa	Goan Local Sweets Seller	Customer	Unique Sweets From The Jatras And Feasts Of Goa(Khaje, Mhana, Alyachi Kapa, Cajiche Ladoo)
+state	Goa	Tourist	Doctor	Goa Medical College And Health Facilities In Goa (Free Treatment, Ddssy, Mediclaim)
+state	Goa	Cocunut Plucker	Customer 	The Dying Art Of Coconut Plucking (Render)
+state	Goa	Start Up Founder In Agriculture	Friend	Agricultural Opportunities In Goa
+state	Goa	Traditional Farmer	Student	Khazan With Mangroves Poim(Water Body)/Manos(Sluice Gate)/ Rainage Canals/ Agricultural Lands
+state	Goa	Folk Artist	Tourist	Flok Art Forms From Goa(Dhalo/Fugdi)
+state	Goa	Tiatrist	Tourist	History Of Tiatr Culture In Goa
+state	Goa	Konkani Language Activist	Friend	The Konkani Language Movement In Goa
+state	Goa	Goan Freedom Fighter	New Generation Youth	Goan Liberation Struggle
+state	Goa	Goan Konkani Lover	Tourist	Opinion Poll Goa
+state	Goa	Goan Local	Tourist	Kulagars In Goa
+state	Goa	Beetalnut Cultuvator	Customer	Beetalnut Cutivation In Goa
+state	Goa	Coconut Farmer	Customers	Coconut Plantation In Goa(Places Famous For Coconut/ Best Coconut Varieties/ Govt Subsidies)
+state	Goa	Mango Farmer	Customer	Selling Of Mankurad Mangoes And Different Types Of Mango Varieties Like Xavier, Fernand
+state	Goa	Seller	Cusomer	Seller Of Purument Items During A Jatra/Fest
+state	Goa	Jweller	Customer 	Goan Traditional Jwellery
+state	Goa	Startup Founder	Friend	Goan Startup Ecosystem
+state	Goa	School Teacher	Student	Career Options In Goa
+state	Goa	Child	Parents	Buying New Clothes & Fire Crackers For Ganesh Chaturthi
+state	Goa	Friend	Friend	Narkasur Making 
+state	Goa	Local Priest	Person	Traditional Hindu Wedding Of Goa
+state	Goa	Church Priest	Person	Traditional Christian Wedding Of Goa
+state	Goa	Restaurant Owner	Tourist	Traditional Cusiene Of Goa
+state	Goa	Goan Origin Person	A Researcher	Dialects Of Konkani In Goa
+state	Goa	History Professor	History Student	Portuguese Inquistion In Goa
+state	Goa	Folk Artist	Local	Folk Culture Of Goa Like Gade Utsav
+state	Goa	Artist	Tourist	Carnival Of Goa
+state	Goa	Tableau Artist	Tourist	Shigmo Festival Of Goa
+state	Goa	Truck Owner	Mine Owner	Mining In Goa
+state	Goa	Goan 2 Wheeler Pilot	Customer	2 Wheeler Taxis Riders- Called Pilots In Goa
+state	Goa	Goan Nature Activist	People	Mhadei River Issue Of Goa
+state	Goa	GMC Doctor	Person	Oxygen Shortage In Goa Medical College During Covid
+state	Goa	Professor	Students	Higher Education Institutes In Goa Like Nit, Iit, Bits
+state	Goa	Environmental Activist	Environmental Activist	Mollem Double Tracking Project
+state	Goa	Naturalist	Tourists	Local And Migratory Birds Found In Goa/ Sancturies
+state	Goa	Archeologist	Tourists	The Caves And Prehistoric Art Forms Found In Goa
+state	Goa	Salt Seller	Customer	Salt Panes Of Goa
+state	Goa	Fish Form Owner	Retailer	Fish Farms In Goa,
+state	Goa	Raponkar (Traditional Fisherman)	Customer	Raponn Method In Goa Of Fishing
+state	Goa	Kunbi Woman	Tourist	Kunbi Saree And The Method Of Wearing It
+state	Goa	Traditional House Ownder	Friend	Features Of Traditional Houses Of Goa, The Balcao, The Sopo,  The Finials
+state	Andra Pradesh	Tourist	Resident	Major attractions for the tourists when they visit Andhra Pradesh
+state	Andra Pradesh	Biriyani Seller	Customer	Famous places in Andhra Pradesh that sell the best Biriyani
+state	Andra Pradesh	Tourist	Resident	Famous festivals celebrated in Andra Pradesh
+state	Andra Pradesh	Tourist	Resident	Famous art forms in Andra Pradesh
+state	Andra Pradesh	Student	Career Counsellor	Major STEM fields or disciplines that are studied and researched in Andra Pradesh
+state	Andra Pradesh	Student	Career Counsellor	Major STEM industries or sectors in Andhra Pradesh that are driving innovation and economic growth
+state	Andra Pradesh	Resident-1	Resident-2	Major news events or stories that have made headlines in Andhra Pradesh in recent times include
+state	Andra Pradesh	Resident-1	Resident-2	Major news organizations or media houses in Andhra Pradeshthat own or operate the major news sources?
+state	Andra Pradesh	Resident-1	Resident-2	Most popular news outlets in Andhra Pradesh
+state	Andra Pradesh	Security	Tourist	Local transportation options that tourists can use to get around Andhra Pradesh
+state	Andra Pradesh	Manager	Security	Briefing from earlier shift
+state	Andra Pradesh	Museum	Visitor	History and culture, such as through museums or local festivals
+state	Andra Pradesh	Tourist	Cab driver	Unique accommodations or homestays that tourists can experience while visiting Andhra Pradesh
+state	Andra Pradesh	Student	Dance Teacher	Major arts or cultural traditions and dance forms
+state	Andra Pradesh	Student	Sports Teacher	Major sports sponsorships or partnerships in Andhra Pradesh that support sports development or promotion in the state
+state	Andra Pradesh	Customer	Banking (Loan)	Major governement schemes available for startup business for womens exclusive in Andhra Pradesh
+state	Andra Pradesh	Job seeker	Placement Consultancy	Support of placement consultancies for the youths in Andhra Pradesh to get their dream job
+state	Andra Pradesh	Tourist	Resident	Kabaddi is selected as a state game
+state	Andra Pradesh	Textile salesman	Customer	Buying wedding clothes for a family
+state	Andra Pradesh	Football coach	student	To enroll for football coaching
+state	Andra Pradesh	Insurance Agent	Customer	To buy a new insurance policy for family covering life and medical expenses
+state	Andra Pradesh	Customer	Gold Loan (Manager)	To avail gold loan
+state	Andra Pradesh	Spa & Wellness centre	Tourist	Massages and wellness treatment
+state	Andra Pradesh	Tourist	Resident	Tirupati is the richest temple in the World
+state	Andra Pradesh	Tourist	Guide	Andhra Pradesh called the 'land of hot chillies'
+state	Andra Pradesh	Tourist	Guide	Andhra Pradesh is the largest producers of tobacco in India
+state	Andra Pradesh	Tourist	Guide	Specific information for those visitors traveling in Andhra Pradesh
+state	Andra Pradesh	Tourist	Resident	Offbeat or lesser-known destinations in Andhra Pradesh that tourists might not have heard of but are worth a visit
+state	Andra Pradesh	Resident-1	Resident-2	Spiritual or wellness retreats that tourists can visit in Andhra Pradesh
+state	Andra Pradesh	Tourist	Resident	Common activities that tourists can participate in while visiting Andhra Pradesh
+state	Andra Pradesh	Tourist	Guide	Unique accommodations or homestays that tourists can experience while visiting Andhra Pradesh
+state	Andra Pradesh	Passenger-1	Passenger-2	Vijayawada railway station as the nodal station for various destinations and its development
+state	Andra Pradesh	Resident-1	Resident-2	Initiative of AP Govt to have multiple cities as its Capital
+state	Andra Pradesh	Resident-1	Resident-2	Development of airports in AP in line with other cities in India (like Hyderabad)
+state	Andra Pradesh	Guide-1	Guide-2	Araku Valley as the go-to tourist destination and its promotion
+state	Andra Pradesh	Resident-1	Resident-2	Sustainability of AP as a welfare state where everything is offered free to its citizens
+state	Andra Pradesh	Road contractor	Official	Laying of 2 lane road for 50 kms
+state	Andra Pradesh	Doctor	Patient	Explaining on the treatment in State General Hospital for cancer
+state	Andra Pradesh	Minister	Secretary	Policy to make Anakapalli district to be the no1 jaggery market in the country
+state	Andra Pradesh	Minister	TTD Board Member	Crowd management in Tirupati temple
+state	Andra Pradesh	Education Dept Secretary	Dept Official	Venkateswara University in Tirupati to be in top 10 universities in India by 2025
+district	Anakapalli	Tourist	Travel Agent	Travel options in Anakapalle to plan a trip to Kondarla Ava
+district	Anakapalli	Wholesaler	Customer	vegetable farming in Anakapalle (potato, tomato, brinjal)
+district	Anakapalli	Tourist	Guide	Traditional festivals (Nookalamma Jathara at Sri Nookambica Ammavari Temple)
+district	Anakapalli	Teacher	Student	What should be aimed at Anakapalle which was formed a district in April 2022 to make it a development oriented district
+district	Anakapalli	Counsellor	Student	Medical Education opportunities in Anakapalle
+district	Anakapalli	Local-1	Local-2	NTR Jaggery Market-ways to improve
+district	Anakapalli	Tourist	Guide	Visit to the Satyanarayana Konda-hill temple at kasimkota in Anakapalle
+district	Anakapalli	Rice dealer	Customer	Types of rice native to Anakapalle (swarna, chaitanya)
+district	Anakapalli	Resident-1	Resident-2	Visit to the sri dakshina kasi visweswara swamy temple-largest crystal lingam in the world in taxi by 5 members
+district	Anakapalli	Tourist	Guide	Visit to the famous Buddhist place-Bojjana konda and lingala konda-buddhist sites-Sankaram famous for its many votive stupas, rock-cut caves
+district	Anakapalli	Resident	School Principal	To get admission in Vidhya Dari Public School-Anakapalle for class VI as the resident is on a transfer
+district	Anakapalli	Mason	House owner	Construction of an independent house in traditional 'tharavad' style
+district	Anakapalli	Medical representative	Doctor (Oncologist)	Consultation with the Oncologist at NTR Govt Hospital-Anakapalle for cancer ailment
+district	Anakapalli	Local-1	Local-2	To visit Appikonda Beach, Seethapalem Beach, Mutyalammapalem Beach, Gangavaram Beach, Pudimadaka Beach, Rambilli Beach, Revupolavaram Beach
+district	Anakapalli	Cab driver	Tourist	Engaging a cab for 3 people in Anakapalle to visit Thanthadi Beach
+district	Anakapalli	Tourist	Handicraft sales person	Arts & crafts shops in Anakapalle to buy coasters
+district	Anakapalli	Tourist	Guide	Enquiring with guide in Anakapalle to visit Revupolavaram Beach
+district	Anakapalli	Person 1	person 2	Visit to Dharmalingeswara Temple at Panchadharla by engaging a cab
+district	Anakapalli	local guide	tourist	To visit Pudimadaka Beach, Rambilli Beach by a family of 7
+district	Anakapalli	Tourist	Resident	To visit the oldest church in Anakapalle - Andhra Baptist Church
+district	Anakapalli	Resident-1	Resident-2	To visit the Dusshera festival at bhagiradhi ammavaru
+district	Anakapalli	Local-1	Local-2	To watch a movie at shirdi sai theater-1st multiplex in Anakapalle
+district	Anakapalli	Local-1	Local-2	To visit the Gavarapalem Park along with family
+district	Anakapalli	Local-1	Local-2	To visit the VUDA Parameshwari Park
+district	Anakapalli	Resident-1	Resident-2	to discuss on the golden globe awards for 'Naatu Naatu' from the movie "RRR"
+district	Anakapalli	Local-1	Local-2	To visit Mutyalammapalem Beach, Gangavaram Beach
+district	Anakapalli	Cab driver	Tourist	Engaging a cab in anakapalli to visit Nookambika Temple
+district	Anakapalli	Guide	Tourist	Visit to the NTR Jaggery Market-2nd largest in India
+district	Anakapalli	Guide	Tourist	Visit to the Lingala Tirugudu - oldest and famous Shiva Temple
+district	Anakapalli	Guide	Tourist	Visit to the AP Baptist Church which was constructed in 1895
+district	Anakapalli	School Principal	Parent	admission for children for classes lkg and 2nd std in Cambridge School, Anakapalle
+district	Anakapalli	College Principal	Student	principal interviewing the student for b tech admission in Dadi Institute Of Engineering & Technology
+district	Anakapalli	Resident-1	Resident-2	To have lunch at Sathvika multicuisine restaurant in Anakapalle
+district	Anakapalli	Resident-1	Resident-2	installing Jio Fibernet AGANAMPUDI services for home
+district	Anakapalli	Resident-1	Resident-2	To buy fresh fish from the famous Chepala Bazar
+district	Anakapalli	Multi brand car dealer	Customer	buying a budget car from a JAYABHERI MARUTI ANAKAPALLI outlet in Anakapalle
+district	Anakapalli	Travel Agent	Tourist	engaging cab services to Bojjanna Konda & Ligala konda at sankaram
+district	Anakapalli	Applicances Store	Customer	buying tv, fridge, washing machine and ac for a new home from Samsung Smart Plaza Anakapalle
+district	Anakapalli	Resident-1	Resident-2	Discussion on buying solar pannels from SRI SAI SOLAR SYSTEMS and installing the system for our apartment
+district	Anakapalli	Carpenter	Resident	to construct a water proof water tank with 20000 litres with allied pipe works and buying materials from SAI DURGA HARDWARE ANAKAPALLE
+district	Anakapalli	Resident-1	Resident-2	recipe for andhra chilli chicken-using guntur chilli
+district	Anakapalli	Wholesale flower seller	Florist	Buying flowers for wedding decoration from Sri nookambika flowers shop (Rose,Daisy,Carnation,Artificial flowers)
+state	Karnataka	Tourist	Guide	Visit to hill stations like BR Hills, Kemmanagundi, Coorg, Chikmagalur, the cost, places to explore, no of days required
+state	Karnataka	Cook	Tourist	Famous breakfast items of Karnataka. Why masala dosa is favorite of all in the state?
+state	Karnataka	Tourist	Guide	Famous festivals celebrated in Karnataka?
+state	Karnataka	Tourist	Guide	Art forms that represent the tradition of Karnataka
+state	Karnataka	Cook	Tourist	
+state	Karnataka	Patient	Guide	Specialty hospitals in Karnataka
+state	Karnataka	Student	Career Counsellor	
+state	Karnataka	Student	Career Counsellor	IT as a career in Karnataka
+state	Karnataka	Local	Tourist	Good restaurants for seafood
+state	Karnataka	Resident-1	Resident-2	Toddy shops in Karnataka
+state	Karnataka	Local -1	Local-2	Raise of viewership for OTT platforms and the slide of DTH channels
+state	Karnataka	Taxi driver	Tourist	Aggregator business - is it a boon or bane ?
+state	Karnataka	Manager	Security	Security drill in an IT Park
+state	Karnataka	Guide	Tourist	History & Culture of Karnataka
+state	Karnataka	Tourist	Cab driver	Unique accommodations or homestays available in Karnataka?
+state	Karnataka	Student	Dance Teacher	Major arts and dance forms of Karnataka
+state	Karnataka	Local-1	Local-2	Football in karnataka and FIFA-2022 World Cup
+state	Karnataka	Customer	Banking (Loan)	Startup initiatives and opportunities in Karnataka?
+state	Karnataka	Wholeseller	Agent	Coffee industry in Karnataka
+state	Karnataka	Faculty	Social worker	Social sector organization and their contribution in Karnataka
+state	Karnataka	Textile salesman	Customer	Buying dresses for Ganesha Chaturthi from a textile store
+state	Karnataka	Football coach	Student	Enrolling for football coaching
+state	Karnataka	Insurance Agent	Customer	Enrolling for a new insurance product with an insurance agent
+state	Karnataka	Customer	Gold loan (Manager)	Enquiring to avail a gold loan from a bank
+state	Karnataka	Ayurvedic Wellness Centre	Tourist	Ayurvedic treatment
+state	Karnataka	Resident-1	Resident-2	Famous Retreat Centre in Karnataka
+state	Karnataka	Tourist	Guide	Places known for Coffee
+state	Karnataka	Tourist	Guide	Ragi producing districts in Karnataka
+state	Karnataka	Resident	SHG Member	SHG movement in Karnataka
+state	Karnataka	Tourist	Resident	Wildlife sanctuaries in Karnataka
+state	Karnataka	traditional house owner	friend	Traditional 'Karnataka' style houses
+state	Karnataka	Tourist	Guide	Seafood specialty in Karnataka
+state	Karnataka	Tourist	Restaurant Owner	Traditional food in Karnataka
+state	Karnataka	Banana farmer	Customer	Why cultivation of Karnataka's GI-tagged Nanjangud rasabale banana has declined
+state	Karnataka	Coconut oil mill	Customer	Usage of coconut oil
+state	Karnataka	2 wheeler rental company	Tourist	Bike rentals in Karnataka
+state	Karnataka	Church Priest	Local	Christian weddings and their rituals in Karnataka
+state	Karnataka	Local priest	Resident 2	Hindu weddings in Karnataka
+state	Karnataka	Doctor	Resident	Handling of COVID-19 by the State Govt
+state	Karnataka	Tourist	Massage centre owner	Ayurvedic massages/treatments in Karnataka
+state	Karnataka	Tourist	Resident	Literacy ratio - highest in the country
+state	Karnataka	Local-1	Local-2	Ayurvedic Eye Hospital in Karnataka
+state	Karnataka	Tourist	Guide	India is in the lead in production of ragi in the world. And in India, Karnataka is in the top position of producing Ragi.
+state	Karnataka	Resident	Tourist	Why is karnataka called Land of Sandalwood ?
+state	Karnataka	Tourist	Resident	Karnataka and coconut trees
+state	Karnataka	Guide	Tourist	Richest Temple of the World
+state	Karnataka	Professor	student	Karnataka - matriarchial society
+state	Karnataka	Resident-1	Resident-2	Gold and textile shopping in Karnataka
+state	Karnataka	Resident	Tourist	Lottery business in Karnataka
+state	Karnataka	Traditional cook	Resident	Ragi roti recipe and with wht
+district	Tumkur	Tourist	Travel Agent	Travel options in Tumkur to plan a trip to Devarayana Durga and Mandaragiri Jain Temple
+district	Tumkur	Wholesaler	Customer	vegetable farming in Tumkur (Tomato, Brinjal, Chilli, Aster)
+district	Tumkur	Tourist	Guide	Traditional festivals (Kambala Festival, Hampi Festival, Pattadakal Dance Festival)
+district	Tumkur	Teacher	Student	Tumkur is the oldest Narasimha Swamy Temple
+district	Tumkur	Counsellor	Student	Medical Education opportunities in Tumkur
+district	Tumkur	Medical Tourist	Local	Ahalia campus-is there good care and facilities for heart ailments in Tumkur ?
+district	Tumkur	Tourist	Guide	Visit to the Shree Siddagangaa Matha in Tumkur
+district	Tumkur	Rice dealer	Customer	Types of rice native to Tumkur / Chikkaballapura
+district	Tumkur	Resident-1	Resident-2	Visit to the navratri festival in Goravanahalli Mahalakshmi Temple
+district	Tumkur	Classical Singer-1	Classical Singer-2	Tumkur is a Carnatic Instrumental music
+district	Tumkur	Siddaganga Institute Of Technology collage	3rd year degree student	Siddaganga Institute Of Technology collage -oldest higher educational institution in the state opened in 1963. Current standards and improcvement over the years
+district	Tumkur	Mason	House owner	Construction of an independent house in traditional 'tharavad' style
+district	Tumkur	Medical representative	Doctor (Oncologist)	Meeting the Oncologist at Siddaganga Medical College -tumkur to brief about a new drug for cancer
+district	Tumkur	Customer	Car Sales Executive	To buy Hyundai CRETA from Grand Hyundai-Tumkur
+district	Tumkur	Cab driver	Tourist	Engaging a cab in Tumkur to visit Shri Chennakeshava Swami Temple
+district	Tumkur	Tourist	Handicraft sales person	Arts & crafts shops in Tumkur to buy bamboo and cane products
+district	Tumkur	Tourist	Travel Agent	Visit to Manikyadhara Falls and Mallalli Falls by taxi - the cost and time it would take
+district	Tumkur	Person 1	person 2	Visit to Channakeshava temple Temple by tempo traveller
+district	Tumkur	local guide	tourist	Visit to the historic Tumkur Fort
+district	Tumkur	Tourist	Resident	To visit the biggest Temple in Tumkur - Sir Neelakanteshwara swami temple
+district	Tumkur	Flower seller	Resident	buying various types of flowers for wedding
+district	Tumkur	Local-1	Local-2	to eat Akki roti and Tumkur Khara Bath at Hotel Good Luck Restaurant
+district	Tumkur	Local-1	Local-2	the festival at Kote Sri Kollapuradamma Temple in Tumkur
+district	Tumkur	Local mahila-1	Bank staff	How to apply loan for Vikas Asha (women entrepreneur - procedure and eligibility
+district	Tumkur	Resident-1	Resident-2	to discuss on the success/failure of Kannada movies released in 2022 (Kantara Vs Harikathe Alla Girikathe)
+district	Tumkur	Local-1	Local-2	Dr. Rajkumar-icon of Tumkur
+district	Tumkur	Cab driver	Tourist	Visit to the Markonahalli Dam by taxi
+district	Tumkur	Guide	Tourist	Visit to the Shimsha Falls Museum, Gol Gumbaz, and Namachilume in Tumkur. The cost of a van for 20 people and the time taken to visit all the places
+district	Tumkur	Guide	Tourist	To visit Omaha Ayurveda treatment centre in Tumkur
+district	Tumkur	Guide	Tourist	Visit to the Kaggaladu Bird Sanctuary
+district	Tumkur	School Principal	Parent	admission for children for classes lkg and 2nd std in ORCHIDS The International School
+district	Tumkur	College Principal	Student	Principal interviewing the student for b tech admission in Sri Siddhartha Institute Of Technology
+district	Tumkur	Resident-1	Resident-2	visit to Kaju Masala restaurant in Tumkur
+district	Tumkur	DTH aggregator	Resident	Installing Airtel DTH services for home
+district	Tumkur	Resident-1	Resident-2	To buy fresh fish from the famous sri sai sea fish point
+district	Tumkur	Multi brand car dealer	Customer	buying a budget car from a CarPlanet Pre-owned Car Showroom in Tumkur
+district	Tumkur	Travel Agent	Tourist	engaging cab services for 4 days to visit coorg for a friends of 12
+district	Tumkur	Applicances Store	Customer	buying tv, fridge, washing machine and ac for a new home from Darshan Home Appliances
+district	Tumkur	Resident-1	Resident-2	Discussion on Tumkur as the multi-modal transport hub with world class infrastructure
+district	Tumkur	Carpenter	Resident	to construct a water proof water tank with 15000 litres with allied pipe works and buying materials from G M Naveen Enterprises

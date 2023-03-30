@@ -749,6 +749,6 @@ def show_state(value):
 
 if __name__ == '__main__':
     # run app in debug mode on port 5000
-    # app.run(debug=False, port=6060)
-    http_server = WSGIServer(('', 6060), app.server)
-    http_server.serve_forever()
+    app.run(debug=False, port=6060)
+    #http_server = WSGIServer(('', 6060), app.server)
+    #http_server.serve_forever()
