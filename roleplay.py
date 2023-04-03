@@ -1,10 +1,9 @@
 import dash
 #from dash.dependencies import Input, Output
-from dash import html,DiskcacheManager, State, Input, Output
+from dash import html,DiskcacheManager, State, Input, Output,dcc
 import diskcache
 import dash_bootstrap_components as dbc
 from datetime import datetime
-
 import time
 from dash_iconify import DashIconify
 import dash_mantine_components as dmc
@@ -104,6 +103,8 @@ topic_dropdown = html.Div(
 call_button = dmc.Button("Call/Recall", color = "orange", id = "call-button", radius = 100)
 
 fetch_button = dmc.Button("Fetch", color = "orange", id = "fetch-button", radius = 100,style={'display':'none'})
+
+verify_button = dmc.Button("Verify", color = "orange", id = "verify-button", radius = 100, style= {'display':'none'})
 
 
 
@@ -336,7 +337,9 @@ main_card = html.Div(
             toast,
             error_toast,
             notification,
-            number_notification
+            number_notification,
+            verify_button,
+           
         ],withBorder=True,
             shadow="sm",
         style = {'width':'auto', 'margin-left':'10px', 'margin-right':'10px'}
@@ -346,8 +349,8 @@ justify="center", align="center", className="h-50"
     #style ={'align':'center','width':'100vh'}
 ),)
 app.layout = dmc.NotificationsProvider(html.Div(
-    [
-        main_card,
+    [ dcc.Location(id = 'url', refresh = False),
+       main_card,
         
     ]
 
@@ -493,14 +496,18 @@ def check_phone_number(num1,num2):
 
 
 
-@dash.callback(Output("player_container", "children"), Input("call-button", "n_clicks"),
+@dash.callback(Output("player_container", "children"),
+                Output("verify-button",'style'),
+               Input("call-button", "n_clicks"),
 background=True,)
 def fetch_audio(value):
     print("inside fetch audio")
-    return []
+    #return [],{'display':'none'}
     if value is None:
-        return
+        return [],{'display':'none'}
+
     else:
+        """
         sid = request.args.get('callSid')
         url = "https://kpi.knowlarity.com/Basic/v1/account/call/get-detailed-call-log?uuid="+sid
         headers = {
@@ -523,13 +530,14 @@ def fetch_audio(value):
             upload_to_azure(f'{sid}.wav')
             # Share bytes
             response['Call']['AzureUrl'] = f'https://ai4bdmustorage.blob.core.windows.net/role-play-convs/{sid}.wav?sp=r&st=2023-03-26T19:26:54Z&se=2024-06-01T03:26:54Z&spr=https&sv=2021-12-02&sr=c&sig=wp74Z7pg%2Fq3GYVXZzIMhXjnC3dwNnORTu1gj0YYDZ88%3D'
-        return response
-    
+        return response,{'display','block'}
+        """
+        pass
     print('Entered show_state',value)
     a = html.Audio(id = 'player',src='data:audio/mpeg;base64,{}'.format(base64.b64encode(open('./Shakira_-_Whenever_Wherever_(ColdMP3.com).mp3', 'rb').read()).decode()), controls = True, autoPlay = False, style = {"width":"100%"})
     print("a done")
     #return
-    return a
+    return a, {'display':'block'}
 
 
 @dash.callback(
@@ -704,7 +712,18 @@ def get_topic(role2, r_category, r_sub_category, role1, district):
 
 
 
-
+@dash.callback(
+    Output('url','href'),
+    Output('url', 'refresh'),
+    Input('verify-button','n_clicks'),
+    Input('url','pathname'),
+    prevent_initail_call = True
+)
+def verify_audio(n_clicks, pathname):
+    if n_clicks != None:
+        print("inside verify audio", pathname)
+        return "/", True
+    return '',False
 if __name__ == '__main__':
     app.run_server(debug=True)
 
