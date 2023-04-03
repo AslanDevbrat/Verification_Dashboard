@@ -1,6 +1,6 @@
 import dash
-from dash.dependencies import Input, Output
-from dash import html,DiskcacheManager, State
+#from dash.dependencies import Input, Output
+from dash import html,DiskcacheManager, State, Input, Output
 import diskcache
 import dash_bootstrap_components as dbc
 from datetime import datetime
@@ -250,7 +250,7 @@ role_sub_category_district_dropdown = dmc.Grid(
 toast = html.Div(
         [
             dbc.Toast(
-                "",
+                "ERrOR",
                 id="positioned-toast",
                 header="Error",
                 is_open=False,
@@ -262,6 +262,36 @@ toast = html.Div(
             ),
         ]
     )
+error_toast = html.Div(
+        [
+            dbc.Toast(
+                id="error-toast",
+                header="Error",
+                is_open=False,
+                dismissable=True,
+                icon="danger",
+                duration = 10000,
+                # top: 66 positions the toast below the navbar
+                style={"position": "fixed", "top": 66, "right": 10, "width": 350},
+            ),
+        ]
+    )
+
+notification = html.Div(
+    [
+        html.Div(id="notifications-container",children = [ dmc.Notification(
+        title="Error!",
+        id="simple-notify",
+        action="hide",
+        #message="Notifications in Dash, Awesome!",
+        color = 'red',
+        message = "",
+        icon=DashIconify(icon="ic:round-error"),
+    )] ),
+        #dmc.Button("Show Notification", id="notify"),
+    ]
+)
+
 
 main_card = html.Div(
     dbc.Row(
@@ -291,6 +321,8 @@ main_card = html.Div(
             html.Br(),
             audio_player,
             toast,
+            error_toast,
+            notification
         ],withBorder=True,
             shadow="sm",
         style = {'width':'auto', 'margin-left':'10px', 'margin-right':'10px'}
@@ -299,13 +331,13 @@ justify="center", align="center", className="h-50"
 
     #style ={'align':'center','width':'100vh'}
 ),)
-app.layout = html.Div(
+app.layout = dmc.NotificationsProvider(html.Div(
     [
         main_card,
         
     ]
 
-)
+))
 
 
 file_path = '/data/bucket'
@@ -333,25 +365,68 @@ def get_file(filename):
                 encoded_sound = base64.b64encode(f.read())
     return encoded_sound
 
-@dash.callback(Output("call-timeline", "active"),
-               Output("fetch-button",'style'),
-               Output('call-timeline','style'),
-               Output('sid','children'),
-               Input("call-button", "n_clicks"),
-               State("roleplay-category-dropdown",'value'),
-               State("roleplay-sub-category-dropdown",'value'),
-               State("participant-1-name",'value'),
-               State("participant-1-phone-number",'value'),
-               State("participant-1-role-dropdown",'value'),
-               State("participant-2-name",'value'),
-               State("participant-2-phone-number",'value'),
-               State("participant-2-role-dropdown", 'value'),
-               State('topic-dropdown','value'),
-
-
+"""
+@dash.callback(
+    Output("notifications-container", "children"),
+    Input("notify", "n_clicks"),
+    prevent_initial_call=True,
 )
-def initiate_call(n_clicks,roleplay_category,roleplay_sub_category, name_1, number_1,role_1, name_2, number_2,role_2, topic ):
-    print(n_clicks)
+def show(n_clicks):
+    return dmc.Notification(
+        title="Hey there!",
+        id="simple-notify",
+        action="show",
+        message="Notifications in Dash, Awesome!",
+        icon=DashIconify(icon="ic:round-celebration"),
+    )
+
+"""
+
+
+@dash.callback(
+            Output("simple-notify","action"),
+            Output("simple-notify", 'message'),
+            Output("call-timeline", "active"),
+           Output("fetch-button",'style'),
+           Output('call-timeline','style'),
+           Output('sid','children'),
+           Input("call-button", "n_clicks"),
+           State("roleplay-category-dropdown",'value'),
+           State("roleplay-sub-category-dropdown",'style'),
+           State("roleplay-sub-category-dropdown",'value'),
+            State("state-dropdown",'style'),
+            State("state-dropdown", 'value'),
+            State("district-dropdown",'style'),
+            State("district-dropdown",'value'),
+           State("participant-1-name",'value'),
+           State("participant-1-phone-number",'value'),
+           State("participant-1-role-dropdown",'value'),
+           State("participant-2-name",'value'),
+           State("participant-2-phone-number",'value'),
+           State("participant-2-role-dropdown", 'value'),
+           State('topic-dropdown','value'),
+           prevent_initail_call = True 
+)
+def initiate_call(n_clicks,roleplay_category,roleplay_sub_category_style, roleplay_sub_category, state_dropdown_style, state_dropdown, district_dropdown_style, district_dropdown, name_1, number_1,role_1, name_2, number_2,role_2, topic ):
+    #print(n_clicks)
+    #print(roleplay_category_style)
+    if n_clicks == None:
+        return  'hide' ,'',0, {'display':'none'}, {'display': 'none'}, ""
+
+    if roleplay_category == "General":
+        pass
+    elif roleplay_category == "State":
+        if roleplay_sub_category_style['display'] != 'none' and roleplay_sub_category == None:
+            return  'show',"Selcet state" ,0, {'display':'none'}, {'display': 'none'}, ""
+    elif roleplay_category == "District":
+        print(district_dropdown_style)
+        if ( state_dropdown == None) or ( district_dropdown == None) :
+            return 'show',"Select both district and state",0, {'display':'none'}, {'display': 'none'}, ""
+ 
+    if name_1 == None or number_1 == None or role_1 == None or name_2 == None or number_2 == None or role_2 == None:
+        return 'show','Select all fields' ,0, {'display':'none'}, {'display': 'none'}, ""
+ 
+ 
     if n_clicks !=None:
         url = "https://kpi.knowlarity.com/Basic/v1/account/call/makecall"
         payload = {
@@ -373,9 +448,9 @@ def initiate_call(n_clicks,roleplay_category,roleplay_sub_category, name_1, numb
         return_response['Call'] = {"Sid":sid}
 
         
-        return 0, {'display':'block'},{'display':'block'},"asdfiunrf98141n34ij134n09"
+        return 'hide','',0, {'display':'block'},{'display':'block'},"asdfiunrf98141n34ij134n09"
     else:
-        return 0, {'display':'none'},{'display':'none'},"asdfiunrf98141n34ij134n09"
+        return 'hide','', 0, {'display':'none'},{'display':'none'},"asdfiunrf98141n34ij134n09"
 
 
 @app.callback(
@@ -404,6 +479,7 @@ def check_phone_number(num1,num2):
 background=True,)
 def fetch_audio(value):
     print("inside fetch audio")
+    return []
     if value is None:
         return
     else:
