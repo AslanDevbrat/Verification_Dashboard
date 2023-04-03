@@ -265,7 +265,7 @@ toast = html.Div(
 error_toast = html.Div(
         [
             dbc.Toast(
-                id="error-toast",
+                id="run_serveror-toast",
                 header="Error",
                 is_open=False,
                 dismissable=True,
@@ -292,7 +292,20 @@ notification = html.Div(
     ]
 )
 
-
+number_notification = html.Div(
+    [
+        html.Div(id="number_check",children = [ dmc.Notification(
+        title="Error!",
+        id="number-verify-notify",
+        action="hide",
+        #message="Notifications in Dash, Awesome!",
+        color = 'red',
+        message = "",
+        icon=DashIconify(icon="ic:round-error"),
+    )] ),
+        #dmc.Button("Show Notification", id="notify"),
+    ]
+)
 main_card = html.Div(
     dbc.Row(
     dmc.Card(
@@ -322,7 +335,8 @@ main_card = html.Div(
             audio_player,
             toast,
             error_toast,
-            notification
+            notification,
+            number_notification
         ],withBorder=True,
             shadow="sm",
         style = {'width':'auto', 'margin-left':'10px', 'margin-right':'10px'}
@@ -337,7 +351,7 @@ app.layout = dmc.NotificationsProvider(html.Div(
         
     ]
 
-))
+),position = 'top-right' )
 
 
 file_path = '/data/bucket'
@@ -423,11 +437,12 @@ def initiate_call(n_clicks,roleplay_category,roleplay_sub_category_style, rolepl
         if ( state_dropdown == None) or ( district_dropdown == None) :
             return 'show',"Select both district and state",0, {'display':'none'}, {'display': 'none'}, ""
  
-    if name_1 == None or number_1 == None or role_1 == None or name_2 == None or number_2 == None or role_2 == None:
+    if len(name_1) == 0 or len(number_1) !=10 or role_1 == None or len(name_2) == 0 or len(number_2) !=10 or role_2 == None in topic == None:
+        print("WTF") 
         return 'show','Select all fields' ,0, {'display':'none'}, {'display': 'none'}, ""
- 
- 
-    if n_clicks !=None:
+    else:
+        print(name_1,number_1,role_1,name_2,number_2,role_2,topic)
+        """
         url = "https://kpi.knowlarity.com/Basic/v1/account/call/makecall"
         payload = {
                     "k_number": "+919513248817",
@@ -447,15 +462,18 @@ def initiate_call(n_clicks,roleplay_category,roleplay_sub_category_style, rolepl
         return_response = response.json()
         return_response['Call'] = {"Sid":sid}
 
-        
+        """
         return 'hide','',0, {'display':'block'},{'display':'block'},"asdfiunrf98141n34ij134n09"
-    else:
+
+""" 
+    if n_clicks !=None:
+            else:
         return 'hide','', 0, {'display':'none'},{'display':'none'},"asdfiunrf98141n34ij134n09"
+"""
 
-
-@app.callback(
-    Output("positioned-toast",'is_open' ),
-    Output("positioned-toast",'children'),
+@dash.callback(
+    Output("number-verify-notify",'action' ),
+    Output("number-verify-notify",'message'),
     Input('participant-1-phone-number','value'),
     Input('participant-2-phone-number','value'),
     prevent_initail_call = True
@@ -465,13 +483,13 @@ def check_phone_number(num1,num2):
         response = requests.get(f"https://ai4bdmuserver.centralindia.cloudapp.azure.com/misc/findUser/{num1}")
         res = response.text
         if res == 'NO':
-            return True ,f'{num1} does not exist in Database'
+            return 'show',f'{num1} does not exist in Database'
     if  num2 != None and len(num2) == 10:
         response = requests.get(f"https://ai4bdmuserver.centralindia.cloudapp.azure.com/misc/findUser/{num2}")
         res = response.text
         if res == 'NO':
-            return True ,f'{num2} does not exist in Database'
-    return False, ''
+            return 'show',f'{num2} does not exist in Database'
+    return 'hide', ''
 
 
 
